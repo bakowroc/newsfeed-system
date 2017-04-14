@@ -19,6 +19,9 @@ Download Node.js from here https://nodejs.org/en/
 Be sure if you installed npm as well. Then run your CLI (or command window or whatever) and type:
 >npm install
 
+And to create a bundle.js file type once:
+>webpack
+
 All dependencies should install automatically. Everything should be ready.
 
 Except angular following extensions are needed:
@@ -53,6 +56,6 @@ The beauty: https://www.youtube.com/watch?v=Mh5VQVfWTbs
 ###### Combined
 
 Yeah, with angular it looks a little bit strange. But don't worry, it's because of those loooooooong types.
-https://www.youtube.com/watch?v=32VyeinxbbI&t=657s
+https://www.youtube.com/watch?v=32VyeinxbbI
 
 And remember. Those are just *examples*. There are bunches of videos about that. You just have to keep learning and write a code by yourself.
