@@ -56593,7 +56593,7 @@ var platform_browser_1 = __webpack_require__(196);
 var forms_1 = __webpack_require__(423);
 var app_component_1 = __webpack_require__(452);
 var navbar_component_1 = __webpack_require__(454);
-var main_section_component_1 = __webpack_require__(453);
+var main_news_component_1 = __webpack_require__(453);
 var weather_component_1 = __webpack_require__(457);
 var news_component_1 = __webpack_require__(455);
 var single_news_component_1 = __webpack_require__(456);
@@ -56611,7 +56611,7 @@ AppModule = __decorate([
         declarations: [
             app_component_1.default,
             navbar_component_1.default,
-            main_section_component_1.default,
+            main_news_component_1.default,
             weather_component_1.default,
             news_component_1.default,
             single_news_component_1.default
@@ -71649,21 +71649,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = __webpack_require__(0);
-var MainSectionComponent = (function () {
-    function MainSectionComponent() {
+var MainNewsComponent = (function () {
+    function MainNewsComponent() {
     }
-    return MainSectionComponent;
+    return MainNewsComponent;
 }());
-MainSectionComponent = __decorate([
+MainNewsComponent = __decorate([
     core_1.Component({
-        selector: 'main-section',
+        selector: 'main-news',
         template: __webpack_require__(619),
         styles: [__webpack_require__(645)]
     }),
     __metadata("design:paramtypes", [])
-], MainSectionComponent);
+], MainNewsComponent);
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = MainSectionComponent;
+exports.default = MainNewsComponent;
 
 
 /***/ }),
@@ -72011,13 +72011,13 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /* 612 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #F8F8F8;\n  font-family: 'Lato';\n  font-weight: 400; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 600; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    float: right;\n    border-radius: 3px; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 613 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-section .main-news {\n  background-color: #ffe6e6;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  background-color: #fff;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
 
 /***/ }),
 /* 614 */
@@ -72035,19 +72035,19 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 616 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 325px;\n  margin-top: 13px;\n  text-align: center; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 325px;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
 
 /***/ }),
 /* 617 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nweather .weather {\n  background-image: url(\"/static/assets/img/weather.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nweather .weather {\n  background-image: url(\"/static/assets/img/weather.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
 
 /***/ }),
 /* 618 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <navbar></navbar>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-8\">\r\n            <main-section></main-section>\r\n        </div>\r\n\r\n        <div class=\"col-lg-4\">\r\n            <weather></weather>\r\n        </div>\r\n        <div class=\"col-lg-12\">\r\n            <news></news>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <navbar></navbar>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-8\">\r\n            <main-news></main-news>\r\n        </div>\r\n\r\n        <div class=\"col-lg-4\">\r\n            <weather></weather>\r\n        </div>\r\n        <div class=\"col-lg-12\">\r\n            <news></news>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 619 */
@@ -72065,7 +72065,7 @@ module.exports = "<div class=\"nav\">\r\n    <div class=\"container\">\r\n      
 /* 621 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"let singleNews of news\">\r\n        <single-news [singleNews]=\"singleNews\"></single-news>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"let singleNews of news\">\r\n        <single-news [singleNews]=\"singleNews\"></single-news>\r\n\r\n<div href=\"/\" class=\"full-width-button-area\">\r\n    <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n</div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 622 */
@@ -72670,8 +72670,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./main-section.component.scss", function() {
-			var newContent = require("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./main-section.component.scss");
+		module.hot.accept("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./main-news.component.scss", function() {
+			var newContent = require("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./main-news.component.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

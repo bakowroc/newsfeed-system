@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import AppComponent from './app.component'
 import NavbarComponent from './navbar/navbar.component'
-import MainSectionComponent from './main-section/main-section.component'
+import MainNewsComponent from './main-news/main-news.component'
 import WeatherComponent from './weather/weather.component'
 import NewsComponent from './news/news.component'
 import SingleNewsComponent from './news/single-news/single-news.component'
@@ -19,7 +19,7 @@ import SingleNewsComponent from './news/single-news/single-news.component'
     declarations: [
                 AppComponent,
                 NavbarComponent,
-                MainSectionComponent,
+                MainNewsComponent,
                 WeatherComponent,
                 NewsComponent,
                 SingleNewsComponent
