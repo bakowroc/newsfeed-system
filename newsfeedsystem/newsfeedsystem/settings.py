@@ -129,5 +129,10 @@ STATIC_URL = '/static/'
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-STATICFILES_DIRS = [os.path.abspath(os.path.join(
-        BASE_DIR, '..', 'dist', 'src/assets'))]
+STATICFILES_DIRS = [
+    os.path.abspath(os.path.join(
+            BASE_DIR, '..', 'dist')),
+    os.path.abspath(os.path.join(
+            BASE_DIR, '..', 'src'))
+
+    ]
