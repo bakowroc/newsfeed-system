@@ -72011,13 +72011,13 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /* 612 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 600; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    float: right;\n    border-radius: 3px; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    float: right;\n    border-radius: 3px; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 613 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  background-color: #fff;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  background-color: #ffe6e6;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center; }\n"
 
 /***/ }),
 /* 614 */
