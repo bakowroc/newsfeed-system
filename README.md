@@ -18,6 +18,7 @@ And that's it. Of course you've got to have this repo locally.
 Download Node.js from here https://nodejs.org/en/
 Be sure if you installed npm as well. Then run your CLI (or command window or whatever) and type:
 >npm install
+
 >npm install webpack -g
 
 Change directory to /newsfeedsystem and:
@@ -61,11 +62,5 @@ And this should be edited like this: https://www.youtube.com/watch?v=U2kCjkxPMuM
 ###### Typescript
 
 The beauty: https://www.youtube.com/watch?v=Mh5VQVfWTbs
-
-
-###### Combined
-
-Yeah, with angular it looks a little bit strange. But don't worry, it's because of those loooooooong types.
-https://www.youtube.com/watch?v=32VyeinxbbI
 
 And remember. Those are just *examples*. There are bunches of videos about that. You just have to keep learning and write a code by yourself.
