@@ -39,6 +39,9 @@ navbar {
                         }
                         &.log-in {
                             color: #d4514e;
+                            &:hover {
+                                color: #c3403d;
+                            }
                         }
                     }
                 }

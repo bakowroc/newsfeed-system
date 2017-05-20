@@ -133,6 +133,7 @@ STATICFILES_DIRS = [
     os.path.abspath(os.path.join(
             BASE_DIR, '..', 'dist')),
     os.path.abspath(os.path.join(
-            BASE_DIR, '..', 'src'))
-
+            BASE_DIR, '..', 'src')), 
+    os.path.abspath(os.path.join(
+            BASE_DIR, '..', 'node_modules'))
     ]
