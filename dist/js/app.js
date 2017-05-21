@@ -71737,13 +71737,16 @@ var NewsComponent = (function () {
     NewsComponent.prototype.ngOnInit = function () {
         this.news = [
             {
-                name: 'News 1', link: '/', class: 'single-news'
+                logo: 'static/assets/img/es6.png', link: '/', class: 'single-news', content: 'xD',
+                tag: 'web development', title: 'ECMAScript 6'
             },
             {
-                name: 'News 2', link: '/', class: 'single-news'
+                logo: 'static/assets/img/ts.png', link: '/', class: 'single-news', content: 'xD',
+                tag: 'web development', title: 'TypeScript'
             },
             {
-                name: 'News 3', link: '/', class: 'single-news'
+                logo: 'static/assets/img/ng.png', link: '/', class: 'single-news', content: 'xD',
+                tag: 'web development', title: 'Angular 2'
             }
         ];
     };
@@ -72011,13 +72014,13 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /* 612 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    margin-right: 10px;\n    float: right;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    position: absolute;\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    right: 25px;\n    bottom: 10px;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 613 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  position: relative;\n  background-image: url(\"/static/assets/img/main-news.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n  main-news .main-news .title {\n    position: absolute;\n    font-size: 30px;\n    font-weight: 500;\n    color: #fff;\n    right: 15px;\n    bottom: 13px; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  position: relative;\n  background-image: url(\"/static/assets/img/main-news.jpg\");\n  background-size: 100%;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n  main-news .main-news .title {\n    position: absolute;\n    font-size: 35px;\n    font-weight: 500;\n    color: #fff;\n    right: 15px;\n    bottom: 13px; }\n    main-news .main-news .title:hover {\n      text-decoration: none;\n      color: #f1f1f1; }\n"
 
 /***/ }),
 /* 614 */
@@ -72035,7 +72038,7 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 616 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 470px;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  padding: 13px;\n  overflow: auto; }\n  single-news .news-logo {\n    width: 100%;\n    height: 220px;\n    margin-bottom: 5px;\n    padding: 0; }\n  single-news .content {\n    text-align: justify;\n    margin-top: 13px; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 470px;\n  margin-top: 13px;\n  text-align: left;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  overflow: auto; }\n  single-news .news-logo {\n    width: 100%;\n    height: 220px;\n    padding: 0; }\n    single-news .news-logo img {\n      width: 100%; }\n  single-news .text {\n    padding-left: 13px;\n    padding-top: 5px; }\n    single-news .text .title {\n      color: gray;\n      font-size: 20px; }\n    single-news .text .tag {\n      color: #ccc;\n      font-size: 15px;\n      text-transform: uppercase; }\n    single-news .text .content {\n      text-align: justify;\n      padding: 13px;\n      font-size: 16px;\n      color: darkgray; }\n"
 
 /***/ }),
 /* 617 */
@@ -72053,7 +72056,7 @@ module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n
 /* 619 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-news\">\r\n    <div class=\"title\">Main News</div>\r\n</div>\r\n"
+module.exports = "<div class=\"main-news\">\r\n    <a href=\"/\" class=\"title\">Main News</a>\r\n</div>\r\n"
 
 /***/ }),
 /* 620 */
@@ -72071,7 +72074,7 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"le
 /* 622 */
 /***/ (function(module, exports) {
 
-module.exports = "<table>\r\n    <tr class=\"news-logo\"><img class=\"news-logo\" src=\"/static/assets/img/news.png\"> </tr>\r\n    <tr class=\"content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend eros eu vestibulum sodales. Cras nec est justo. Morbi sit amet leo a metus maximus mollis eu eget justo. Vestibulum ultricies hendrerit neque quis suscipit. Suspendisse potenti. </tr>\r\n    <div href=\"/\" class=\"full-width-button-area\">\r\n        <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n    </div>\r\n</table>\r\n"
+module.exports = "<table>\r\n    <tr class=\"news-logo\"><img src=\"{{singleNews.logo}}\"></tr>\r\n    <div class=\"text\">\r\n        <tr class=\"tag\">{{singleNews.tag}}</tr>\r\n        <tr class=\"title\">{{singleNews.title}}</tr>\r\n        <tr class=\"content\">{{singleNews.content}}</tr>\r\n    </div>\r\n    <div href=\"/\" class=\"full-width-button-area\">\r\n        <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n    </div>\r\n</table>\r\n"
 
 /***/ }),
 /* 623 */

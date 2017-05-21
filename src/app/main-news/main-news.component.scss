@@ -2,6 +2,7 @@
      .main-news {
          position: relative;
          background-image: url('/static/assets/img/main-news.jpg');
+         background-size: 100%;
          width: 100%;
          height: 470px;
          float: left;
@@ -10,11 +11,15 @@
          border-radius: 3px;
          .title {
              position: absolute;
-             font-size: 30px;
+             font-size: 35px;
              font-weight: 500;
              color: #fff;
              right: 15px;
              bottom: 13px;
+             &:hover {
+                 text-decoration: none;
+                 color: #f1f1f1;
+             }
          }
      }
  }

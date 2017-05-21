@@ -14,13 +14,16 @@ export default class NewsComponent implements OnInit{
     ngOnInit(){
         this.news = [
            {
-               name: 'News 1', link: '/', class: 'single-news'
+               logo: 'static/assets/img/es6.png', link: '/', class: 'single-news', content: 'xD',
+               tag: 'web development', title: 'ECMAScript 6'
            },
             {
-                name: 'News 2', link: '/', class: 'single-news'
+                logo: 'static/assets/img/ts.png', link: '/', class: 'single-news', content: 'xD',
+                tag: 'web development', title: 'TypeScript'
             },  
             {
-                name: 'News 3', link: '/', class: 'single-news'
+                logo: 'static/assets/img/ng.png', link: '/', class: 'single-news', content: 'xD',
+                tag: 'web development', title: 'Angular 2'
             }
             
         ]
