@@ -72011,19 +72011,19 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /* 612 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    float: right;\n    border-radius: 3px; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    margin-top: 10px;\n    margin-right: 10px;\n    float: right;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 613 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  background-color: #ffe6e6;\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nmain-news .main-news {\n  position: relative;\n  background-image: url(\"/static/assets/img/main-news.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n  main-news .main-news .title {\n    position: absolute;\n    font-size: 30px;\n    font-weight: 500;\n    color: #fff;\n    right: 15px;\n    bottom: 13px; }\n"
 
 /***/ }),
 /* 614 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nnavbar .nav {\n  background-color: #34373a;\n  height: 60px;\n  width: 100%;\n  display: block; }\n  navbar .nav .logo {\n    float: left;\n    height: 100%;\n    color: white;\n    margin-top: 15px; }\n    navbar .nav .logo img {\n      width: 30px;\n      height: 30px;\n      margin-right: 8px; }\n  navbar .nav .list {\n    height: 100%;\n    color: white;\n    float: right;\n    margin-top: 15px; }\n    navbar .nav .list ul {\n      float: left; }\n      navbar .nav .list ul li {\n        display: inline;\n        text-align: center;\n        float: left;\n        padding: 0 10px; }\n        navbar .nav .list ul li:last-child {\n          padding-right: 0; }\n        navbar .nav .list ul li a {\n          color: white;\n          float: left; }\n          navbar .nav .list ul li a:hover {\n            color: aliceblue;\n            text-decoration: none; }\n          navbar .nav .list ul li a.log-in {\n            color: #d4514e; }\n            navbar .nav .list ul li a.log-in:hover {\n              color: #c3403d; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nnavbar .nav {\n  background-color: #34373a;\n  height: 60px;\n  width: 100%;\n  display: block; }\n  navbar .nav .logo {\n    float: left;\n    height: 100%;\n    color: white;\n    margin-top: 15px; }\n    navbar .nav .logo img {\n      width: 30px;\n      height: 30px;\n      margin-right: 8px; }\n  navbar .nav .list {\n    height: 100%;\n    color: white;\n    float: right;\n    margin-top: 15px; }\n    navbar .nav .list ul {\n      float: left; }\n      navbar .nav .list ul li {\n        display: inline;\n        text-align: center;\n        float: left;\n        padding: 0 10px; }\n        navbar .nav .list ul li:last-child {\n          padding-right: 0; }\n        navbar .nav .list ul li a {\n          color: white;\n          float: left; }\n          navbar .nav .list ul li a:hover {\n            color: #c3403d;\n            text-decoration: none; }\n          navbar .nav .list ul li a.log-in {\n            color: #d4514e; }\n            navbar .nav .list ul li a.log-in:hover {\n              color: #c3403d; }\n"
 
 /***/ }),
 /* 615 */
@@ -72035,13 +72035,13 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 616 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 325px;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 470px;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  padding: 13px;\n  overflow: auto; }\n  single-news .news-logo {\n    width: 100%;\n    height: 220px;\n    margin-bottom: 5px;\n    padding: 0; }\n  single-news .content {\n    text-align: justify;\n    margin-top: 13px; }\n"
 
 /***/ }),
 /* 617 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nweather .weather {\n  background-image: url(\"/static/assets/img/weather.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nweather .weather {\n  background-image: url(\"/static/assets/img/weather.jpg\");\n  width: 100%;\n  height: 470px;\n  float: left;\n  margin-top: 13px;\n  text-align: center;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n  weather .weather img {\n    height: 200px;\n    width: 200px;\n    margin: 0 auto;\n    margin-top: 85px;\n    filter: opacity(80%); }\n"
 
 /***/ }),
 /* 618 */
@@ -72053,7 +72053,7 @@ module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n
 /* 619 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-news\">Main News</div>\r\n"
+module.exports = "<div class=\"main-news\">\r\n    <div class=\"title\">Main News</div>\r\n</div>\r\n"
 
 /***/ }),
 /* 620 */
@@ -72065,19 +72065,19 @@ module.exports = "<div class=\"nav\">\r\n    <div class=\"container\">\r\n      
 /* 621 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"let singleNews of news\">\r\n        <single-news [singleNews]=\"singleNews\"></single-news>\r\n\r\n<div href=\"/\" class=\"full-width-button-area\">\r\n    <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n</div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"let singleNews of news\">\r\n        <single-news [singleNews]=\"singleNews\"></single-news>\r\n\r\n\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 622 */
 /***/ (function(module, exports) {
 
-module.exports = "News\r\n"
+module.exports = "<table>\r\n    <tr class=\"news-logo\"><img class=\"news-logo\" src=\"/static/assets/img/news.png\"> </tr>\r\n    <tr class=\"content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend eros eu vestibulum sodales. Cras nec est justo. Morbi sit amet leo a metus maximus mollis eu eget justo. Vestibulum ultricies hendrerit neque quis suscipit. Suspendisse potenti. </tr>\r\n    <div href=\"/\" class=\"full-width-button-area\">\r\n        <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n    </div>\r\n</table>\r\n"
 
 /***/ }),
 /* 623 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"weather\">Weather</div>\r\n"
+module.exports = "<div class=\"weather\"><img src=\"/static/assets/img/weather-icon.png\"></div>\r\n"
 
 /***/ }),
 /* 624 */
