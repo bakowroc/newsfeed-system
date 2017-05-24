@@ -72025,7 +72025,7 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /* 612 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400; }\n  body .button {\n    position: absolute;\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    right: 25px;\n    bottom: 10px;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  padding: 0; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400;\n  overflow-x: hidden; }\n  body .full-width-button-area {\n    float: left;\n    width: 100%;\n    box-sizing: border-box;\n    padding: 20px;\n    background: transparent;\n    text-align: right;\n    text-decoration: none; }\n  body .button {\n    position: absolute;\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    right: 25px;\n    bottom: 10px;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  width: 100%; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 613 */
@@ -82224,7 +82224,7 @@ exports.default = TrendingComponent;
 /* 718 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsign-in .log-in-form {\n  position: relative;\n  margin: 0 auto;\n  margin-top: 2%;\n  background-color: #fff;\n  box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  height: 300px;\n  width: 400px;\n  padding: 20px; }\n  sign-in .log-in-form h1 {\n    font-size: 25px; }\n  sign-in .log-in-form input[type=email],\n  sign-in .log-in-form input[type=password] {\n    display: block;\n    width: 100%;\n    border: none;\n    border-bottom: solid 1px #99d6ff;\n    line-height: 2px;\n    margin-top: 10px;\n    margin-bottom: 15px; }\n  sign-in .log-in-form .label {\n    color: #ccc;\n    text-transform: uppercase;\n    font-size: 13px; }\n  sign-in .log-in-form .reminder a {\n    float: right;\n    color: crimson;\n    font-size: 12px; }\n  sign-in .log-in-form .button {\n    position: absolute;\n    border: none;\n    text-align: center;\n    color: #fff;\n    background-color: #008CBA;\n    font-size: 14px;\n    font-weight: 500;\n    right: 25px;\n    bottom: 25px;\n    border-radius: 3px;\n    text-decoration: none; }\n"
 
 /***/ }),
 /* 719 */
@@ -82236,7 +82236,7 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 720 */
 /***/ (function(module, exports) {
 
-module.exports = "Sign in\r\n"
+module.exports = "<div class=\"col-lg-12\">\r\n    <div class=\"log-in-form\">\r\n        <h1>Sign in</h1>\r\n        <form name=\"sign-in\">\r\n            <div class=\"\">\r\n                <span class=\"label\">Email address</span>\r\n                <input type=\"email\" name=\"email\" placeholder=\"Your e-mail address\" required>\r\n            </div>\r\n            <div class=\"\">\r\n                <span class=\"label\">Password</span>\r\n                <input type=\"password\" name=\"password\" placeholder=\"Your password\" required>\r\n            </div>\r\n            <div class=\"reminder\"><a href=\"#\">Forgot your password?</a></div>\r\n            <button type=\"submit\" class=\"button\">Sign in</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 721 */

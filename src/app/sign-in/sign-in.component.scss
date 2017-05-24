@@ -1,0 +1,49 @@
+sign-in {
+    .log-in-form {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 2%;
+        background-color: #fff;
+        box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.20);
+        border-radius: 3px;
+        height: 300px;
+        width: 400px;
+        padding: 20px;
+        h1 {
+            font-size: 25px;
+        }
+        input[type=email],
+        input[type=password] {
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: solid 1px #99d6ff;
+            line-height: 2px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .label {
+            color: #ccc;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        .reminder a {
+            float: right;
+            color: crimson;
+            font-size: 12px;
+        }
+        .button {
+            position: absolute;
+            border: none;
+            text-align: center;
+            color: #fff;
+            background-color: #008CBA;
+            font-size: 14px;
+            font-weight: 500;
+            right: 25px;
+            bottom: 25px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+    }
+}
