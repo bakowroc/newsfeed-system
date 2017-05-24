@@ -18,13 +18,13 @@ export default class NavbarComponent implements OnInit{
                name: 'Home', link: '/', class: ''
            },
             {
-                name: 'Trending', link: '/', class: ''
+                name: 'Trending', link: 'trending', class: ''
             },  
             {
-                name: 'About us', link: '/', class: ''
+                name: 'About us', link: 'about', class: ''
             },  
             {
-                name: 'Sign in', link: '/', class: 'log-in'
+                name: 'Sign in', link: 'sign-in', class: 'log-in'
             }
             
         ]
