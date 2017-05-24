@@ -10,6 +10,11 @@ class User(models.Model):
     def __str__(self):
         return self.email
 
+class Tag(models.Model):
+    tag = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.tag
 
 class News(models.Model):
     title = models.CharField(max_length=20)
@@ -28,7 +33,7 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
-
+        
 class Comment(models.Model):
     content = models.TextField(default='')
     date = models.DateTimeField('date commented', default = timezone.now)

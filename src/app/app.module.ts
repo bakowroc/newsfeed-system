@@ -3,6 +3,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { routes } from './app.router';
+
 import AppComponent from './app.component'
 import MainPageComponent from './main-page/main-page.component'
 import AboutComponent from './about/about.component'
@@ -13,6 +14,8 @@ import MainNewsComponent from './main-news/main-news.component'
 import WeatherComponent from './weather/weather.component'
 import NewsComponent from './news/news.component'
 import SingleNewsComponent from './news/single-news/single-news.component'
+
+import { ApiService } from './services/api.service'
 
 @NgModule({
 
@@ -36,6 +39,7 @@ import SingleNewsComponent from './news/single-news/single-news.component'
 
                   ],
     providers: [
+                ApiService
                 ],
     bootstrap: [AppComponent]
 

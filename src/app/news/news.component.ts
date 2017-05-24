@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { ApiService } from '../services/api.service';
  
 
 @Component ({
@@ -8,24 +9,12 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export default class NewsComponent implements OnInit{
-    news: Array<Object>;
+    news: any;
     
-    constructor(){}
+    constructor(private api: ApiService){}
     ngOnInit(){
-        this.news = [
-           {
-               logo: 'static/assets/img/es6.png', link: '/', class: 'single-news', content: 'xD',
-               tag: 'web development', title: 'ECMAScript 6'
-           },
-            {
-                logo: 'static/assets/img/ts.png', link: '/', class: 'single-news', content: 'xD',
-                tag: 'web development', title: 'TypeScript'
-            },  
-            {
-                logo: 'static/assets/img/ng.png', link: '/', class: 'single-news', content: 'xD',
-                tag: 'web development', title: 'Angular 2'
-            }
-            
-        ]
+    
+        this.api.GetData('news/').subscribe(x => this.news = x);
+        
     }
 }
