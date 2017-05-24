@@ -10,18 +10,13 @@ class User(models.Model):
     def __str__(self):
         return self.email
 
-class Tag(models.Model):
-    tag = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.tag
 
 class News(models.Model):
     title = models.CharField(max_length=20)
     desc = models.TextField(default = '')
     date = models.DateTimeField('date published', default = timezone.now)
     author = models.ForeignKey('User', default= '')
-    tag = models.ForeignKey('Tag', default = '', null = True)
+    tag = models.ForeignKey('Tag', null = True)
 
     def __str__(self):
         return self.title
@@ -33,7 +28,15 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
-        
+
+class Mark(models.Model):
+    news = models.ForeignKey('News', default = '')
+    value = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.id
+
+
 class Comment(models.Model):
     content = models.TextField(default='')
     date = models.DateTimeField('date commented', default = timezone.now)
@@ -53,5 +56,5 @@ class Group(models.Model):
     is_allowed_to_manage = models.BooleanField(default=False)
     is_allowed_to_stat = models.BooleanField(default=False)
 
-    def __str___(self):
+    def __str__(self):
         return self.name
