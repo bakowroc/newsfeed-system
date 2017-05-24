@@ -3,30 +3,12 @@ body {
     font-family: 'Lato';
     font-weight: 400;
     overflow-x: hidden;
-    .full-width-button-area {
-        float: left;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px;
-        background: transparent;
-        text-align: right;
-        text-decoration: none;
-    }
-    .button {
-        position: absolute;
-        color: #fff;
-        padding: 12px;
-        background-color: #f65753;
-        right: 25px;
-        bottom: 10px;
-        border-radius: 3px;
-        text-decoration: none;
-    }
 }
 
 my-app {
     .container {
         width: 100%;
+        margin-bottom: 13px;
     }
     .container-fluid {
         padding: 0;

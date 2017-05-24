@@ -62068,7 +62068,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = __webpack_require__(0);
 var SignInComponent = (function () {
     function SignInComponent() {
+        this.data = {};
     }
+    SignInComponent.prototype.formSubmit = function () {
+        console.log(this.data);
+    };
     return SignInComponent;
 }());
 SignInComponent = __decorate([
@@ -63165,6 +63169,7 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
+            forms_1.ReactiveFormsModule,
             http_1.HttpModule,
             app_router_1.routes
         ],
@@ -80483,7 +80488,7 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 668 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400;\n  overflow-x: hidden; }\n  body .full-width-button-area {\n    float: left;\n    width: 100%;\n    box-sizing: border-box;\n    padding: 20px;\n    background: transparent;\n    text-align: right;\n    text-decoration: none; }\n  body .button {\n    position: absolute;\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    right: 25px;\n    bottom: 10px;\n    border-radius: 3px;\n    text-decoration: none; }\n\nmy-app .container {\n  width: 100%; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nbody {\n  background-color: #f1f1f1;\n  font-family: 'Lato';\n  font-weight: 400;\n  overflow-x: hidden; }\n\nmy-app .container {\n  width: 100%;\n  margin-bottom: 13px; }\n\nmy-app .container-fluid {\n  padding: 0; }\n"
 
 /***/ }),
 /* 669 */
@@ -80513,7 +80518,7 @@ module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    
 /* 673 */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news {\n  background-color: white;\n  float: left;\n  width: 100%;\n  height: 470px;\n  margin-top: 13px;\n  text-align: left;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  overflow: auto; }\n  single-news .news-logo {\n    width: 100%;\n    height: 220px;\n    padding: 0; }\n    single-news .news-logo img {\n      width: 100%; }\n  single-news .text {\n    padding-left: 13px;\n    padding-top: 5px; }\n    single-news .text .title {\n      color: gray;\n      font-size: 20px; }\n    single-news .text .tag {\n      color: #ccc;\n      font-size: 15px;\n      text-transform: uppercase; }\n    single-news .text .content {\n      text-align: justify;\n      padding: 13px;\n      font-size: 16px;\n      color: darkgray; }\n"
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nsingle-news .news-content {\n  position: relative;\n  background-color: white;\n  float: left;\n  width: 100%;\n  max-height: 470px;\n  overflow-y: scroll;\n  margin-top: 13px;\n  padding-bottom: 13px;\n  text-align: left;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px;\n  /* .full-width-button-area {\r\n           position: absolute;\r\n            width: 100%;\r\n            box-sizing: border-box;\r\n            padding: 20px;\r\n            background: transparent;\r\n            text-align: right;\r\n            text-decoration: none;\r\n        }*/ }\n  single-news .news-content .news-logo {\n    width: 100%;\n    height: 220px;\n    padding: 0; }\n    single-news .news-content .news-logo img {\n      width: 100%; }\n  single-news .news-content .text {\n    padding-left: 15px;\n    padding-right: 15px;\n    padding-top: 5px; }\n    single-news .news-content .text .title {\n      color: gray;\n      font-size: 20px; }\n    single-news .news-content .text .tag {\n      color: #ccc;\n      font-size: 15px;\n      text-transform: uppercase; }\n    single-news .news-content .text .content {\n      text-align: justify;\n      font-size: 16px;\n      color: darkgray;\n      display: block;\n      margin-bottom: 15px; }\n  single-news .news-content .button {\n    float: right;\n    color: #fff;\n    padding: 12px;\n    background-color: #f65753;\n    right: 25px;\n    bottom: 10px;\n    border-radius: 3px;\n    text-decoration: none; }\n"
 
 /***/ }),
 /* 674 */
@@ -80573,13 +80578,13 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"le
 /* 683 */
 /***/ (function(module, exports) {
 
-module.exports = "<table>\r\n    <tr class=\"news-logo\"><img src=\"{{singleNews.logo}}\"></tr>\r\n    <div class=\"text\">\r\n        <tr class=\"tag\">{{singleNews.tag}}</tr>\r\n        <tr class=\"title\">{{singleNews.title}}</tr>\r\n        <tr class=\"content\">{{singleNews.desc}}</tr>\r\n    </div>\r\n    <div href=\"/\" class=\"full-width-button-area\">\r\n        <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n    </div>\r\n</table>\r\n"
+module.exports = "<div class=\"news-content\">\r\n    <table>\r\n        <tr class=\"news-logo\"><img src=\"/static/assets/news/{{singleNews.id}}.png\"></tr>\r\n        <tbody>\r\n            <div class=\"text\">\r\n\r\n                <tr class=\"tag\">{{singleNews.tag}}</tr>\r\n                <tr class=\"title\">{{singleNews.title}}</tr>\r\n                <tr class=\"content\">{{singleNews.desc}}</tr>\r\n            </div>\r\n            <!--        <div href=\"/\" class=\"full-width-button-area\">-->\r\n            <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n            <!--        </div>-->\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
 
 /***/ }),
 /* 684 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-lg-12\">\r\n    <div class=\"log-in-form\">\r\n        <h1>Sign in</h1>\r\n        <form name=\"sign-in\">\r\n            <div class=\"\">\r\n                <span class=\"label\">Email address</span>\r\n                <input type=\"email\" name=\"email\" placeholder=\"Your e-mail address\" required>\r\n            </div>\r\n            <div class=\"\">\r\n                <span class=\"label\">Password</span>\r\n                <input type=\"password\" name=\"password\" placeholder=\"Your password\" required>\r\n            </div>\r\n            <div class=\"reminder\"><a href=\"#\">Forgot your password?</a></div>\r\n            <button type=\"submit\" class=\"button\">Sign in</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"col-lg-12\">\r\n    <div class=\"log-in-form\">\r\n        <h1>Sign in</h1>\r\n        <form (ngSubmit)=\"formSubmit()\">\r\n            <div class=\"\">\r\n                <span class=\"label\">Email address</span>\r\n                <input type=\"email\" name=\"email\" placeholder=\"Your e-mail address\" [(ngModel)]=\"data.email\" required>\r\n            </div>\r\n            <div class=\"\">\r\n                <span class=\"label\">Password</span>\r\n                <input type=\"password\" name=\"password\" placeholder=\"Your password\" [(ngModel)]=\"data.password\" required>\r\n            </div>\r\n            <div class=\"reminder\"><a href=\"#\">Forgot your password?</a></div>\r\n            <button type=\"submit\" class=\"button\">Sign in</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 685 */
