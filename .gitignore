@@ -1,4 +1,5 @@
 node_modules/*
 .sass-cache/*
 newsfeedsystem/*/_pycache_/*
+newsfeedsystem/*/*/_pycache_/*
 newsfeedsystem/db.sqlite
