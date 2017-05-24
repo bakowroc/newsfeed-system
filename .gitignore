@@ -1,6 +1,3 @@
 node_modules/*
 .sass-cache/*
-newsfeedsystem/*/_pycache_/*
-newsfeedsystem/*/api/_pycache_/*
-newsfeedsystem/*/angular/_pycache_/*
-newsfeedsystem/db.sqlite
+__pycache__/

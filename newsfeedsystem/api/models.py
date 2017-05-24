@@ -13,12 +13,20 @@ class User(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=20)
-    desc = models.CharField(max_length=120)
+    desc = models.TextField(default = '')
     date = models.DateTimeField('date published', default = timezone.now)
     author = models.ForeignKey('User', default= '')
+    tag = models.ForeignKey('Tag', default = '', null = True)
 
     def __str__(self):
-        return self.title;
+        return self.title
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 class Comment(models.Model):
