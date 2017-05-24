@@ -30,12 +30,13 @@ navbar {
                     &:last-child {
                         padding-right: 0;
                     }
-                    a {
+                    a,
+                    a:visited {
                         color: white;
                         float: left;
+                        text-decoration: none;
                         &:hover {
-                            color: #c3403d;
-                            text-decoration: none;
+                            color: #f2f2f2;
                         }
                         &.log-in {
                             color: #d4514e;
