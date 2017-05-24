@@ -7,3 +7,8 @@ import AppModule from './app/app.module';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+return this.http
+  .get('url')
+  .map((res: Response) => res.json()).subscribe((cos)=> return cos);
