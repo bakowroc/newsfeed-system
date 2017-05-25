@@ -1,14 +1,22 @@
 from rest_framework.generics import(
-                            ListAPIView,
-                            RetrieveAPIView,
-                            DestroyAPIView,
-                            UpdateAPIView,
-                            )
+                                CreateAPIView,
+                                ListAPIView,
+                                RetrieveAPIView,
+                                DestroyAPIView,
+                                UpdateAPIView,
+                                )
 
 
 from comments.models import Comment
-from comments.api.serializers import CommentSerializer, CommentDetailSerializer
+from comments.api.serializers import (
+                                CommentSerializer,
+                                CommentDetailSerializer,
+                                CommentCreateSerializer,
+                                )
 
+class CommentCreate(CreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentCreateSerializer
 
 class CommentDetail(RetrieveAPIView):
     queryset = Comment.objects.all()

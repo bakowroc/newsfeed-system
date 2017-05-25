@@ -1,8 +1,18 @@
 from rest_framework import serializers
 from users.models import User
 
+from groups.api.serializers import GroupSerializer
+
+class UserCreateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        exclude = ['date']
+
 
 class UserSerializer(serializers.ModelSerializer):
+
+    group = GroupSerializer()
 
     class Meta:
         model = User
@@ -12,6 +22,10 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserDetailSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = User
-            exclude = ('password', )
+
+    group = GroupSerializer()
+
+    class Meta:
+        model = User
+        exclude = ('password', )
+        depth = 1

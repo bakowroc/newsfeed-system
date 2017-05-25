@@ -1,13 +1,23 @@
 from rest_framework.generics import(
-                            ListAPIView,
-                            RetrieveAPIView,
-                            DestroyAPIView,
-                            UpdateAPIView,
-                            )
+                                CreateAPIView,
+                                ListAPIView,
+                                RetrieveAPIView,
+                                DestroyAPIView,
+                                UpdateAPIView,
+                                )
 
 
 from groups.models import Group
-from groups.api.serializers import GroupSerializer, GroupDetailSerializer
+from groups.api.serializers import (
+                                GroupSerializer,
+                                GroupDetailSerializer,
+                                GroupCreateSerializer,
+                                )
+
+                                
+class GroupCreate(CreateAPIView):
+    queryset = Group.objects.all()
+    serializer_class = GroupCreateSerializer
 
 
 class GroupDetail(RetrieveAPIView):

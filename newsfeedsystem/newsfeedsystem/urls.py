@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^api/groups/', include('groups.api.urls')),
     url(r'^api/news/', include('news.api.urls')),
     url(r'^api/users/', include('users.api.urls')),
-    url(r'', include('angular.urls'))
+    url(r'^', include('angular.urls'))
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
