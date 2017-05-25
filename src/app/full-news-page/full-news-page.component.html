@@ -16,16 +16,23 @@
     <div class="comments">
         <form name="comments">
             <textarea placeholder="Add comment..."></textarea>
-            <button type="submit">Submit</button>
+            <button type="submit">Ok</button>
         </form>
     </div>
+
     <div class="comments">
-        <table *ngFor="let com of comments">
-            <tr>
-                <td>{{com.author}}</td>
-                <td>{{com.date}}</td>
-            </tr>
-            <tr>{{com.content}}</tr>
-        </table>
+
+        <ul>
+            <h1>3 Comments</h1>
+            <li *ngFor="let com of comments">
+                <div class="com-header">
+                    <img src="/static/assets/user/1.png">
+                    <p>{{com.author}}</p>
+                    <span>{{com.date}}</span>
+                    <div class="com-content">{{com.content}}</div>
+                </div>
+
+            </li>
+        </ul>
     </div>
 </div>
