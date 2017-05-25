@@ -1,11 +1,16 @@
-<table>
-    <tr class="news-logo"><img src="{{singleNews.logo}}"></tr>
-    <div class="text">
-        <tr class="tag">{{singleNews.tag}}</tr>
-        <tr class="title">{{singleNews.title}}</tr>
-        <tr class="content">{{singleNews.desc}}</tr>
-    </div>
-    <div href="/" class="full-width-button-area">
-        <a href="/" class="button pull-right">Read more</a>
-    </div>
-</table>
+<div class="news-content">
+    <table>
+        <tr class="news-logo"><img src="/static/assets/news/{{singleNews.id}}.png"></tr>
+        <tbody>
+            <div class="text">
+
+                <tr class="tag">{{singleNews.tag}}</tr>
+                <tr class="title">{{singleNews.title}}</tr>
+                <tr class="content">{{singleNews.desc}}</tr>
+            </div>
+            <!--        <div href="/" class="full-width-button-area">-->
+            <a routerLink="news" class="button pull-right">Read more</a>
+            <!--        </div>-->
+        </tbody>
+    </table>
+</div>

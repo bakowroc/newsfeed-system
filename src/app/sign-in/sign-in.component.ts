@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
  
 
 @Component ({
@@ -8,5 +9,8 @@ import {Component} from '@angular/core';
 })
 
 export default class SignInComponent{
-    searchValue: string;
+    data = {};
+    formSubmit() {
+    console.log(this.data);
 } 
+}

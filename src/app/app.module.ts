@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routes } from './app.router';
 
 import AppComponent from './app.component'
@@ -14,6 +14,7 @@ import MainNewsComponent from './main-news/main-news.component'
 import WeatherComponent from './weather/weather.component'
 import NewsComponent from './news/news.component'
 import SingleNewsComponent from './news/single-news/single-news.component'
+import FullNewsPageComponent from './full-news-page/full-news-page.component'
 
 import { ApiService } from './services/api.service'
 
@@ -22,6 +23,7 @@ import { ApiService } from './services/api.service'
     imports: [
             BrowserModule,
             FormsModule,
+            ReactiveFormsModule,
             HttpModule,
             routes
            ],
@@ -35,7 +37,8 @@ import { ApiService } from './services/api.service'
                 MainNewsComponent,
                 WeatherComponent,
                 NewsComponent,
-                SingleNewsComponent
+                SingleNewsComponent,
+                FullNewsPageComponent,
 
                   ],
     providers: [
