@@ -1,17 +1,29 @@
-from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.generics import(
+                            ListAPIView,
+                            RetrieveAPIView,
+                            DestroyAPIView,
+                            UpdateAPIView,
+                            )
+
 
 from news.models import News
-from news.api.serializers import NewsSerializer
+from news.api.serializers import NewsSerializer, NewsDetailSerializer
 
-class NewsList(APIView):
 
-    def get(self, request):
-        news = News.objects.all()
-        serializer = NewsSerializer(news, many = True)
-        return Response(serializer.data)
+class NewsDetail(RetrieveAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsDetailSerializer
 
-    def post(self):
-        pass
+
+class NewsDestroy(DestroyAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsDetailSerializer
+
+class NewsList(ListAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
+
+
+class NewsUpdate(UpdateAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsDetailSerializer

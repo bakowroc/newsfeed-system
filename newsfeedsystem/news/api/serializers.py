@@ -8,6 +8,16 @@ class NewsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = News
-        # fields = ('title', 'desc', 'author')
+        fields = '__all__'
+        depth = 1
+
+
+
+class NewsDetailSerializer(serializers.ModelSerializer):
+
+    author = UserSerializer()
+
+    class Meta:
+        model = News
         fields = '__all__'
         depth = 1
