@@ -63158,6 +63158,7 @@ var main_news_component_1 = __webpack_require__(507);
 var weather_component_1 = __webpack_require__(511);
 var news_component_1 = __webpack_require__(509);
 var single_news_component_1 = __webpack_require__(510);
+var full_news_page_component_1 = __webpack_require__(728);
 var api_service_1 = __webpack_require__(372);
 var AppModule = (function () {
     function AppModule() {
@@ -63183,7 +63184,8 @@ AppModule = __decorate([
             main_news_component_1.default,
             weather_component_1.default,
             news_component_1.default,
-            single_news_component_1.default
+            single_news_component_1.default,
+            full_news_page_component_1.default,
         ],
         providers: [
             api_service_1.ApiService
@@ -80442,12 +80444,14 @@ var main_page_component_1 = __webpack_require__(339);
 var about_component_1 = __webpack_require__(338);
 var trending_component_1 = __webpack_require__(341);
 var sign_in_component_1 = __webpack_require__(340);
+var full_news_page_component_1 = __webpack_require__(728);
 exports.router = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: '', component: main_page_component_1.default },
     { path: 'about', component: about_component_1.default },
     { path: 'trending', component: trending_component_1.default },
-    { path: 'sign-in', component: sign_in_component_1.default }
+    { path: 'sign-in', component: sign_in_component_1.default },
+    { path: 'news', component: full_news_page_component_1.default }
 ];
 exports.routes = router_1.RouterModule.forRoot(exports.router);
 
@@ -80578,7 +80582,7 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-4\" *ngFor=\"le
 /* 683 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"news-content\">\r\n    <table>\r\n        <tr class=\"news-logo\"><img src=\"/static/assets/news/{{singleNews.id}}.png\"></tr>\r\n        <tbody>\r\n            <div class=\"text\">\r\n\r\n                <tr class=\"tag\">{{singleNews.tag}}</tr>\r\n                <tr class=\"title\">{{singleNews.title}}</tr>\r\n                <tr class=\"content\">{{singleNews.desc}}</tr>\r\n            </div>\r\n            <!--        <div href=\"/\" class=\"full-width-button-area\">-->\r\n            <a href=\"/\" class=\"button pull-right\">Read more</a>\r\n            <!--        </div>-->\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
+module.exports = "<div class=\"news-content\">\r\n    <table>\r\n        <tr class=\"news-logo\"><img src=\"/static/assets/news/{{singleNews.id}}.png\"></tr>\r\n        <tbody>\r\n            <div class=\"text\">\r\n\r\n                <tr class=\"tag\">{{singleNews.tag}}</tr>\r\n                <tr class=\"title\">{{singleNews.title}}</tr>\r\n                <tr class=\"content\">{{singleNews.desc}}</tr>\r\n            </div>\r\n            <!--        <div href=\"/\" class=\"full-width-button-area\">-->\r\n            <a routerLink=\"news\" class=\"button pull-right\">Read more</a>\r\n            <!--        </div>-->\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
 
 /***/ }),
 /* 684 */
@@ -82372,6 +82376,97 @@ if(false) {
 
 
         var result = __webpack_require__(716);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 727 */,
+/* 728 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = __webpack_require__(0);
+var FullNewsPageComponent = (function () {
+    function FullNewsPageComponent() {
+    }
+    return FullNewsPageComponent;
+}());
+FullNewsPageComponent = __decorate([
+    core_1.Component({
+        selector: 'full-news-page',
+        template: __webpack_require__(730),
+        styles: [__webpack_require__(732)]
+    }),
+    __metadata("design:paramtypes", [])
+], FullNewsPageComponent);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = FullNewsPageComponent;
+
+
+/***/ }),
+/* 729 */
+/***/ (function(module, exports) {
+
+module.exports = "/*\r\n    colors\r\n*/\n/*\r\n    font-sizes\r\n*/\n/*\r\n    z-index \r\n*/\nfull-news-page .news-content {\n  position: relative;\n  margin: 0 auto;\n  background-color: white;\n  width: 80%;\n  margin-top: 13px;\n  padding-bottom: 13px;\n  text-align: left;\n  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);\n  border-radius: 3px; }\n  full-news-page .news-content .news-logo {\n    float: left;\n    padding: 0;\n    width: 100%; }\n    full-news-page .news-content .news-logo img {\n      height: 450px;\n      width: 100%; }\n  full-news-page .news-content .text {\n    padding-left: 15px;\n    padding-right: 15px;\n    padding-top: 5px;\n    float: right; }\n    full-news-page .news-content .text .title {\n      color: gray;\n      font-size: 20px; }\n    full-news-page .news-content .text .tag {\n      color: #ccc;\n      font-size: 15px;\n      text-transform: uppercase; }\n    full-news-page .news-content .text .content {\n      text-align: justify;\n      font-size: 16px;\n      color: darkgray;\n      display: block;\n      margin-bottom: 15px; }\n"
+
+/***/ }),
+/* 730 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"news-content\">\r\n        <table>\r\n            <tr class=\"news-logo\"><img src=\"/static/assets/news/logo.png\"></tr>\r\n            <tbody>\r\n                <div class=\"text\">\r\n\r\n                    <tr class=\"tag\">Tag</tr>\r\n                    <tr class=\"title\">Tytuł</tr>\r\n                    <tr class=\"content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisl nunc, molestie et elementum at, placerat ac enim. Duis ornare quam risus, nec aliquet mauris aliquam ut. Praesent odio orci, sagittis sit amet magna quis, sodales hendrerit ex. Maecenas aliquam suscipit velit, porttitor vestibulum libero commodo sed. Vivamus commodo luctus nulla, id facilisis sem porttitor in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vehicula tellus odio, vel varius ipsum pulvinar a. Maecenas nec dolor in justo placerat porttitor sit amet eget dolor. Ut eget ligula ligula. Nulla leo justo, pharetra quis luctus ut, sodales id est. Nullam tincidunt ultrices quam, id gravida nibh posuere at. Praesent quis venenatis massa, ut pellentesque ex. Sed aliquet, nisi et vestibulum commodo, velit magna rhoncus eros, eu tristique tellus mi eu diam. Proin hendrerit pretium justo sed tempus. In hac habitasse platea dictumst. Quisque volutpat ut metus et tristique. Quisque vitae est dui. Vestibulum lacus nisi, faucibus eget venenatis in, bibendum eleifend quam. Nam a porta nunc, sed accumsan felis. Phasellus eu neque in odio venenatis tempor. Maecenas suscipit, magna ut consectetur sagittis, justo nunc gravida erat, id congue urna tortor ut quam. Fusce hendrerit tellus libero. Cras tempor nisi vel scelerisque scelerisque. Pellentesque bibendum massa ut diam bibendum, mattis elementum nibh rhoncus. Vivamus ornare erat sit amet orci iaculis, quis condimentum lorem dictum. Integer nec commodo velit. Pellentesque eget velit vitae ipsum egestas tincidunt. Suspendisse efficitur nulla magna, sit amet aliquet ante aliquam consequat. Nunc aliquam commodo arcu, sit amet porttitor ante cursus eget. Nunc diam dolor, viverra vel sapien et, egestas condimentum erat. Etiam quis bibendum dui. Aliquam sollicitudin maximus efficitur. Donec ultrices orci felis, nec fringilla risus tempus eget. Nam lobortis accumsan vestibulum. In nec aliquam nisl. Cras laoreet elit quis nulla pharetra blandit. Donec tempus elit at urna luctus, in feugiat erat vulputate. Nullam sollicitudin, magna sed pellentesque auctor, massa orci aliquam dui, eu porttitor felis turpis dapibus nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec elit justo, cursus eget ipsum quis, elementum sodales nisi. Praesent vel lorem at dui efficitur gravida. Nunc dictum ipsum non ante egestas, at finibus tortor sodales. Suspendisse nec mattis arcu. Suspendisse facilisis odio at felis tristique, nec commodo elit tristique. Donec finibus dapibus diam. Curabitur est arcu, congue quis tellus at, sollicitudin dictum lectus. Morbi tempus cursus lacus vitae mattis.</tr>\r\n                </div>\r\n            </tbody>\r\n\r\n        </table>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+/* 731 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(729);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(24)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./full-news-page.component.scss", function() {
+			var newContent = require("!!../../../node_modules/raw-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"./src/assets/scss/variables.scss\",\"./src/assets/scss/mixins.scss\"]}!./full-news-page.component.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 732 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(731);
 
         if (typeof result === "string") {
             module.exports = result;

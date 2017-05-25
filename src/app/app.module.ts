@@ -14,6 +14,7 @@ import MainNewsComponent from './main-news/main-news.component'
 import WeatherComponent from './weather/weather.component'
 import NewsComponent from './news/news.component'
 import SingleNewsComponent from './news/single-news/single-news.component'
+import FullNewsPageComponent from './full-news-page/full-news-page.component'
 
 import { ApiService } from './services/api.service'
 
@@ -36,7 +37,8 @@ import { ApiService } from './services/api.service'
                 MainNewsComponent,
                 WeatherComponent,
                 NewsComponent,
-                SingleNewsComponent
+                SingleNewsComponent,
+                FullNewsPageComponent,
 
                   ],
     providers: [
