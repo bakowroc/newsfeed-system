@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'api.apps.ApiConfig',
+    'comments.apps.CommentsConfig',
+    'groups.apps.GroupsConfig',
+    'marks.apps.MarksConfig',
+    'news.apps.NewsConfig',
+    'tags.apps.TagsConfig',
+    'users.apps.UsersConfig',
     'angular.apps.AngularConfig'
 ]
 
@@ -133,7 +138,7 @@ STATICFILES_DIRS = [
     os.path.abspath(os.path.join(
             BASE_DIR, '..', 'dist')),
     os.path.abspath(os.path.join(
-            BASE_DIR, '..', 'src')), 
+            BASE_DIR, '..', 'src')),
     os.path.abspath(os.path.join(
             BASE_DIR, '..', 'node_modules'))
     ]
