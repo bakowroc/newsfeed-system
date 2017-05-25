@@ -1,5 +1,5 @@
 full-news-page {
-    .comments {
+    .news-page {
         width: 80%;
         margin: 0 auto;
         h1 {
@@ -44,7 +44,7 @@ full-news-page {
             margin-top: 13px;
             padding: 0;
         }
-        .com-header {
+        .header {
             width: 100%;
             border-radius: 3px;
             padding-bottom: 13px;
@@ -89,7 +89,7 @@ full-news-page {
                     text-transform: uppercase;
                 }
             }
-            .com-content {
+            .content {
                 width: 100%;
                 margin-top: 5px;
                 text-align: justify;
