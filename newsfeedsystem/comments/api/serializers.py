@@ -12,3 +12,12 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = '__all__'
         depth = 1
+
+
+class CommentDetailSerializer(serializers.ModelSerializer):
+
+    author = UserSerializer()
+
+    class Meta:
+        model = Comment
+        depth = 1

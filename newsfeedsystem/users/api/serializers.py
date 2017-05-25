@@ -9,3 +9,9 @@ class UserSerializer(serializers.ModelSerializer):
         #fields = '__all__'
         exclude = ('password', )
         depth = 1
+
+
+class UserDetailSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = User
+            exclude = ('password', )

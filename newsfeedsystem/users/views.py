@@ -1,15 +1,13 @@
-from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 
 from users.models import User
-from users.api.serializers import UserSerializer
+from users.api.serializers import UserSerializer, UserDetailSerializer
 
 
-class UserList(APIView):
+class UserList(ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
-    def get(self, request):
-        users = User.objects.all()
-        serializer = UserSerializer(users, many = True)
-        return Response(serializer.data)
+class UserDetail(RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserDetailSerializer

@@ -1,15 +1,14 @@
-from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 
 from groups.models import Group
-from groups.api.serializers import GroupSerializer
+from groups.api.serializers import GroupSerializer, GroupDetailSerializer
 
 
-class GroupList(APIView):
+class GroupList(ListAPIView):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
 
-    def get(self, request):
-        groups = Group.objects.all()
-        serializer = GroupSerializer(groups, many = True)
-        return Response(serializer.data)
+
+class GroupDetail(RetrieveAPIView):
+    queryset = Group.objects.all()
+    serializer_class = GroupDetailSerializer

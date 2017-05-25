@@ -1,15 +1,20 @@
-from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.generics import(
+                            ListAPIView,
+                            RetrieveAPIView,
+                            DestroyAPIView,
+                            UpdateAPIView,
+                            )
+
 
 from comments.models import Comment
-from comments.api.serializers import CommentSerializer
+from comments.api.serializers import CommentSerializer, CommentDetailSerializer
 
 
-class CommentList(APIView):
+class CommentList(ListAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 
-    def get(self, request):
-        comments = Comment.object.all()
-        serializer = CommentSerializer(comments, many = True)
-        return Response(serializer.data)
+
+class CommentDetail(RetrieveAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentDetailSerializer
