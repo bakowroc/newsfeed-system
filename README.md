@@ -48,11 +48,12 @@ Following API routes are available:
 
 
 | **Request**  | **Path**  |
-|GET|/api/<table_name>/|
-|GET|/api/<table_name>/<id>/|
-|POST|/api/<table_name>/create/|
-|PUT, UPDATE|/api/<table_name>/update/|
-|DELETE|/api/<table_name>/destroy/|
+|-------------|---------------------------|
+| GET  | /api/`table_name`/ |
+| GET| /api/`table_name`/`id`/ |
+| POST | /api/`table_name`/create/ |
+| PUT, UPDATE | /api/`table_name`/update/ |
+| DELETE | /api/`table_name`/destroy/ |
 
 
 The output is in JSON format.
