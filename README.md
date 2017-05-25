@@ -41,26 +41,18 @@ Except angular following extensions are needed:
 - ES6
 - Webpack
 
-Well, typescript and ES6 are just "remanagement" of common javascript code. You write clean, clear and wonderful code with modules, imports and everything which every MODERN language should have. You write a poem, but it's not readable for those crappy tools, which called themsleves a browser. So we need a webpack to retranslate it just for our browser. Poor browser.
 
-##### How to use webpack
-Well, webpack is a great tool for every sized project, it's easy to manage, it's easy to work with. But it has it's own lectures, and you need to know them. Not all of them, but some, Just to now how to us it.
-I mean, it's pretty easy here, you just type
+###### API routes
 
->webpack -w
-
-and webpack is watching your files during your work. But what if you want to add some extension or use a widget or whatever? It's a little bit more complicated than this, so please, make yourself sure you'd understand the subject, because I don't want to answer every stupid question ten times a day. I've got life. I hope you either. Save your time by lecture. And mine too.
-
-##### Tutorials just for you, straight from the Internet
+Following API routes are available:
 
 
-###### Webpack
+| **Request**  | **Path**  |
+|GET|/api/<table_name>/|
+|GET|/api/<table_name>/<id>/|
+|POST|/api/<table_name>/create/|
+|PUT, UPDATE|/api/<table_name>/update/|
+|DELETE|/api/<table_name>/destroy/|
 
-To make sure you now how it looks like: https://www.youtube.com/watch?v=9kJVYpOqcVU
-And this should be edited like this: https://www.youtube.com/watch?v=U2kCjkxPMuM
 
-###### Typescript
-
-The beauty: https://www.youtube.com/watch?v=Mh5VQVfWTbs
-
-And remember. Those are just *examples*. There are bunches of videos about that. You just have to keep learning and write a code by yourself.
+The output is in JSON format.
