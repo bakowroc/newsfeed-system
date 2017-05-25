@@ -19,4 +19,13 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <div class="comments">
+        <table *ngFor="let com of comments">
+            <tr>
+                <td>{{com.author}}</td>
+                <td>{{com.date}}</td>
+            </tr>
+            <tr>{{com.content}}</tr>
+        </table>
+    </div>
 </div>
