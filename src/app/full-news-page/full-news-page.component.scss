@@ -1,9 +1,9 @@
 full-news-page {
     .news-content {
+        width: 80%;
         position: relative;
         margin: 0 auto;
         background-color: white;
-        width: 80%;
         margin-top: 13px;
         padding-bottom: 13px;
         text-align: left;
@@ -38,6 +38,36 @@ full-news-page {
                 color: darkgray;
                 display: block;
                 margin-bottom: 15px;
+            }
+        }
+    }
+    .comments {
+        form {
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            text-align: left;
+            box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.20);
+            border-radius: 3px;
+            textarea {
+                margin-top: 13px;
+                padding: 20px;
+                width: 100%;
+            }
+            button {
+                margin-top: 13px;
+                padding: 15px;
+                float: right;
+                border: none;
+                text-align: center;
+                color: #fff;
+                background-color: #008CBA;
+                font-size: 16px;
+                font-weight: 500;
+                right: 25px;
+                bottom: 25px;
+                border-radius: 3px;
+                text-decoration: none;
             }
         }
     }
