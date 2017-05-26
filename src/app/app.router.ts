@@ -6,7 +6,7 @@ import MainPageComponent from './main-page/main-page.component';
 import AboutComponent from './about/about.component';
 import TrendingComponent from './trending/trending.component';
 import SignInComponent from './sign-in/sign-in.component';
-import FullNewsPageComponent from './full-news-page/full-news-page.component';
+import NewsPageComponent from './news-page/news-page.component';
 
 export const router: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full'},
@@ -14,7 +14,7 @@ export const router: Routes = [
     { path: 'about', component: AboutComponent},
     { path: 'trending', component: TrendingComponent},
     { path: 'sign-in', component: SignInComponent},
-    { path: 'news', component: FullNewsPageComponent}
+    { path: 'news', component: NewsPageComponent}
 
 ];
 
