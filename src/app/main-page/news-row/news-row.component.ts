@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../services/api.service';
  
 
 @Component ({
-    selector: 'news',
-    templateUrl: './news.component.html',
-    styleUrls: ['./news.component.scss']
+    selector: 'news-row',
+    templateUrl: './news-row.component.html',
+    styleUrls: ['./news-row.component.scss']
 })
 
-export default class NewsComponent implements OnInit{
+export default class NewsRowComponent implements OnInit{
     news: any;
     
     constructor(private api: ApiService){}

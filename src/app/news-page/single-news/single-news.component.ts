@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
- 
+import {Component, Input, OnInit} from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component ({
     selector: 'single-news',
@@ -8,5 +8,5 @@ import {Component, Input} from '@angular/core';
 })
 
 export default class SingleNewsComponent {
-    @Input() singleNews: Object;
-}
+    searchValue: string;
+} 

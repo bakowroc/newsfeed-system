@@ -1,0 +1,8 @@
+single-comment {
+    .header {
+        @include li-header;
+    }
+    .content {
+        @include content;
+    }
+}

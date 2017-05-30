@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../services/api.service';
 
 @Component ({
-    selector: 'full-news-page',
-    templateUrl: './full-news-page.component.html',
-    styleUrls: ['./full-news-page.component.scss']
+    selector: 'comments',
+    templateUrl: './comments.component.html',
+    styleUrls: ['./comments.component.scss']
 })
 
-export default class FullNewsPageComponent implements OnInit{
+export default class CommentsComponent implements OnInit{
     comments: Array<Object>;
     
     
