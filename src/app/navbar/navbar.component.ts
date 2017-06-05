@@ -1,5 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
  
+import SignInComponent from '../sign-in/sign-in.component'
+
 @Component ({
     selector: 'navbar',
     templateUrl: './navbar.component.html',
@@ -22,4 +24,5 @@ export default class NavbarComponent implements OnInit{
             }
         ]
     }
+
 } 

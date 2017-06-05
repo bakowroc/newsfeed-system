@@ -12,10 +12,11 @@ export default class SignInComponent{
     data = {};
     formSubmit() {
     console.log(this.data);
-} 
+    } 
  //   @Input() logIn: String;
     logIn: any = true;
-    onClick(){
+    close(){
     this.logIn = false;
-}
+    }
+  
 }
