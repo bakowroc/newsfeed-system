@@ -4,6 +4,7 @@ navbar {
         height: 60px;
         width: 100%;
         display: block;
+        box-shadow: 0px -2px 10px lighten(#888, 5%);
         .logo {
             float: left;
             height: 100%;
@@ -40,6 +41,7 @@ navbar {
                         }
                         &.log-in {
                             color: #d4514e;
+                            font-weight: 600;
                             &:hover {
                                 color: #c3403d;
                             }

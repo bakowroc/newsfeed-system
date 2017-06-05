@@ -8,5 +8,6 @@ import {Component} from '@angular/core';
 })
 
 export default class AppComponent{
-    searchValue: string;
+ //  logIn: any = false;
+    
 } 

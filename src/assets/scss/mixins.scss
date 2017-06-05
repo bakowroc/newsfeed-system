@@ -90,8 +90,8 @@
     float: left;
     img {
         float: left;
-        width: 100px;
-        height: 100px;
+        width: 65px;
+        height: 65px;
         border-radius: 100%;
         margin-right: 15px;
     }
@@ -113,7 +113,7 @@
 @mixin content {
     width: 100%;
     margin-top: 5px;
-    text-align: justify;
+    text-align: left;
     font-size: 17px;
     padding: 5px;
 }

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
  
 
@@ -13,4 +13,9 @@ export default class SignInComponent{
     formSubmit() {
     console.log(this.data);
 } 
+ //   @Input() logIn: String;
+    logIn: any = true;
+    onClick(){
+    this.logIn = false;
+}
 }

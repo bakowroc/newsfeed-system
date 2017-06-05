@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
  
-
 @Component ({
     selector: 'navbar',
     templateUrl: './navbar.component.html',
@@ -9,8 +8,6 @@ import {Component, OnInit} from '@angular/core';
 
 export default class NavbarComponent implements OnInit{
     menu: Array<Object>;
-    
-    
     constructor(){}
     ngOnInit(){
         this.menu = [
@@ -22,11 +19,7 @@ export default class NavbarComponent implements OnInit{
             },  
             {
                 name: 'About us', link: 'about', class: ''
-            },  
-            {
-                name: 'Sign in', link: 'sign-in', class: 'log-in'
             }
-            
         ]
     }
 } 

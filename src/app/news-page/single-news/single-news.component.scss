@@ -1,11 +1,8 @@
 single-news {
     .single-news {
-        width: 80%;
-        margin: 0 auto;
         @include ul;
         .header {
             @include li-header;
-            background-color: #fff;
             box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.20);
             img {
                 border-radius: 3px;
