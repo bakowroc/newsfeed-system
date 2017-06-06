@@ -1,6 +1,7 @@
-sign-in {
-    .log-in-form {
+register {
+    .register-form {
         @include popup;
+        height: 350px;
         h1 {
             font-size: 25px;
         }

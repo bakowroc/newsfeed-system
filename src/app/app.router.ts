@@ -6,6 +6,7 @@ import MainPageComponent from './main-page/main-page.component';
 import AboutComponent from './about/about.component';
 import TrendingComponent from './trending/trending.component';
 import SignInComponent from './sign-in/sign-in.component';
+import RegisterComponent from './register/register.component';
 import NewsPageComponent from './news-page/news-page.component';
 
 export const router: Routes = [
@@ -14,6 +15,7 @@ export const router: Routes = [
     { path: 'about', component: AboutComponent},
     { path: 'trending', component: TrendingComponent},
     { path: 'sign-in', component: SignInComponent},
+    { path: 'register', component: RegisterComponent},
     { path: 'news', component: NewsPageComponent}
 
 ];

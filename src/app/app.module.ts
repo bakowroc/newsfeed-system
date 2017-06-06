@@ -15,6 +15,7 @@ import NavbarComponent from './navbar/navbar.component'
 import AboutComponent from './about/about.component'
 import TrendingComponent from './trending/trending.component'
 import SignInComponent from './sign-in/sign-in.component'
+import RegisterComponent from './register/register.component'
 
 
 import NewsPageComponent from './news-page/news-page.component'
@@ -43,6 +44,7 @@ import { ApiService } from './services/api.service'
                 AboutComponent,
                 TrendingComponent,
                 SignInComponent,
+                RegisterComponent,
                 NewsRowComponent,
                 MiniNewsComponent,
                 NewsPageComponent,

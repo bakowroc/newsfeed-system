@@ -9,11 +9,11 @@ mini-news {
                 width: 100%;
             }
         }
-        background-color: white;
+        //  background-color: white;
         float: left;
         width: 100%;
         max-height: 470px;
-        overflow-y: scroll;
+        // overflow-y: scroll;
         //        overflow: hidden;
         //        text-overflow: ellipsis;
         margin-top: 13px;
@@ -54,10 +54,9 @@ mini-news {
         .button {
             float: right;
             color: #fff;
-            padding: 12px;
+            padding: 10px;
             background-color: #f65753;
-            right: 25px;
-            bottom: 10px;
+            margin-right: 2%;
             border-radius: 3px;
             text-decoration: none;
         }

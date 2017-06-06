@@ -1,7 +1,11 @@
 <div class="col-lg-12">
-    <div class="log-in-form" *ngIf="logIn==true">
-        <h1>Sign in</h1>
+    <div class="register-form" *ngIf="signUp==true">
+        <h1>Sign up</h1>
         <form (ngSubmit)="formSubmit()">
+            <div class="">
+                <span class="label">Username</span>
+                <input type="text" name="username" placeholder="Your username" [(ngModel)]="data.username" required>
+            </div>
             <div class="">
                 <span class="label">Email address</span>
                 <input type="email" name="email" placeholder="Your e-mail address" [(ngModel)]="data.email" required>
@@ -10,9 +14,8 @@
                 <span class="label">Password</span>
                 <input type="password" name="password" placeholder="Your password" [(ngModel)]="data.password" required>
             </div>
-            <div class="reminder"><a routerLink="../register">Forgot your password?</a></div>
-            <button type="submit" class="button">Sign in</button>
+            <button type="submit" class="button">Register</button>
         </form>
     </div>
-    <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>
+    <div class="popup-bg" *ngIf="signUp==true" (click)="close()"></div>
 </div>
