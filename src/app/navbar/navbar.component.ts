@@ -21,6 +21,12 @@ export default class NavbarComponent implements OnInit{
             },  
             {
                 name: 'About us', link: 'about', class: ''
+            },
+            {
+                name: '*management panel*', link: 'manage', class: 'temporary'
+            },
+            {
+                name: '*user-settings*', link: 'settings', class: 'temporary snd'
             }
         ]
     }
