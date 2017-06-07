@@ -14,5 +14,6 @@
             <button type="submit" class="button">Sign in</button>
         </form>
     </div>
-    <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>
+    <!-- <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>-->
+    <a class="popup-bg" *ngIf="logIn==true" routerLink="/"></a>
 </div>

@@ -2,11 +2,8 @@
     <table>
         <tr class="news-logo"><img src="/static/assets/news/{{miniNews.id}}.png"></tr>
         <div class="text">
-
             <tr class="tag">{{miniNews.tag}}</tr>
-            <tr class="title">{{miniNews.title}}</tr>
-            <tr class="content">{{miniNews.desc}}</tr>
+            <tr class="title"><a routerLink="news">{{miniNews.title}}</a></tr>
         </div>
-        <a routerLink="news" class="button pull-right">Read more</a>
     </table>
 </div>
