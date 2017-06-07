@@ -16,6 +16,8 @@ import AboutComponent from './about/about.component'
 import TrendingComponent from './trending/trending.component'
 import SignInComponent from './sign-in/sign-in.component'
 import RegisterComponent from './register/register.component'
+import ManageComponent from './manage/manage.component'
+import SettingsComponent from './settings/settings.component'
 
 
 import NewsPageComponent from './news-page/news-page.component'
@@ -45,6 +47,8 @@ import { ApiService } from './services/api.service'
                 TrendingComponent,
                 SignInComponent,
                 RegisterComponent,
+                ManageComponent,
+                SettingsComponent,
                 NewsRowComponent,
                 MiniNewsComponent,
                 NewsPageComponent,

@@ -8,6 +8,8 @@ import TrendingComponent from './trending/trending.component';
 import SignInComponent from './sign-in/sign-in.component';
 import RegisterComponent from './register/register.component';
 import NewsPageComponent from './news-page/news-page.component';
+import ManageComponent from './manage/manage.component';
+import SettingsComponent from './settings/settings.component';
 
 export const router: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full'},
@@ -16,7 +18,9 @@ export const router: Routes = [
     { path: 'trending', component: TrendingComponent},
     { path: 'sign-in', component: SignInComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'news', component: NewsPageComponent}
+    { path: 'news', component: NewsPageComponent},
+    { path: 'manage', component: ManageComponent},
+    { path: 'settings', component: SettingsComponent}
 
 ];
 

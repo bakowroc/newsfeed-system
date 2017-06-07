@@ -1,0 +1,38 @@
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <!-- <form name="avatar" novalidate>-->
+    <!-- <div class="col-lg-4">-->
+    <div class="userForm">
+        <div class="avatar">
+            <img src="/static/assets/user/1.png">
+        </div>
+        <div class="avatar"><input type="file" required></div>
+        <button type="submit" class="button">OK</button>
+        <!-- </form>-->
+    </div>
+    <!-- </div>-->
+    <!--  <div class="col-lg-8">-->
+    <div class="userForm form">
+        <form name="user" (ngSubmit)="formSubmit()" novalidate>
+            <h1>Account settings</h1>
+
+            <span class="label">Username: </span>
+            <input type="text" name="username" required>
+
+            <span class="label">Email Address: </span>
+            <input type="email" name="email" required>
+
+            <span class="label">Group: </span>
+            <input type="text" required>
+
+            <span class="label">Change password: </span>
+            <input type="password" placeholder="Set new password">
+            <input type="password" placeholder="Confirm new password">
+
+            <span class="label">Confirm changes: </span>
+            <input type="password" name="password" placeholder="Enter current password" required>
+
+            <button type="submit" class="button">OK</button>
+        </form>
+    </div>
+    <!--</div>-->
+</div>

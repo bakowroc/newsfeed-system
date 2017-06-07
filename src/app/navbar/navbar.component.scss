@@ -46,6 +46,16 @@ navbar {
                                 color: #c3403d;
                             }
                         }
+                        &.temporary {
+                            font-size: 10px;
+                            color: #a8a8a8;
+                            position: absolute;
+                            top: 15px;
+                            right: 10px;
+                            &.snd {
+                                top: 35px;
+                            }
+                        }
                     }
                 }
             }
