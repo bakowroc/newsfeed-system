@@ -6,7 +6,7 @@ class NewsCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = News
-        exclude = ['date']
+        exclude = ['date', 'author']
 
 
 class NewsSerializer(serializers.ModelSerializer):

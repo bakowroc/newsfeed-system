@@ -142,3 +142,18 @@ STATICFILES_DIRS = [
     os.path.abspath(os.path.join(
             BASE_DIR, '..', 'node_modules'))
     ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERED_CLASSES':(
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer'
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        #'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.BasicAuthentication'
+    ),
+    'DEFAULT_PERMISSIONS_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}

@@ -7,17 +7,26 @@ from rest_framework.generics import(
                                 )
 
 
-from groups.models import Group
+from rest_framework.permissions import (
+                            AllowAny,
+                            IsAuthenticated,
+                            IsAdminUser,
+                            IsAuthenticatedOrReadOnly
+)
+
+
+from django.contrib.auth.models import Group
 from groups.api.serializers import (
                                 GroupSerializer,
                                 GroupDetailSerializer,
                                 GroupCreateSerializer,
                                 )
 
-                                
+
 class GroupCreate(CreateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupCreateSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class GroupDetail(RetrieveAPIView):
@@ -28,6 +37,7 @@ class GroupDetail(RetrieveAPIView):
 class GroupDestroy(DestroyAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupDetailSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class GroupList(ListAPIView):
@@ -38,3 +48,4 @@ class GroupList(ListAPIView):
 class GroupUpdate(UpdateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupDetailSerializer
+    permission_classes = [IsAuthenticated]

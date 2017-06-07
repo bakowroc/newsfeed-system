@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 from news.models import News
-from users.models import User
+from django.contrib.auth.models import User
 
 class Comment(models.Model):
     content = models.TextField(default='')

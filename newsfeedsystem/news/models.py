@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-from users.models import User
+from django.contrib.auth.models import User
 from tags.models import Tag
 
 class News(models.Model):
@@ -13,3 +13,5 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+    
