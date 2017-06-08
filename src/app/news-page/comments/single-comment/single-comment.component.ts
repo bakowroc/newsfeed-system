@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
- 
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component ({
     selector: 'single-comment',
@@ -7,6 +7,12 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./single-comment.component.scss']
 })
 
-export default class SingleCommentComponent{
-    @Input() com: Object;
-} 
+export default class SingleCommentComponent implements OnInit{
+
+    @Input()
+        comment: Object;
+
+    constructor(){}
+
+    ngOnInit(){}
+}

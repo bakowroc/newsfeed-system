@@ -1,6 +1,6 @@
 <div class="comments">
-    <form name="comments">
-        <textarea placeholder="Add comment..."></textarea>
+    <form name="comments" (ngSubmit) = "addComment()" novalidate>
+        <textarea placeholder="Add comment..." required></textarea>
         <button type="submit">OK</button>
     </form>
 </div>

@@ -1,12 +1,12 @@
-<div class="single-news" *ngIf = 'ready'>
+<div class="single-news" *ngIf = "SingleNews">
     <ul>
         <li>
             <div class="header">
                 <img src="/static/assets/news/logo.png">
-                <p>{{SingleNews}}</p>
-                <span></span>
+                <p>{{SingleNews.title}}</p>
+                <span>{{SingleNews.tag.name}}</span>
                 <div class="content">
-                    {{SingleNews}}
+                    {{SingleNews.desc}}
                 </div>
             </div>
             <li>

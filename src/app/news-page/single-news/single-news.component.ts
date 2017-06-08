@@ -14,7 +14,6 @@ export default class SingleNewsComponent implements OnInit, OnChanges {
     @Input()
         SingleNews: any = {};
 
-    ready: Boolean = false;
     constructor(){}
 
     ngOnInit() {
@@ -23,7 +22,6 @@ export default class SingleNewsComponent implements OnInit, OnChanges {
 
     ngOnChanges(){
         console.log(this.SingleNews);
-        this.ready = true;
     }
 
 }
