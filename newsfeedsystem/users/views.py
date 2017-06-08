@@ -10,8 +10,7 @@ from rest_framework.generics import(
                             DestroyAPIView,
                             UpdateAPIView,
                             )
-
-
+from users.api.permissions import IsHimOrIsAdminUser
 from rest_framework.permissions import (
                             AllowAny,
                             IsAuthenticated,
@@ -20,7 +19,7 @@ from rest_framework.permissions import (
 )
 
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth import login, authenticate
 
 from users.api.serializers import (
@@ -33,29 +32,42 @@ from users.api.serializers import (
 class UserCreate(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreateSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
+
+    def perform_create(self, serializer):
+        serializer.save(is_active = False)
+        serializer.save(groups = Group.objects.filter_by(id=1))
 
 
 class UserDetail(RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserDetailSerializer
+    permission_classes = [AllowAny]
 
 
 class UserDestroy(DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserDetailSerializer
-    permission_classes = [IsAuthenticated]
-
+    permission_classes =[IsAdminUser]
 
 class UserList(ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [AllowAny]
 
 
 class UserUpdate(UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserDetailSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsHimOrIsAdminUser]
+
+class UserCurrent(APIView):
+
+    serializer_class = UserDetailSerializer
+
+    def get(self, request, *args, **kwargs):
+        serializer = UserDetailSerializer(request.user)
+        return Response(serializer.data)
 
 
 class UserLogin(APIView):
@@ -70,11 +82,3 @@ class UserLogin(APIView):
             new_data = serializer.data
             return Response(new_data, status=HTTP_200_OK)
         return Response(serializer.errors, status = HTTP_400_BAD_REQUEST)
-
-    def login_user(request):
-        username = request.data['username']
-        password = request.data['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            # Redirect to a success page.

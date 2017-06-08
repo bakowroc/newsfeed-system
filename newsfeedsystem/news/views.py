@@ -6,6 +6,7 @@ from rest_framework.generics import (
                             UpdateAPIView,
                             )
 
+from news.api.permissions import IsNewsManager
 from rest_framework.permissions import (
                             AllowAny,
                             IsAuthenticated,
@@ -25,7 +26,7 @@ from news.api.serializers import (
 class NewsCreate(CreateAPIView):
     queryset = News.objects.all()
     serializer_class = NewsCreateSerializer
-    permission_classes = []
+    permission_classes = [IsNewsManager]
 
     def perform_create(self, serializer):
         serializer.save(author = self.request.user)
@@ -40,7 +41,8 @@ class NewsDetail(RetrieveAPIView):
 class NewsDestroy(DestroyAPIView):
     queryset = News.objects.all()
     serializer_class = NewsDetailSerializer
-    permission_classes = []
+    permission_classes = [IsNewsManager]
+
 
 class NewsList(ListAPIView):
     queryset = News.objects.all()
@@ -51,4 +53,4 @@ class NewsList(ListAPIView):
 class NewsUpdate(UpdateAPIView):
     queryset = News.objects.all()
     serializer_class = NewsDetailSerializer
-    permission_classes = []
+    permission_classes = [IsNewsManager]

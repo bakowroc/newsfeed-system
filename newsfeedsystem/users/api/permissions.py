@@ -1,7 +1,7 @@
 from rest_framework.permissions import BasePermission
 
-class IsOwner(BasePermission):
-    message = 'You must be the owner of this comment'
+class IsHimOrIsAdminUser(BasePermission):
+    message = 'It\'s not your account'
     safe_method = ['PUT']
 
     def has_permission(self, request, view):
@@ -10,6 +10,6 @@ class IsOwner(BasePermission):
         return False
 
     def has_object_permission(self, request, view ,obj):
-        if obj.author == request.user:
+        if obj == request.user or request.user.is_staff:
             return True
-        return False    
+        return False

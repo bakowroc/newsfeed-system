@@ -20,7 +20,8 @@ class UserCreateSerializer(serializers.ModelSerializer):
                 'is_active',
                 'is_staff',
                 'user_permissions',
-                'is_superuser'
+                'is_superuser',
+                'groups'
                 ]
 
 

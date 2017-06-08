@@ -30,7 +30,6 @@ from comments.api.serializers import (
 class CommentCreate(CreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentCreateSerializer
-    permission_classes = []
 
     def perform_create(self, serializer):
         serializer.save(author = self.request.user)
@@ -39,12 +38,12 @@ class CommentCreate(CreateAPIView):
 class CommentDetail(RetrieveAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentDetailSerializer
+    permission_classes = [AllowAny]
 
 
 class CommentDestroy(DestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentDetailSerializer
-    permission_classes = []
 
 
 class CommentList(ListAPIView):

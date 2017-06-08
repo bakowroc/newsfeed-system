@@ -26,26 +26,25 @@ from groups.api.serializers import (
 class GroupCreate(CreateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupCreateSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
 
 
 class GroupDetail(RetrieveAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupDetailSerializer
-
+    permission_classes = [AllowAny]
 
 class GroupDestroy(DestroyAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupDetailSerializer
-    permission_classes = [IsAuthenticated]
-
+    permission_classes = [IsAdminUser]
 
 class GroupList(ListAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-
+    permission_classes = [AllowAny]
 
 class GroupUpdate(UpdateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupDetailSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
