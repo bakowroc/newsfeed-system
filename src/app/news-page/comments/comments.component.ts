@@ -8,12 +8,14 @@ import { ApiService } from '../../services/api.service';
 })
 
 export default class CommentsComponent implements OnInit{
-    comments: Array<Object>;
-    
-    
+
+    @Input()
+        Comments: Array<Object>;
+
+
     constructor(){}
     ngOnInit(){
-        this.comments = [
+        this.Comments = [
            {
                date: '25.05.2017', author: 'Ja', content: 'Bardzo ladnie'
            }, {
@@ -21,7 +23,7 @@ export default class CommentsComponent implements OnInit{
            }, {
                date: '25.05.2017', author: 'Ja3', content: 'Serdecznie polecam'
            }
-            
+
         ]
     }
-} 
+}

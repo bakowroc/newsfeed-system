@@ -2,8 +2,12 @@
     <table>
         <tr class="news-logo"><img src="/static/assets/news/{{miniNews.id}}.png"></tr>
         <div class="text">
-            <tr class="tag">{{miniNews.tag}}</tr>
-            <tr class="title"><a routerLink="news">{{miniNews.title}}</a></tr>
+            <tr class="tag">{{miniNews.tag.name}}</tr>
+            <tr class="title">
+                <a routerLink="news/{{miniNews.id}}/{{createSlugFromTitle(miniNews.title)}}">
+                    {{miniNews.title}}
+                </a>
+            </tr>
         </div>
     </table>
 </div>

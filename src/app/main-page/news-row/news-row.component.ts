@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ApiService } from '../../services/api.service';
- 
+
 
 @Component ({
     selector: 'news-row',
@@ -9,12 +9,14 @@ import { ApiService } from '../../services/api.service';
 })
 
 export default class NewsRowComponent implements OnInit{
+
     news: any;
-    
-    constructor(private api: ApiService){}
+
+    constructor(private API: ApiService){}
     ngOnInit(){
-    
-        this.api.GetData('news/').subscribe(x => this.news = x);
-        
+
+        this.API.get('news')
+                .subscribe((response)=> this.news = response);
+
     }
 }

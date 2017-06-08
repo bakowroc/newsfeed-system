@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
- 
+
 
 @Component ({
     selector: 'mini-news',
@@ -9,4 +9,13 @@ import {Component, Input} from '@angular/core';
 
 export default class MiniNewsComponent {
     @Input() miniNews: Object;
+
+    constructor(){}
+
+    createSlugFromTitle(title: string): string{
+
+        return title.toLowerCase().split(' ').join('-');
+
+    }
+
 }
