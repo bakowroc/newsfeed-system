@@ -1,11 +1,6 @@
 settings {
     .content {
-        .col-xl-4,
-        .col-lg-4,
-        .col-md-4,
-        .col-xl-8,
-        .col-lg-8,
-        .col-md-8 {
+        [class*="col-"] {
             padding: 0px;
         }
         display: flex;

@@ -1,11 +1,6 @@
 manage {
     .panel {
-        .col-xl-3,
-        .col-lg-3,
-        .col-md-3,
-        .col-xl-9,
-        .col-lg-9,
-        .col-md-9 {
+        [class*="col-"] {
             padding: 2px;
         }
         float: left;
@@ -23,15 +18,15 @@ manage {
                 margin: 0;
                 padding: 0;
                 text-align: left;
-                li {
-                    padding: 10px;
-                    &:hover {
-                        background-color: #8dc6f6;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        font-weight: 300;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 300;
+                    li {
+                        padding: 10px;
+                        &:hover {
+                            background-color: #8dc6f6;
+                        }
                     }
                 }
             }

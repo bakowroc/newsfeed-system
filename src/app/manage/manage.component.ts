@@ -13,26 +13,47 @@ export default class ManageComponent implements OnInit{
     ngOnInit(){
         this.menu = [
            {
-               name: 'Posts', link: '#'
+               name: 'Posts', link: 'component.post'
            },
             {
-                name: 'Add post', link: '#'
+                name: 'Add post', link: 'component.addPost=true'
             },
             {
-                name: 'Comments', link: '#'
+                name: 'Comments', link: 'component.comments'
             },  
             {
-                name: 'Categories', link: '#'
+                name: 'Categories', link: 'component.categories'
             },
             {
-                name: 'Users', link: '#'
+                name: 'Users', link: 'component.users'
             },
             {
-                name: 'Add user', link: '#'
+                name: 'Add user', link: 'component.addUser'
             },
             {
-                name: 'Groups', link: '#'
+                name: 'Groups', link: 'component.groups'
             }
         ]
+    }
+    component: any[]=[{
+        post: false,
+        addPost: false,
+        comments: false,
+        categories: false,
+        users: false,
+        addUser: false,
+        groups: false
+    }]
+    
+    close(){
+        this.component = [{
+        post: false,
+        addPost: false,
+        comments: false,
+        categories: false,
+        users: false,
+        addUser: false,
+        groups: false
+    }]
     }
 } 
