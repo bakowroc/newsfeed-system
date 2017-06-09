@@ -46,14 +46,6 @@ export default class ManageComponent implements OnInit{
     }]
     
     close(){
-        this.component = [{
-        post: false,
-        addPost: false,
-        comments: false,
-        categories: false,
-        users: false,
-        addUser: false,
-        groups: false
-    }]
+        this.component = [false]
     }
 } 
