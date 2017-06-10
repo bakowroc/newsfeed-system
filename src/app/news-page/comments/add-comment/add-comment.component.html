@@ -1,6 +1,7 @@
 <div class="comments">
-    <form name="comments" (ngSubmit)="addComment()" novalidate>
-        <textarea placeholder="Add comment..." required></textarea>
+
+    <form (ngSubmit) = "addComment()" *ngIf = "comment">
+        <textarea placeholder="Add comment..." [(ngModel)] = "comment.content" name = "content" required></textarea>
         <button type="submit"><i class="material-icons">done</i></button>
     </form>
 </div>

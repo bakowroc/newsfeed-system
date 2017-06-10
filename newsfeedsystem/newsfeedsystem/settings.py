@@ -144,7 +144,7 @@ STATICFILES_DIRS = [
     ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERED_CLASSES':(
+    'DEFAULT_RENDERER_CLASSES':(
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer'
     ),
