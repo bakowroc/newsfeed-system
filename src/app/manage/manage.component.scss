@@ -18,7 +18,8 @@ manage {
                 margin: 0;
                 padding: 0;
                 text-align: left;
-                a {
+                a,
+                a:hover {
                     text-decoration: none;
                     color: white;
                     font-weight: 300;
@@ -44,6 +45,11 @@ manage {
             background: #fff;
             float: right;
             padding: 10px;
+        }
+        @include icons;
+        .material-icons {
+            float: left;
+            padding-right: 10px;
         }
     }
 }

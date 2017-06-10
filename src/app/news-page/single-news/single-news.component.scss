@@ -40,6 +40,7 @@ single-news {
         }
         .content {
             @include content;
+            padding: 10px;
         }
     }
 }

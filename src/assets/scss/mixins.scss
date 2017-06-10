@@ -231,3 +231,10 @@
         }
     }
 }
+
+@mixin icons {
+    .material-icons {
+        display: block;
+        margin: 0 auto;
+    }
+}

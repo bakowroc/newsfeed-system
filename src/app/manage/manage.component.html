@@ -8,22 +8,22 @@
     <li [ngClass]="styles(component)">{{part.name}}</li>
 </a>-->
                     <a (click)="close() || (componentPost = true)">
-                        <li [ngClass]="styles(componentPost)">Posts</li>
+                        <li [ngClass]="styles(componentPost)"><i class="material-icons">library_books</i>Posts</li>
                     </a>
                     <a (click)="close() || (component.addPost = true)">
-                        <li [ngClass]="styles(component.addPost)">Add Post</li>
+                        <li [ngClass]="styles(component.addPost)"><i class="material-icons">add</i>Add Post</li>
                     </a>
                     <a (click)="close() || (component.comments = true)">
-                        <li [ngClass]="styles(component.comments)">Comments</li>
+                        <li [ngClass]="styles(component.comments)"><i class="material-icons">insert_comment</i>Comments</li>
                     </a>
                     <a (click)="close() || (component.categories = true)">
-                        <li [ngClass]="styles(component.categories)">Categories</li>
+                        <li [ngClass]="styles(component.categories)"><i class="material-icons">style</i>Categories</li>
                     </a>
                     <a (click)="close() || (component.users = true)">
-                        <li [ngClass]="styles(component.users)">Users</li>
+                        <li [ngClass]="styles(component.users)"><i class="material-icons">person</i>Users</li>
                     </a>
                     <a (click)="close() || (component.groups = true)">
-                        <li [ngClass]="styles(component.groups)">Groups</li>
+                        <li [ngClass]="styles(component.groups)"><i class="material-icons">group</i>Groups</li>
                     </a>
                     <!-- <a routerLink="posts">Posts</a>-->
                 </ul>
