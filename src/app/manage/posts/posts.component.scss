@@ -1,0 +1,22 @@
+posts {
+    table {
+        width: 100%;
+        thead {
+            border-bottom: solid 1px;
+            border-color: rgb(228, 228, 228);
+            th {
+                height: 50px;
+                padding: 10px;
+            }
+        }
+        tbody {
+            background: #f2f2f2;
+            color: #888;
+            font-weight: 300;
+            td {
+                height: 45px;
+                padding: 10px;
+            }
+        }
+    }
+}
