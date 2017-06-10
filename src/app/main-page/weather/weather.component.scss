@@ -1,16 +1,13 @@
 weather {
     .weather {
         background-image: url('/static/assets/img/weather.jpg');
-        width: 100%;
+        @include standard-div;
         height: 400px;
         float: left;
-        margin-top: 13px;
         text-align: center;
-        box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.20);
-        border-radius: 3px;
         img {
-            height: 200px;
-            width: 200px;
+            height: 150px;
+            width: 150px;
             margin: 0 auto;
             margin-top: 85px;
             filter: opacity(80%);

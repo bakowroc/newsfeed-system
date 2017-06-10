@@ -1,17 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
 
 @Component ({
-    selector: 'news-row',
-    templateUrl: './news-row.component.html',
-    styleUrls: ['./news-row.component.scss']
+    selector: 'posts',
+    templateUrl: './posts.component.html',
+    styleUrls: ['./posts.component.scss']
 })
 
-export default class NewsRowComponent implements OnInit{
-
+export default class PostsComponent{
+    @Input() show;
+     
     news: any;
-
     constructor(private API: ApiService){}
     ngOnInit(){
 
@@ -19,4 +19,4 @@ export default class NewsRowComponent implements OnInit{
                 .subscribe((response)=> this.news = response);
 
     }
-}
+} 

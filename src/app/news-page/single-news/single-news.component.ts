@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, OnChanges} from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component ({
     selector: 'single-news',
@@ -7,6 +9,19 @@ import { ApiService } from '../../services/api.service';
     styleUrls: ['./single-news.component.scss']
 })
 
-export default class SingleNewsComponent {
-    searchValue: string;
-} 
+export default class SingleNewsComponent implements OnInit, OnChanges {
+
+    @Input()
+        SingleNews: any = {};
+
+    constructor(){}
+
+    ngOnInit() {
+
+    }
+
+    ngOnChanges(){
+        console.log(this.SingleNews);
+    }
+
+}

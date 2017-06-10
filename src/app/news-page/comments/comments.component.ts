@@ -8,20 +8,16 @@ import { ApiService } from '../../services/api.service';
 })
 
 export default class CommentsComponent implements OnInit{
-    comments: Array<Object>;
-    
-    
+
+    @Input()
+        Comments: Array<Object>;
+
+
     constructor(){}
     ngOnInit(){
-        this.comments = [
-           {
-               date: '25.05.2017', author: 'Ja', content: 'Bardzo ladnie'
-           }, {
-               date: '25.05.2017', author: 'Ja2', content: 'Wspaniale'
-           }, {
-               date: '25.05.2017', author: 'Ja3', content: 'Serdecznie polecam'
-           }
-            
-        ]
     }
-} 
+
+    addComment(): void{
+        console.log('submitted');
+    }
+}

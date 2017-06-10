@@ -1,0 +1,25 @@
+<div *ngIf="show==true">
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Comment</th>
+                <th>Date</th>
+                <th>In response to</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let com of com">
+            <td>{{com.author.username}}</td>
+            <td>{{com.content}}</td>
+            <td>{{com.date}}</td>
+            <td>{{com.related_news.title}}</td>
+            <td>{{news.tag.name}}</td>
+
+            <!--Do podpiecia-->
+            <td>delete</td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>

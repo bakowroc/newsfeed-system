@@ -1,45 +1,51 @@
 settings {
-    .userForm {
-        background: white;
-        box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.20);
-        border-radius: 3px;
-        margin: 0;
-        margin-top: 13px;
+    .content {
+        [class*="col-"] {
+            padding: 0px;
+        }
+        display: flex;
         float: left;
-        padding: 20px;
-        height: 600px;
-        width: 50%;
-        &.form {
-            box-shadow: 1px 2px rgba(0, 0, 0, 0.20);
-        }
-        h1 {
-            font-size: 25px;
-        }
-        @include form;
-        input[type=email],
-        input[type=text],
-        input[type=password] {
-            border-bottom: solid 1px #fabcbf;
-        }
-        /*input[type=file] {
+        @include standard-div;
+        background: white;
+        .userForm {
+            margin: 0;
+            float: left;
+            padding: 20px;
+            height: 600px;
+            width: 100%;
+            border-left: solid 1px #f0f0f0;
+            h1 {
+                font-size: 25px;
+            }
+            @include form;
+            input[type=email],
+            input[type=text],
+            input[type=password] {
+                border-bottom: solid 1px #fabcbf;
+            }
+            /*input[type=file] {
     background: #5eaff2;
 }*/
-        .button {
-            background-color: #5eaff2;
-            position: initial;
-            margin-top: 15px;
-            float: right;
-        }
-        .avatar {
-            width: 100%;
-            img {
-                border-radius: 100%;
-                display: block;
-                margin: 0 auto;
-                height: 150px;
-                width: 150px;
-                margin-bottom: 40px;
+            .button {
+                background-color: #5eaff2;
+                position: initial;
+                margin-top: 15px;
+                width: 50px;
+                height: 50px;
+                float: right;
+            }
+            .avatar {
+                width: 100%;
+                img {
+                    border-radius: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    height: 150px;
+                    width: 150px;
+                    margin-bottom: 40px;
+                }
             }
         }
+        @include icons;
     }
 }

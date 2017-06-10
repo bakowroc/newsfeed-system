@@ -16,7 +16,15 @@ import AboutComponent from './about/about.component'
 import TrendingComponent from './trending/trending.component'
 import SignInComponent from './sign-in/sign-in.component'
 import RegisterComponent from './register/register.component'
+
 import ManageComponent from './manage/manage.component'
+import PostsComponent from './manage/posts/posts.component'
+import AddPostComponent from './manage/add-post/add-post.component'
+import CategoriesComponent from './manage/categories/categories.component'
+import CommentsViewComponent from './manage/comments-view/comments-view.component'
+import GroupsComponent from './manage/groups/groups.component'
+import UsersComponent from './manage/users/users.component'
+
 import SettingsComponent from './settings/settings.component'
 
 
@@ -48,6 +56,12 @@ import { ApiService } from './services/api.service'
                 SignInComponent,
                 RegisterComponent,
                 ManageComponent,
+                AddPostComponent,
+                PostsComponent,
+                CategoriesComponent,
+                CommentsViewComponent,
+                GroupsComponent,
+                UsersComponent,
                 SettingsComponent,
                 NewsRowComponent,
                 MiniNewsComponent,
