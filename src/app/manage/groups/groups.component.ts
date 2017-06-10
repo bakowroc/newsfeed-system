@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { ApiService } from '../../services/api.service';
  
 
 @Component ({
@@ -9,5 +10,14 @@ import {Component, Input} from '@angular/core';
 
 export default class GroupsComponent{
     @Input() show;
-    constructor() {}
+    
+    groups: any;
+    constructor(private API: ApiService){}
+    ngOnInit(){
+
+        this.API.get('groups')
+                .subscribe((response)=> this.groups = response);
+
+    }
+     
 } 
