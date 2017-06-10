@@ -208,3 +208,33 @@
     box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.20);
     border-radius: 3px;
 }
+
+@mixin table {
+    table {
+        width: 100%;
+        thead {
+            border-bottom: solid 1px;
+            border-color: rgb(228, 228, 228);
+            th {
+                height: 50px;
+                padding: 10px;
+            }
+        }
+        tbody {
+            background: #f9f7f7;
+            color: #888;
+            font-weight: 300;
+            td {
+                height: 45px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@mixin icons {
+    .material-icons {
+        display: block;
+        margin: 0 auto;
+    }
+}

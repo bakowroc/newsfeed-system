@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
- 
+import {Component, Input, OnInit} from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component ({
     selector: 'users',
@@ -9,5 +9,12 @@ import {Component, Input} from '@angular/core';
 
 export default class UsersComponent{
     @Input() show;
-    constructor() {}
+    users: any;
+    constructor(private API: ApiService){}
+    ngOnInit(){
+
+        this.API.get('users')
+                .subscribe((response)=> this.users = response);
+
+    }
 } 

@@ -9,6 +9,7 @@ import SignInComponent from './sign-in/sign-in.component';
 import RegisterComponent from './register/register.component';
 import NewsPageComponent from './news-page/news-page.component';
 import ManageComponent from './manage/manage.component';
+import PostsComponent from './manage/posts/posts.component';
 import SettingsComponent from './settings/settings.component';
 
 export const router: Routes = [
@@ -20,6 +21,7 @@ export const router: Routes = [
     { path: 'register', component: RegisterComponent},
     { path: 'news/:id/:slug', component: NewsPageComponent},
     { path: 'manage', component: ManageComponent},
+    { path: 'manage/posts', component: PostsComponent},
     { path: 'settings', component: SettingsComponent}
 
 ];

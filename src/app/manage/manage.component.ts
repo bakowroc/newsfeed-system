@@ -30,9 +30,6 @@ export default class ManageComponent implements OnInit{
                 name: 'Users', link: 'close() || (component.users=true)', style: 'styles(component.users)'
             },
             {
-                name: 'Add user', link: 'close() || (component.addUser=true)', style: 'styles(component.addUser)'
-            },
-            {
                 name: 'Groups', link: 'close() || (component.groups=true)', style: 'styles(component.groups)'
             }
         ]
@@ -43,7 +40,6 @@ export default class ManageComponent implements OnInit{
         comments: false,
         categories: false,
         users: false,
-        addUser: false,
         groups: false
       
     }]

@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { ApiService } from '../../services/api.service';
  
 
 @Component ({
@@ -9,5 +10,12 @@ import {Component, Input} from '@angular/core';
 
 export default class CategoriesComponent{
     @Input() show;
-    constructor() {}
+    tags: any;
+    constructor(private API: ApiService){}
+    ngOnInit(){
+
+        this.API.get('tags')
+                .subscribe((response)=> this.tags = response);
+
+    }
 } 

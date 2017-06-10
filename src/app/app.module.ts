@@ -20,7 +20,6 @@ import RegisterComponent from './register/register.component'
 import ManageComponent from './manage/manage.component'
 import PostsComponent from './manage/posts/posts.component'
 import AddPostComponent from './manage/add-post/add-post.component'
-import AddUserComponent from './manage/add-user/add-user.component'
 import CategoriesComponent from './manage/categories/categories.component'
 import CommentsViewComponent from './manage/comments-view/comments-view.component'
 import GroupsComponent from './manage/groups/groups.component'
@@ -59,7 +58,6 @@ import { ApiService } from './services/api.service'
                 ManageComponent,
                 AddPostComponent,
                 PostsComponent,
-                AddUserComponent,
                 CategoriesComponent,
                 CommentsViewComponent,
                 GroupsComponent,

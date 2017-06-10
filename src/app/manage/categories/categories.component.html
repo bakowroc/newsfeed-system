@@ -1,1 +1,16 @@
-<div *ngIf="show==true">categories</div>
+<div *ngIf="show==true">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let tag of tags">
+            <td>{{tag.id}}</td>
+            <td>{{tag.name}}</td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>

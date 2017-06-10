@@ -1,1 +1,24 @@
-<div *ngIf="show==true">users</div>
+<div *ngIf="show==true">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Group</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.group}}</td>
+
+            <!--Do podpiecia-->
+            <td><i class="material-icons">delete</i> | set as redactor | obtain the redactor's permission</td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>

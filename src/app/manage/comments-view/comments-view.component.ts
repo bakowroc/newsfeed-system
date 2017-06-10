@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
- 
+import {Component, Input, OnInit} from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component ({
     selector: 'comments-view',
@@ -9,5 +9,12 @@ import {Component, Input} from '@angular/core';
 
 export default class CommentsViewComponent{
     @Input() show;
-    constructor() {}
+    com: any;
+    constructor(private API: ApiService){}
+    ngOnInit(){
+
+        this.API.get('comments')
+                .subscribe((response)=> this.com = response);
+
+    }
 } 

@@ -8,37 +8,35 @@
     <li [ngClass]="styles(component)">{{part.name}}</li>
 </a>-->
                     <a (click)="close() || (componentPost = true)">
-                        <li [ngClass]="styles(componentPost)">Posts</li>
+                        <li [ngClass]="styles(componentPost)"><i class="material-icons">library_books</i>Posts</li>
                     </a>
                     <a (click)="close() || (component.addPost = true)">
-                        <li [ngClass]="styles(component.addPost)">Add Post</li>
+                        <li [ngClass]="styles(component.addPost)"><i class="material-icons">add</i>Add Post</li>
                     </a>
                     <a (click)="close() || (component.comments = true)">
-                        <li [ngClass]="styles(component.comments)">Comments</li>
+                        <li [ngClass]="styles(component.comments)"><i class="material-icons">insert_comment</i>Comments</li>
                     </a>
                     <a (click)="close() || (component.categories = true)">
-                        <li [ngClass]="styles(component.categories)">Categories</li>
+                        <li [ngClass]="styles(component.categories)"><i class="material-icons">style</i>Categories</li>
                     </a>
                     <a (click)="close() || (component.users = true)">
-                        <li [ngClass]="styles(component.users)">Users</li>
-                    </a>
-                    <a (click)="close() || (component.addUser = true)">
-                        <li [ngClass]="styles(component.addUser)">Add User</li>
+                        <li [ngClass]="styles(component.users)"><i class="material-icons">person</i>Users</li>
                     </a>
                     <a (click)="close() || (component.groups = true)">
-                        <li [ngClass]="styles(component.groups)">Groups</li>
+                        <li [ngClass]="styles(component.groups)"><i class="material-icons">group</i>Groups</li>
                     </a>
+                    <!-- <a routerLink="posts">Posts</a>-->
                 </ul>
             </div>
         </div>
         <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div class="content">
+                <!-- <router-outlet></router-outlet>-->
                 <posts [show]="componentPost"></posts>
                 <add-post [show]="component.addPost"></add-post>
                 <comments-view [show]="component.comments"></comments-view>
                 <categories [show]="component.categories"></categories>
                 <users [show]="component.users"></users>
-                <add-user [show]="component.addUser"></add-user>
                 <groups [show]="component.groups"></groups>
             </div>
         </div>
