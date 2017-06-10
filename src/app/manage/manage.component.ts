@@ -9,43 +9,55 @@ import {Component, OnInit} from '@angular/core';
 
 export default class ManageComponent implements OnInit{
    menu: Array<Object>;
+    component: any;
+    componentPost: boolean = true;
     constructor(){}
     ngOnInit(){
         this.menu = [
            {
-               name: 'Posts', link: 'component.post'
+               name: 'Posts', link: 'close() || (component.post=true)', style: 'styles(componentPost)'
            },
             {
-                name: 'Add post', link: 'component.addPost=true'
+                name: 'Add post', link: 'close() || (component.addPost=true)', style: 'styles(component.addPost)'
             },
             {
-                name: 'Comments', link: 'component.comments'
+                name: 'Comments', link: 'close() || (component.comments=true)', style: 'styles(component.comments)'
             },  
             {
-                name: 'Categories', link: 'component.categories'
+                name: 'Categories', link: 'close() || (component.categories=true)', style: 'styles(component.categories)'
             },
             {
-                name: 'Users', link: 'component.users'
+                name: 'Users', link: 'close() || (component.users=true)', style: 'styles(component.users)'
             },
             {
-                name: 'Add user', link: 'component.addUser'
+                name: 'Add user', link: 'close() || (component.addUser=true)', style: 'styles(component.addUser)'
             },
             {
-                name: 'Groups', link: 'component.groups'
+                name: 'Groups', link: 'close() || (component.groups=true)', style: 'styles(component.groups)'
             }
         ]
-    }
-    component: any[]=[{
-        post: false,
+    
+    this.component = [{
+        //post: true,
         addPost: false,
         comments: false,
         categories: false,
         users: false,
         addUser: false,
         groups: false
+      
     }]
-    
+    }
     close(){
-        this.component = [false]
+        this.component = [false];
+        this.componentPost = false;
+    }
+    
+    styles(activeComponent){
+        if (activeComponent==true){
+            return 'active';
+        }
+        else
+            return 'none';
     }
 } 

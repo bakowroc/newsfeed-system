@@ -23,8 +23,14 @@ manage {
                     color: white;
                     font-weight: 300;
                     li {
-                        padding: 10px;
+                        &.none {
+                            padding: 10px;
+                        }
                         &:hover {
+                            background-color: #8dc6f6;
+                        }
+                        &.active {
+                            padding: 10px;
                             background-color: #8dc6f6;
                         }
                     }

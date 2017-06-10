@@ -1,38 +1,39 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="panel">
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
             <div class="menu">
                 <ul>
-                    <!--tak powinno byc ale nie dziala-->
-                    <!--<li *ngFor="let part of menu"><a (click)='part.link'>{{part.name}}</a></li>-->
-
-                    <a (click)="close() || (component.post = true)">
-                        <li>Posts</li>
+                    <!--tak powinno byc ale nie nie wiem jak zrobic zeby dzialalo-->
+                    <!--<a *ngFor="let part of menu" (click)="menu.link">
+    <li [ngClass]="styles(component)">{{part.name}}</li>
+</a>-->
+                    <a (click)="close() || (componentPost = true)">
+                        <li [ngClass]="styles(componentPost)">Posts</li>
                     </a>
                     <a (click)="close() || (component.addPost = true)">
-                        <li>Add Post</li>
+                        <li [ngClass]="styles(component.addPost)">Add Post</li>
                     </a>
                     <a (click)="close() || (component.comments = true)">
-                        <li>Comments</li>
+                        <li [ngClass]="styles(component.comments)">Comments</li>
                     </a>
                     <a (click)="close() || (component.categories = true)">
-                        <li>Categories</li>
+                        <li [ngClass]="styles(component.categories)">Categories</li>
                     </a>
                     <a (click)="close() || (component.users = true)">
-                        <li>Users</li>
+                        <li [ngClass]="styles(component.users)">Users</li>
                     </a>
                     <a (click)="close() || (component.addUser = true)">
-                        <li>Add User</li>
+                        <li [ngClass]="styles(component.addUser)">Add User</li>
                     </a>
                     <a (click)="close() || (component.groups = true)">
-                        <li>Groups</li>
+                        <li [ngClass]="styles(component.groups)">Groups</li>
                     </a>
                 </ul>
             </div>
         </div>
-        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div class="content">
-                <posts [show]="component.post"></posts>
+                <posts [show]="componentPost"></posts>
                 <add-post [show]="component.addPost"></add-post>
                 <comments-view [show]="component.comments"></comments-view>
                 <categories [show]="component.categories"></categories>

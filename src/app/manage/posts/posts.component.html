@@ -1,1 +1,26 @@
-<div *ngIf="show==true">posts</div>
+<div *ngIf="show==true">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Author</th>
+                <th>Tags</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let news of news">
+            <td>{{news.id}}</td>
+            <td>{{news.title}}</td>
+            <td>{{news.date}}</td>
+            <td>{{news.author.username}}</td>
+            <td>{{news.tag.name}}</td>
+            
+            <!--Do podpiecia-->
+            <td>edit | delete</td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>
