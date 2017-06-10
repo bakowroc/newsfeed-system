@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
- 
+import { ApiService } from '../services/api.service';
 
 @Component ({
     selector: 'sign-in',
@@ -9,14 +9,31 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 
 export default class SignInComponent{
-    data = {};
-    formSubmit() {
-    console.log(this.data);
-    } 
- //   @Input() logIn: String;
-    logIn: any = true;
-    close(){
-    this.logIn = false;
+
+    data: Object;
+
+    constructor(private API: ApiService){
+
+        this.data = {
+            username: '',
+            password: ''
+        }
+
     }
-  
+
+    login() {
+
+        let userLoginData = {
+            username: this.data['username'],
+            password: this.data['password']
+        };
+
+        this.API.getLoginToken(userLoginData)
+                .subscribe((response)=>{
+                    if(response){
+                        localStorage.setItem('jwttoken', response['token']);
+                    }
+                });
+    }
+
 }

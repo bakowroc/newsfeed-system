@@ -1,9 +1,9 @@
 <div class="col-lg-12">
-    <div class="log-in-form" *ngIf="logIn==true" novalidate>
+    <div class="log-in-form" novalidate>
         <h1>Sign in</h1>
-        <form (ngSubmit)="formSubmit()">
+        <form (ngSubmit)="login()">
             <span class="label">Email address</span>
-            <input type="email" name="email" placeholder="Your e-mail address" [(ngModel)]="data.email" required>
+            <input type="text" name="email" placeholder="Your e-mail address" [(ngModel)]="data.username" required>
             <span class="label">Password</span>
             <input type="password" name="password" placeholder="Your password" [(ngModel)]="data.password" required>
             <div class="reminder"><a routerLink="../register">Forgot your password?</a></div>
@@ -11,5 +11,5 @@
         </form>
     </div>
     <!-- <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>-->
-    <a class="popup-bg" *ngIf="logIn==true" routerLink="/"></a>
+    <a class="popup-bg" routerLink="/"></a>
 </div>

@@ -1,7 +1,9 @@
 from rest_framework import serializers
+from rest_framework.response import Response
 from news.models import News
 from comments.models import Comment
 from users.api.serializers import UserSerializer, UserCreateSerializer
+import json
 
 
 
@@ -15,6 +17,19 @@ class NewsCreateSerializer(serializers.ModelSerializer):
 class NewsSerializer(serializers.ModelSerializer):
 
     author = UserSerializer()
+
+
+    class Meta:
+        model = News
+        fields = '__all__'
+        depth = 1
+
+
+
+
+class NewsDetailSerializer(serializers.ModelSerializer):
+
+    author = UserSerializer()
     comments = serializers.SerializerMethodField('get_my_comments')
 
     class Meta:
@@ -22,15 +37,15 @@ class NewsSerializer(serializers.ModelSerializer):
         fields = '__all__'
         depth = 1
 
+
     def get_my_comments(self, obj):
-        return Comment.objects.filter(related_news = obj)
+        json_data = []
+        data = Comment.objects.filter(related_news = obj).values('author', 'content', 'date')
+        for obj in data:
+            json_data.append({
+                'author': obj['author'],
+                'content': obj['content'],
+                'date': obj['date']
+            })
 
-
-class NewsDetailSerializer(serializers.ModelSerializer):
-
-    author = UserSerializer()
-
-    class Meta:
-        model = News
-        fields = '__all__'
-        depth = 1
+        return json_data
