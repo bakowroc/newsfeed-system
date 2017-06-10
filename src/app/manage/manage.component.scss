@@ -1,0 +1,43 @@
+manage {
+    .panel {
+        [class*="col-"] {
+            padding: 2px;
+        }
+        float: left;
+        height: 650px;
+        display: flex;
+        width: 100%;
+        .menu {
+            @include standard-div;
+            height: 650px;
+            width: 100%;
+            float: left;
+            background-color: #5EAFF2;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 300;
+                    li {
+                        padding: 10px;
+                        &:hover {
+                            background-color: #8dc6f6;
+                        }
+                    }
+                }
+            }
+        }
+        .content {
+            @include standard-div;
+            height: 650px;
+            width: 100%;
+            background: #fff;
+            float: right;
+            padding: 10px;
+        }
+    }
+}
