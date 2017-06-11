@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
- 
+import {Component, Input, OnInit} from '@angular/core';
+import { AuthService } from '../services/auth.service'
 
 @Component ({
     selector: 'register',
@@ -7,14 +7,24 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./register.component.scss']
 })
 
-export default class RegisterComponent {
-      data = {};
-    formSubmit() {
-    console.log(this.data);
-    } 
+export default class RegisterComponent implements OnInit{
 
+    data = {};
     signUp: any = true;
+    current_user: Object; 
+
+    constructor(private auth: AuthService){}
+
+    formSubmit() {
+        console.log(this.data);
+    }
+
+    ngOnInit(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
+    }
+
     close(){
-    this.signUp = false;
+        this.signUp = false;
     }
 }

@@ -38,6 +38,7 @@ export const router: Routes = [
         ]},
     { path: 'settings', component: SettingsComponent}
 
+
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);

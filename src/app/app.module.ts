@@ -35,6 +35,7 @@ import AddCommentComponent from './news-page/comments/add-comment/add-comment.co
 import SingleCommentComponent from './news-page/comments/single-comment/single-comment.component'
 
 import { ApiService } from './services/api.service'
+import { AuthService } from './services/auth.service'
 
 @NgModule({
 
@@ -73,7 +74,8 @@ import { ApiService } from './services/api.service'
 
                   ],
     providers: [
-                ApiService
+                ApiService,
+                AuthService
                 ],
     bootstrap: [AppComponent]
 

@@ -9,7 +9,10 @@
             <div class="reminder"><a routerLink="../register">Forgot your password?</a></div>
             <button type="submit" class="button">Sign in</button>
         </form>
+        <div *ngIf = 'current_user'>You are logged in</div>
     </div>
     <!-- <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>-->
     <a class="popup-bg" routerLink="/"></a>
+
+
 </div>

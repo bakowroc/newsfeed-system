@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
- 
 import SignInComponent from '../sign-in/sign-in.component'
+import { AuthService } from '../services/auth.service'
 
 @Component ({
     selector: 'navbar',
@@ -8,9 +8,12 @@ import SignInComponent from '../sign-in/sign-in.component'
     styleUrls: ['./navbar.component.scss']
 })
 
-export default class NavbarComponent implements OnInit{
+export default class NavbarComponent implements OnInit {
+
     menu: Array<Object>;
-    constructor(){}
+    current_user: Object;
+
+    constructor(private auth: AuthService){}
     ngOnInit(){
         this.menu = [
            {
@@ -18,7 +21,7 @@ export default class NavbarComponent implements OnInit{
            },
             {
                 name: 'Trending', link: 'trending', class: ''
-            },  
+            },
             {
                 name: 'About us', link: 'about', class: ''
             },
@@ -29,6 +32,9 @@ export default class NavbarComponent implements OnInit{
                 name: '*user-settings*', link: 'settings', class: 'temporary snd'
             }
         ]
-    }
 
-} 
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
+        }
+
+}

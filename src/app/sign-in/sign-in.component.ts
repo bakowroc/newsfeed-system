@@ -1,6 +1,7 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
+import { AuthService } from '../services/auth.service';
 
 @Component ({
     selector: 'sign-in',
@@ -8,16 +9,28 @@ import { ApiService } from '../services/api.service';
     styleUrls: ['./sign-in.component.scss']
 })
 
-export default class SignInComponent{
+export default class SignInComponent implements OnInit, OnChanges{
 
     data: Object;
+    current_user: Object;
 
-    constructor(private API: ApiService){
+    constructor(private API: ApiService, private auth: AuthService){
 
         this.data = {
             username: '',
             password: ''
         }
+
+    }
+
+    ngOnInit(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
+    }
+
+    ngOnChanges(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
 
     }
 
@@ -32,6 +45,7 @@ export default class SignInComponent{
                 .subscribe((response)=>{
                     if(response){
                         localStorage.setItem('jwttoken', response['token']);
+                        this.auth.checkLoggedStatus();
                     }
                 });
     }

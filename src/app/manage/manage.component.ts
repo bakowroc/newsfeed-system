@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
- 
+import {Component, OnInit, OnChanges, DoCheck} from '@angular/core';
+import { AuthService } from '../services/auth.service'
 
 @Component ({
     selector: 'manage',
@@ -7,68 +7,59 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./manage.component.scss']
 })
 
-export default class ManageComponent implements OnInit{
-   menu: Array<Object>;
-    component: any;
-    constructor(){}
-    ngOnInit(){      
-        this.component = [{
-            post: false,
-            addPost: false,
-            comments: false,
-            categories: false,
-            users: false,
-            groups: false
+export default class ManageComponent implements OnInit, OnChanges, DoCheck{
 
-        }]
+    menu: Array<Object>;
+    active: number = 0;
+    current_user: Object;
+
+    constructor(private auth: AuthService){}
+
+    ngOnInit(){
+
          this.menu = [
             {
-               name: 'Posts', 
-               link: 'posts',  
-               style: this.component.post, 
+               name: 'Posts',
+               link: 'posts',
                icon: 'library_books'
            },
             {
-                name: 'Add post', 
-                link: 'add-post',  
-                style: this.component.addPost, 
+                name: 'Add post',
+                link: 'add-post',
                 icon: 'add'
             },
             {
-                name: 'Comments', 
-                link: 'comments',  
-                style: this.component.comments, 
+                name: 'Comments',
+                link: 'comments',
                 icon: 'insert_comment'
-            },  
+            },
             {
-                name: 'Categories', 
-                link: 'tags',  
-                style: this.component.categories, 
+                name: 'Categories',
+                link: 'tags',
                 icon: 'style'
             },
             {
-                name: 'Users', 
-                link: 'users', 
-                style: this.component.users, 
+                name: 'Users',
+                link: 'users',
                 icon: 'person'
             },
             {
-                name: 'Groups', 
-                link: 'groups',  
-                style: this.component.groups, 
+                name: 'Groups',
+                link: 'groups',
                 icon: 'group'
             }
         ]
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
     }
-    close(){
-        this.component = [false];
+
+    ngOnChanges(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
     }
-  
-    styles(activeComponent){
-        if (activeComponent==true){
-            return 'active';
-        }
-        else
-            return 'none';
+
+    ngDoCheck(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
     }
-} 
+}

@@ -1,6 +1,7 @@
-import {Component, Input, Output, OnInit} from '@angular/core';
+import {Component, Input, Output, OnInit, OnChanges} from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { ActivatedRoute} from '@angular/router';
+import { AuthService } from '../services/auth.service'
+import { ActivatedRoute } from '@angular/router';
 
 @Component ({
     selector: 'news-page',
@@ -8,13 +9,14 @@ import { ActivatedRoute} from '@angular/router';
     styleUrls: ['./news-page.component.scss']
 })
 
-export default class NewsPageComponent implements OnInit{
+export default class NewsPageComponent implements OnInit, OnChanges{
 
     SingleNews: any;
     Comments: any;
     newsIdOutput: number;
+    current_user: Object;
 
-    constructor(private route: ActivatedRoute, private API: ApiService){}
+    constructor(private route: ActivatedRoute, private API: ApiService, private auth: AuthService){}
 
     ngOnInit(){
         this.route.params
@@ -26,6 +28,14 @@ export default class NewsPageComponent implements OnInit{
                                     this.Comments = response['comments'].reverse();
                                 })
                     });
+
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
+    }
+
+    ngOnChanges(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
     }
 
     loadComments(){

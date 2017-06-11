@@ -62,4 +62,10 @@ export class ApiService {
                     .map((res: Response) => res.json());
     }
 
+    getLoginUser(): Observable<Response>{
+        return this.http
+                    .get(this.url + 'users/current/', this.options)
+                    .map((res: Response) => res.json());
+    }
+
 }
