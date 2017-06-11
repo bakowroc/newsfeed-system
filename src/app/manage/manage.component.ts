@@ -10,45 +10,60 @@ import {Component, OnInit} from '@angular/core';
 export default class ManageComponent implements OnInit{
    menu: Array<Object>;
     component: any;
-    componentPost: boolean = true;
     constructor(){}
-    ngOnInit(){
-        this.menu = [
-           {
-               name: 'Posts', link: 'close() || (component.post=true)', style: 'styles(componentPost)'
+    ngOnInit(){      
+        this.component = [{
+            post: false,
+            addPost: false,
+            comments: false,
+            categories: false,
+            users: false,
+            groups: false
+
+        }]
+         this.menu = [
+            {
+               name: 'Posts', 
+               link: 'posts',  
+               style: this.component.post, 
+               icon: 'library_books'
            },
             {
-                name: 'Add post', link: 'close() || (component.addPost=true)', style: 'styles(component.addPost)'
+                name: 'Add post', 
+                link: 'add-post',  
+                style: this.component.addPost, 
+                icon: 'add'
             },
             {
-                name: 'Comments', link: 'close() || (component.comments=true)', style: 'styles(component.comments)'
+                name: 'Comments', 
+                link: 'comments',  
+                style: this.component.comments, 
+                icon: 'insert_comment'
             },  
             {
-                name: 'Categories', link: 'close() || (component.categories=true)', style: 'styles(component.categories)'
+                name: 'Categories', 
+                link: 'tags',  
+                style: this.component.categories, 
+                icon: 'style'
             },
             {
-                name: 'Users', link: 'close() || (component.users=true)', style: 'styles(component.users)'
+                name: 'Users', 
+                link: 'users', 
+                style: this.component.users, 
+                icon: 'person'
             },
             {
-                name: 'Groups', link: 'close() || (component.groups=true)', style: 'styles(component.groups)'
+                name: 'Groups', 
+                link: 'groups',  
+                style: this.component.groups, 
+                icon: 'group'
             }
         ]
-    
-    this.component = [{
-        //post: true,
-        addPost: false,
-        comments: false,
-        categories: false,
-        users: false,
-        groups: false
-      
-    }]
     }
     close(){
         this.component = [false];
-        this.componentPost = false;
     }
-    
+  
     styles(activeComponent){
         if (activeComponent==true){
             return 'active';

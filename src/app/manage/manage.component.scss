@@ -27,7 +27,8 @@ manage {
                         &.none {
                             padding: 10px;
                         }
-                        &:hover {
+                        &:hover,
+                        {
                             background-color: #8dc6f6;
                         }
                         &.active {
