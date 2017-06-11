@@ -1,16 +1,55 @@
 weather {
     .weather {
-        background-image: url('/static/assets/img/weather.jpg');
+        background: #5EAFF2;
         @include standard-div;
         height: 400px;
         float: left;
         text-align: center;
-        img {
-            height: 150px;
-            width: 150px;
-            margin: 0 auto;
-            margin-top: 85px;
-            filter: opacity(80%);
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        padding-top: 20px;
+        box-sizing: border-box;
+        .weather-text{
+            font-size: 26px;
+            margin: 20px 0;
+        }
+        .weather-temp{
+            font-size: 46px;
+            margin: 20px 0;
+        }
+        .weather-forecast{
+            position: absolute;
+            background: white;
+            bottom: 0;
+            float: left;
+            width: 100%;
+            .weather-forecast-box{
+                float: left;
+                width: 50%;
+                box-sizing: border-box;
+                padding: 20px;
+                color: black;
+                text-align: left;
+                &:nth-child(even){
+                    border-left: 1px solid rgba(black, 0.03);
+                }
+                .weather-forecast-box-day,
+                .weather-forecast-box-date{
+                    color: #ddd;
+                    font-size: 13px;
+                    float: left;
+                }
+                .weather-forecast-box-date{
+                    float: right;
+                }
+                .weather-forecast-box-temp{
+                    clear: both;
+                    float: left;
+                    font-size: 24px;
+                    color: #2f313e;
+                }
+            }
         }
     }
 }

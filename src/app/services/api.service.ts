@@ -28,6 +28,12 @@ export class ApiService {
                     .map((res: Response) => res.json());
     }
 
+    getWeather(path: string): Observable<Response>{
+        return this.http
+                    .get(path)
+                    .map((res: Response) => res.json());
+    }
+
     post(path: string, post_object: Object): Observable<Response>{
         return this.http
                     .post(this.url + path + '/create/', post_object, this.options)

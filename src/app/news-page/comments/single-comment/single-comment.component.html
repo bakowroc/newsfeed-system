@@ -1,6 +1,17 @@
-<div class="header" *ngIf = "comment">
-    <img src="/static/assets/user/1.png">
-    <p>{{comment.author}}</p>
-    <span>{{comment.date}}</span>
-    <div class="content">{{comment.content}}</div>
+<div class="single-comment" *ngIf = 'comment'>
+    <header class="comment-header" *ngIf = "comment">
+        <div class="comment-author">
+            <div class="comment-author-avatar">
+                <img src="/static/assets/user/1.png">
+            </div>
+            <p class="comment-author-username">Admin</p>
+        </div>
+
+        <span class="comment-date">{{comment.date | date: 'shortDate'}}</span>
+    </header>
+    <div class="comment-content">
+        <div class="arrow-up"></div>
+        {{comment.content}}
+    </div>
+
 </div>

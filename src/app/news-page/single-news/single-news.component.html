@@ -1,16 +1,30 @@
 <div class="single-news" *ngIf="SingleNews">
-    <ul>
-        <li>
-            <div class="header">
-                <img src="/static/assets/news/logo.png">
-                <h1>{{SingleNews.title}}</h1>
-                <span class="author">by {{SingleNews.author.username}}</span>
-                <span>{{SingleNews.tag.name}}</span>
-                <span class="date">{{SingleNews.date}}</span>
-                <div class="content">
-                    {{SingleNews.desc}}
+    <div class="single-news-img">
+        <img src="/static/assets/news/{{SingleNews.id}}.png">
+
+        <header class="single-news-header">
+
+                <div class="single-news-tag">
+                    {{SingleNews.tag.name}}
                 </div>
-            </div>
-            <li>
-    </ul>
+
+                <div class="single-news-date">
+                    {{SingleNews.date | date : 'shortDate'}}
+                </div>
+
+                <h1 class="single-news-title">
+                    {{SingleNews.title}}
+                </h1>
+
+                <div class="single-news-author">
+                    {{SingleNews.author.username}}
+                </div>
+
+        </header>
+
+    </div>
+
+    <article class="single-news-content">
+        {{SingleNews.desc}}
+    </article>
 </div>

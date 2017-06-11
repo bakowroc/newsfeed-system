@@ -1,10 +1,16 @@
 navbar {
     .nav {
-        background-color: #34373a;
+        box-sizing: border-box;
+        border-top: 3px solid #5EAFF2;
+        background-color: #2f313e;
         height: 65px;
         width: 100%;
         display: block;
-        box-shadow: 0px -2px 10px lighten(#888, 5%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: $always-on-top;
         .logo {
             float: left;
             height: 100%;

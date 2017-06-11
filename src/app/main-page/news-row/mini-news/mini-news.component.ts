@@ -18,4 +18,8 @@ export default class MiniNewsComponent {
 
     }
 
+    cutText(length: number, text: string){
+        return text.slice(0, length) + '...';
+    }
+
 }
