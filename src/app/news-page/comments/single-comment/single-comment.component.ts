@@ -10,7 +10,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export default class SingleCommentComponent implements OnInit{
 
     @Input()
-        comment: Object;
+    comment: Object;
 
     constructor(){}
 

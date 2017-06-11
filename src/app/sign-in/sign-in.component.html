@@ -2,8 +2,8 @@
     <div class="log-in-form" novalidate>
         <h1>Sign in</h1>
         <form (ngSubmit)="login()">
-            <span class="label">Email address</span>
-            <input type="text" name="email" placeholder="Your e-mail address" [(ngModel)]="data.username" required>
+            <span class="label">Username</span>
+            <input type="text" name="username" placeholder="Your username" [(ngModel)]="data.username" required>
             <span class="label">Password</span>
             <input type="password" name="password" placeholder="Your password" [(ngModel)]="data.password" required>
             <div class="reminder"><a routerLink="../register">Forgot your password?</a></div>

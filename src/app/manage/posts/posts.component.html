@@ -14,7 +14,7 @@
         <tr *ngFor="let news of news">
             <td>{{news.id}}</td>
             <td>{{news.title}}</td>
-            <td>{{news.date}}</td>
+            <td>{{news.date | date : 'shortDate'}}</td>
             <td>{{news.author.username}}</td>
             <td>{{news.tag.name}}</td>
 

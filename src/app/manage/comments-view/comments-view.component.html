@@ -12,12 +12,11 @@
         <tr *ngFor="let com of com">
             <td>{{com.author.username}}</td>
             <td>{{com.content}}</td>
-            <td>{{com.date}}</td>
+            <td>{{com.date | date : 'shortDate'}}</td>
             <td>{{com.related_news.title}}</td>
-            <td>{{news.tag.name}}</td>
 
             <!--Do podpiecia-->
-            <td>delete</td>
+            <td><i class="material-icons">delete</i></td>
         </tr>
         <tbody>
         </tbody>
