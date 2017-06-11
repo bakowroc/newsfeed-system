@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../../../services/api.service'
 
@@ -11,17 +11,26 @@ import { ApiService } from '../../../services/api.service'
 })
 
 export default class AddCommentComponent{
+
     comment: Object = {};
+
+    @Input()
+        newsIdInput: number;
+
+    @Output()
+        commentBeenAdded:EventEmitter<boolean> = new EventEmitter();
 
     constructor(private API: ApiService){}
 
     addComment(){
-        this.comment['author'] = 3;
-        this.comment['related_news'] = 4;
+        this.comment['author'] = 1;
+        this.comment['related_news'] = this.newsIdInput;
 
         console.log(this.comment);
 
         this.API.post('comments', this.comment)
-                .subscribe((response)=>console.log(response))
+                .subscribe((response)=>{
+                     this.commentBeenAdded.emit(true);
+                })
     }
 }

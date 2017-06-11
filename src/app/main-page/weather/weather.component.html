@@ -1,1 +1,12 @@
-<div class="weather"><img src="/static/assets/img/weather-icon.png"></div>
+<div class="weather" *ngIf = "weather">
+    <div class="weather-text">{{weather.text}}</div>
+    <div class="weather-temp">{{weather.temp}}°C</div>
+    <div class="weather-pressure">{{weather.pressure}} HPa</div>
+    <div class="weather-location">{{weather.location.city}}, {{weather.location.country}}</div>
+    <div class="weather-forecast">
+        <div class="weather-forecast-box" *ngFor = "let cast of weather.forecast">
+            <div class="weather-forecast-box-day">{{cast.day}}</div>
+            <div class="weather-forecast-box-date">{{cast.date}}</div>
+            <div class="weather-forecast-box-temp">{{toCelsius(cast.high)}}°C</div>
+        </div>
+</div>
