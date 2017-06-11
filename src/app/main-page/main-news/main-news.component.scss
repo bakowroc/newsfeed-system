@@ -1,7 +1,7 @@
  main-news {
      .main-news {
          position: relative;
-         background-image: url('/static/assets/img/main-news.jpg');
+         background-image: url('/static/assets/news/main-news.png');
          background-size: 100%;
          width: 100%;
          height: 400px;
@@ -9,14 +9,26 @@
          @include standard-div;
          .title {
              position: absolute;
-             font-size: 35px;
-             font-weight: 400;
+             font-size: 42px;
+             font-weight: 600;
              color: #fff;
-             right: 15px;
-             bottom: 13px;
+             left: 20px;
+             bottom: 20px;
+             margin: 0;
              &:hover {
                  text-decoration: none;
                  color: #f1f1f1;
+             }
+         }
+         .button-overflow{
+             position: absolute;
+             right: 20px;
+             bottom : 20px;
+             width: 120px;
+             .button{
+                 @include button(rgba(white,0.2));
+                 border: 1px solid white;
+                 float: right;
              }
          }
      }

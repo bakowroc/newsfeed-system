@@ -1,13 +1,20 @@
-<div class="news-content">
-    <table>
-        <tr class="news-logo"><img src="/static/assets/news/{{miniNews.id}}.png"></tr>
-        <div class="text">
-            <tr class="tag">{{miniNews.tag.name}}</tr>
-            <tr class="title">
-                <a routerLink="news/{{miniNews.id}}/{{createSlugFromTitle(miniNews.title)}}">
-                    {{miniNews.title}}
-                </a>
-            </tr>
+<article class="news-content">
+        <div class="news-logo">
+            <img src="/static/assets/news/{{miniNews.id}}.png">
         </div>
-    </table>
-</div>
+        <div class="text">
+            <div class="tag">{{miniNews.tag.name}}</div>
+            <div class="title">
+                {{miniNews.title}}
+            </div>
+            <p class="news-desc">
+                {{cutText(230, miniNews.desc)}}
+            </p>
+            <div class="button-overflow">
+                <a class="button" routerLink="news/{{miniNews.id}}/{{createSlugFromTitle(miniNews.title)}}">
+                    Read more
+                </a>
+            </div>
+        </div>
+
+</article>

@@ -11,7 +11,7 @@ export default class CommentsComponent implements OnInit{
 
     @Input()
         Comments: Array<Object>;
-
+        
 
     constructor(){}
     ngOnInit(){

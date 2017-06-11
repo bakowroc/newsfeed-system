@@ -1,7 +1,7 @@
 mini-news {
     .news-content {
         position: relative;
-        height: 330px;
+        background: #f9f9f9;
         .news-logo {
             width: 100%;
             padding: 0;
@@ -11,8 +11,8 @@ mini-news {
             }
         }
         @include standard-div;
+        margin: 20px 0;
         float: left;
-        max-height: 470px;
         padding-bottom: 13px;
         text-align: left;
         .text {
@@ -20,25 +20,29 @@ mini-news {
             padding-right: 15px;
             padding-top: 5px;
             .title {
-                a {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 22px;
-                    font-weight: 300;
-                }
+                text-decoration: none;
+                color: rgba(black, 0.8);
+                font-size: 20px;
+                font-weight: 600;
+                float: left;
+                margin: 10px 0;
+                width: 100%;
+                clear: both;
             }
             .tag {
                 color: #ccc;
-                font-size: 15px;
-                font-weight: 300;
+                font-size: 13px;
+                font-weight: 600;
                 text-transform: uppercase;
+                margin-top: 10px;
             }
-            .content {
+            .news-desc{
                 text-align: justify;
                 font-size: 16px;
                 color: darkgray;
                 display: block;
                 margin-bottom: 15px;
+                float: left;
             }
         }
         /* .full-width-button-area {
@@ -50,14 +54,13 @@ mini-news {
             text-align: right;
             text-decoration: none;
         }*/
-        .button {
+        .button-overflow {
             float: right;
-            color: #fff;
-            padding: 10px;
-            background-color: #f65753;
-            margin-right: 2%;
-            border-radius: 3px;
-            text-decoration: none;
+            width: 90px;
+            .button{
+                @include button(#E75141, $padding: 2px 4px, $radius: 3px);
+                float: left;
+            }
         }
     }
 }
