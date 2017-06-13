@@ -4,21 +4,21 @@
 
         <header class="single-news-header">
 
-                <div class="single-news-tag">
-                    {{SingleNews.tag.name}}
-                </div>
+            <div class="single-news-tag">
+                {{SingleNews.tag.name}}
+            </div>
 
-                <div class="single-news-date">
-                    {{SingleNews.date | date : 'shortDate'}}
-                </div>
+            <div class="single-news-date">
+                {{SingleNews.date | date : 'shortDate'}}
+            </div>
 
-                <h1 class="single-news-title">
-                    {{SingleNews.title}}
-                </h1>
+            <h1 class="single-news-title">
+                {{SingleNews.title}}
+            </h1>
 
-                <div class="single-news-author">
-                    {{SingleNews.author.username}}
-                </div>
+            <div class="single-news-author">
+                {{SingleNews.author.username}}
+            </div>
 
         </header>
 
@@ -27,4 +27,22 @@
     <article class="single-news-content">
         {{SingleNews.desc}}
     </article>
+
+    <div class="stars">
+        <span>Rate this article:</span>
+        <form action="">
+            <input id="star-5" type="radio" name="star" />
+            <label for="star-5"></label>
+            <input id="star-4" type="radio" name="star" />
+            <label for="star-4"></label>
+            <input id="star-3" type="radio" name="star" />
+            <label for="star-3"></label>
+            <input id="star-2" type="radio" name="star" />
+            <label for="star-2"></label>
+            <input id="star-1" type="radio" name="star" />
+            <label for="star-1"></label>
+        </form>
+    </div>
+
+
 </div>

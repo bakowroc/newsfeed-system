@@ -4,17 +4,17 @@ single-news {
         float: left;
         @include standard-div;
         box-sizing: border-box;
-        .single-news-img{
+        .single-news-img {
             float: left;
             width: 100%;
             position: relative;
             height: 250px;
             overflow: hidden;
-            img{
+            img {
                 float: left;
                 width: 100%;
             }
-            .single-news-header{
+            .single-news-header {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -26,34 +26,33 @@ single-news {
                 margin: 20px 0;
                 width: auto;
                 padding: 40px;
-                .single-news-tag{
+                .single-news-tag {
                     float: left;
                     font-weight: 600;
                     color: #d45446;
                     text-transform: uppercase;
                     margin-bottom: 20px;
                 }
-                .single-news-date{
+                .single-news-date {
                     float: right;
                     color: #fff;
                     font-weight: 600;
                     margin-bottom: 20px;
                 }
-                .single-news-title{
+                .single-news-title {
                     float: left;
                     font-size: 56px;
                     font-weight: 600;
                     color: #fff;
                     clear: both;
                 }
-                .single-news-author{
+                .single-news-author {
                     float: left;
                     width: 100%;
                 }
             }
         }
-
-        .single-news-content{
+        .single-news-content {
             float: left;
             padding: 60px;
             font-size: 18px;
@@ -61,5 +60,38 @@ single-news {
             text-align: justify;
         }
     }
-
+    div.stars {
+        display: inline-block;
+        position: relative;
+        left: 50px;
+        bottom: 20px;
+        span {
+            margin-left: 8px;
+            color: rgba(75, 75, 75, 0.55);
+        }
+        input {
+            display: none;
+            &:checked~label:before {
+                content: '\f005';
+                transition: all .25s;
+                text-shadow: -1px 0px 7px rgb(208, 208, 208);
+                color: #009688;
+            }
+        }
+        label {
+            float: right;
+            padding: 10px;
+            font-size: 20px;
+            color: rgba(0, 48, 44, 0.75);
+            font-weight: 100;
+            transition: all .2s;
+            &:hover {
+                transform: rotate(-15deg) scale(1.3);
+            }
+            &:before {
+                content: '\f006';
+                font-family: FontAwesome;
+            }
+        }
+    }
 }

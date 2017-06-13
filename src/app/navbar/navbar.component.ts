@@ -34,7 +34,7 @@ export default class NavbarComponent implements OnInit {
                 name: 'Management Panel', link: 'manage', icon: 'dashboard'
             },
             {
-                name: 'Logout', link: '#', icon: 'power_settings_new'
+                name: 'Logout', link: '/', icon: 'power_settings_new'
             }
         ]
 
