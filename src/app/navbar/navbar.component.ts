@@ -11,25 +11,30 @@ import { AuthService } from '../services/auth.service'
 export default class NavbarComponent implements OnInit {
 
     menu: Array<Object>;
+    logMenu: Array<Object>;
     current_user: Object;
+    showMenu: boolean = false;
 
     constructor(private auth: AuthService){}
     ngOnInit(){
         this.menu = [
-           {
-               name: 'Home', link: '/', class: ''
-           },
             {
-                name: 'Trending', link: 'trending', class: ''
+                name: 'Trending', link: 'trending'
             },
             {
-                name: 'About us', link: 'about', class: ''
+                name: 'About us', link: 'https://github.com/bakowroc/newsfeed-system'
+            }
+        ]
+        
+        this.logMenu = [
+            {
+                name: 'Account Settings', link: 'settings', icon: 'settings'
             },
             {
-                name: '*management panel*', link: 'manage', class: 'temporary'
+                name: 'Management Panel', link: 'manage', icon: 'dashboard'
             },
             {
-                name: '*user-settings*', link: 'settings', class: 'temporary snd'
+                name: 'Logout', link: '#', icon: 'power_settings_new'
             }
         ]
 

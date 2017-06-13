@@ -1,10 +1,18 @@
 <div class="nav">
     <div class="container">
-        <div class="logo"><img src="static/assets/img/logo.png">newsmeal</div>
+        <div class="logo">
+            <a routerLink="/"><img src="static/assets/img/logo.png">newsmeal</a>
+        </div>
         <nav class="list">
             <ul>
-                <li *ngFor="let li of menu"><a routerLink="{{li.link}}" class="{{li.class}}">{{li.name}}</a></li>
-                <li><a routerLink="sign-in" class="log-in">Sign in</a></li>
+                <li *ngFor="let link of menu"><a routerLink="{{link.link}}" class="{{link.class}}">{{link.name}}</a></li>
+                <li *ngIf="!current_user"><a routerLink="sign-in" class="log-in">Sign in</a></li>
+            </ul>
+            <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><img src="/static/assets/user/1.png"></span>
+        </nav>
+        <nav class="user" *ngIf="showMenu==true" (mouseleave)="!showMenu=false">
+            <ul>
+                <li *ngFor="let part of logMenu"><a routerLink="{{part.link}}"><i class="material-icons">{{part.icon}}</i><p>{{part.name}}</p></a></li>
             </ul>
         </nav>
     </div>
