@@ -5,7 +5,10 @@
         </div>
         <nav class="list">
             <ul>
-                <li *ngFor="let link of menu"><a routerLink="{{link.link}}" class="{{link.class}}">{{link.name}}</a></li>
+                <!-- <li *ngFor="let link of menu"><a routerLink="{{link.link}}" class="{{link.class}}">{{link.name}}</a></li>-->
+                <li><a routerLink="trending">Trending</a></li>
+                <li><a href="https://github.com/bakowroc/newsfeed-system" target="_blank">About us</a></li>
+
                 <li *ngIf="!current_user"><a routerLink="sign-in" class="log-in">Sign in</a></li>
             </ul>
             <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><img src="/static/assets/user/1.png"></span>

@@ -17,14 +17,14 @@ export default class NavbarComponent implements OnInit {
 
     constructor(private auth: AuthService){}
     ngOnInit(){
-        this.menu = [
+      /*  this.menu = [
             {
                 name: 'Trending', link: 'trending'
             },
             {
                 name: 'About us', link: 'https://github.com/bakowroc/newsfeed-system'
             }
-        ]
+        ]*/
         
         this.logMenu = [
             {

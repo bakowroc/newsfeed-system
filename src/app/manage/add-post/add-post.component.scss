@@ -1,0 +1,15 @@
+add-post {
+    .form {
+        @include form;
+        input[type=text] {
+            border: solid 1px #d1d1d1;
+            padding: 10px;
+        }
+        .button {
+            position: initial;
+            margin-top: 13px;
+            float: right;
+            @include icons;
+        }
+    }
+}
