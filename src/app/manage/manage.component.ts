@@ -1,4 +1,4 @@
-import {Component, OnInit, OnChanges, DoCheck} from '@angular/core';
+import {Component, OnInit, OnChanges, OnDestroy} from '@angular/core';
 import { AuthService } from '../services/auth.service'
 
 @Component ({
@@ -7,7 +7,7 @@ import { AuthService } from '../services/auth.service'
     styleUrls: ['./manage.component.scss']
 })
 
-export default class ManageComponent implements OnInit, OnChanges, DoCheck{
+export default class ManageComponent implements OnInit, OnChanges, OnDestroy{
 
     menu: Array<Object>;
     active: number = 0;
@@ -49,6 +49,7 @@ export default class ManageComponent implements OnInit, OnChanges, DoCheck{
                 icon: 'group'
             }
         ]
+        this.auth.checkLoggedStatus();
         this.auth.getLoggedStatus()
                     .subscribe((response)=>this.current_user = response);
     }
@@ -58,7 +59,7 @@ export default class ManageComponent implements OnInit, OnChanges, DoCheck{
                     .subscribe((response)=>this.current_user = response);
     }
 
-    ngDoCheck(){
+    ngOnDestroy(){
         this.auth.getLoggedStatus()
                     .subscribe((response)=>this.current_user = response);
     }

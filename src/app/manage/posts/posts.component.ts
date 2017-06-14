@@ -10,13 +10,33 @@ import { ApiService } from '../../services/api.service';
 
 export default class PostsComponent{
     @Input() show;
-     
+
     news: any;
     constructor(private API: ApiService){}
+
     ngOnInit(){
+
+        this.loadPosts();
+
+    }
+
+    postDelete(id: number){
+
+        const confirmation = confirm('This post will be removed');
+
+        if(confirmation)
+            this.API.delete('news', id)
+                    .subscribe((response)=>{
+                        console.log(response);
+                        this.loadPosts();
+                    });
+
+    }
+
+    loadPosts(){
 
         this.API.get('news')
                 .subscribe((response)=> this.news = response);
 
     }
-} 
+}

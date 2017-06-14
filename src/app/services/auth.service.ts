@@ -21,7 +21,7 @@ export class AuthService {
     }
 
    getLoggedStatus(): EventEmitter<any> {
-
+       
        return this.isLogged
 
    }

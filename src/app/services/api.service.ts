@@ -42,13 +42,13 @@ export class ApiService {
 
     update(path: string, id: number, put_object: Object): Observable<Response>{
         return this.http
-                    .put(this.url + path + '/update/', put_object, this.options)
+                    .put(this.url + path + '/' + id + '/update/', put_object, this.options)
                     .map((res: Response) => res.json());
     }
 
     delete(path: string, id: number): Observable<Response>{
         return this.http
-                    .delete(this.url + path + '/destroy/', this.options)
+                    .delete(this.url + path  + '/' + id + '/destroy/', this.options)
                     .map((res: Response) => res.json());
     }
 

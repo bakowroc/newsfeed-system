@@ -25,21 +25,25 @@ export default class NavbarComponent implements OnInit {
                 name: 'About us', link: 'https://github.com/bakowroc/newsfeed-system'
             }
         ]*/
-        
+
         this.logMenu = [
             {
                 name: 'Account Settings', link: 'settings', icon: 'settings'
             },
             {
                 name: 'Management Panel', link: 'manage', icon: 'dashboard'
-            },
-            {
-                name: 'Logout', link: '/', icon: 'power_settings_new'
             }
         ]
+            this.auth.checkLoggedStatus();
+            this.auth.getLoggedStatus()
+                    .subscribe((response)=>{
+                        this.current_user = response;
+                    });
 
-        this.auth.getLoggedStatus()
-                    .subscribe((response)=>this.current_user = response);
+
         }
-
+        logout(){
+            localStorage.removeItem('jwttoken');
+            window.location.replace('/');
+        }
 }

@@ -7,6 +7,8 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/comments/', include('comments.api.urls')),
+    url(r'^api/marks/', include('marks.api.urls')),
+    url(r'^api/tags/', include('tags.api.urls')),
     url(r'^api/groups/', include('groups.api.urls')),
     url(r'^api/news/', include('news.api.urls')),
     url(r'^api/users/', include('users.api.urls')),

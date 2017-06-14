@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { AuthService } from './services/auth.service'
+import { ApiService } from './services/api.service'
 
 @Component ({
     selector: 'my-app',
@@ -8,21 +9,15 @@ import { AuthService } from './services/auth.service'
     providers: [AuthService]
 })
 
-export default class AppComponent implements OnInit, OnChanges{
+export default class AppComponent implements OnInit{
 
     current_user: Object;
 
-    constructor(private auth: AuthService){}
+    constructor(private auth: AuthService, private api: ApiService){}
 
     ngOnInit(){
 
         this.auth.checkLoggedStatus();
-        this.auth.getLoggedStatus()
-                    .subscribe((response)=>this.current_user = response);
-    }
-
-    ngOnChanges(){
-
-
+        
     }
 }

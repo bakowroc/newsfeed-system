@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./news-page.component.scss']
 })
 
-export default class NewsPageComponent implements OnInit, OnChanges{
+export default class NewsPageComponent implements OnInit{
 
     SingleNews: any;
     Comments: any;
@@ -28,15 +28,11 @@ export default class NewsPageComponent implements OnInit, OnChanges{
                                     this.Comments = response['comments'].reverse();
                                 })
                     });
-
+        this.auth.checkLoggedStatus();
         this.auth.getLoggedStatus()
                     .subscribe((response)=>this.current_user = response);
     }
 
-    ngOnChanges(){
-        this.auth.getLoggedStatus()
-                    .subscribe((response)=>this.current_user = response);
-    }
 
     loadComments(){
         this.route.params

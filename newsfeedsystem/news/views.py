@@ -24,6 +24,7 @@ from news.api.serializers import (
 
 
 class NewsCreate(CreateAPIView):
+    
     queryset = News.objects.all()
     serializer_class = NewsCreateSerializer
     permission_classes = [IsNewsManager]
