@@ -17,11 +17,9 @@
             <td>{{news.date | date : 'shortDate'}}</td>
             <td>{{news.author.username}}</td>
             <td>{{news.tag.name}}</td>
-
-            <!--Do podpiecia-->
             <td>
                 <i class="material-icons">mode_edit</i>
-                <i class="material-icons" (click) = 'postDelete(news.id)'>delete</i>
+                <i class="material-icons" (click)='postDelete(news.id)'>delete</i>
             </td>
         </tr>
         <tbody>

@@ -4,7 +4,7 @@
 
         <label class="label">Select a category:</label>
         <select name="tag" [(ngModel)]="news.tag" required>
-        <option *ngFor="let tag of tags" value="tag.name">{{tag.name}}</option>
+        <option *ngFor="let tag of tags" value="{{tag.id}}">{{tag.name}}</option>
         </select>
 
         <textarea name="desc" placeholder="The content of the article" [(ngModel)]="news.desc" required></textarea>
