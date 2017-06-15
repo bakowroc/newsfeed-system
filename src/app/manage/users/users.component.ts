@@ -15,6 +15,5 @@ export default class UsersComponent{
 
         this.API.get('users')
                 .subscribe((response)=> this.users = response);
-
     }
 } 

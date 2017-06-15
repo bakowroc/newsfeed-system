@@ -15,10 +15,11 @@
             <td>{{user.username}}</td>
             <td>{{user.email}}</td>
             <td>{{user.date_joined | date : 'shortDate'}}</td>
-            <td>{{user.groups.name}}</td>
+            <td *ngIf="user.groups.length">{{user.groups[0].name}}</td>
+            <td *ngIf="!user.groups.length"></td>
             <td>
-                <button class="button">set as redactor</button>
-                <button class="button delete" *ngIf="user.groups.name == 'News manager'">obtain the redactor's permission</button>
+                <button class="button" *ngIf="user.groups.length && user.groups[0].name != 'News manager'">set as redactor</button>
+                <button class="button delete" *ngIf="user.groups.length && user.groups[0].name == 'News manager'">obtain the redactor's permission</button>
                 <i class="material-icons">delete</i>
             </td>
         </tr>

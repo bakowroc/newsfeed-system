@@ -2,6 +2,9 @@ categories {
     @include table;
     @include form;
     @include icons;
+    .add {
+        width: 130px;
+    }
     .button {
         position: initial;
         float: right;
