@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from '../../services/api.service'
  
 
 @Component ({
@@ -11,6 +11,7 @@ import { ApiService } from '../../services/api.service';
 export default class CategoriesComponent{
     @Input() show;
     tags: any;
+   
     constructor(private API: ApiService){}
     ngOnInit(){
 
@@ -18,4 +19,5 @@ export default class CategoriesComponent{
                 .subscribe((response)=> this.tags = response);
 
     }
+     
 } 

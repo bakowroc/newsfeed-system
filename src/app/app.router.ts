@@ -14,6 +14,7 @@ import ManageComponent from './manage/manage.component';
 import PostsComponent from './manage/posts/posts.component';
 import AddPostComponent from './manage/add-post/add-post.component';
 import CategoriesComponent from './manage/categories/categories.component';
+import AddTagComponent from './manage/add-tag/add-tag.component';
 import CommentsViewComponent from './manage/comments-view/comments-view.component';
 import GroupsComponent from './manage/groups/groups.component';
 import UsersComponent from './manage/users/users.component';
@@ -32,6 +33,7 @@ export const router: Routes = [
             { path: 'posts', component: PostsComponent},
             { path: 'add-post', component: AddPostComponent},
             { path: 'tags', component: CategoriesComponent},
+            { path: 'add-tag', component: AddTagComponent},
             { path: 'comments', component: CommentsViewComponent},
             { path: 'groups', component: GroupsComponent},
             { path: 'users', component: UsersComponent},
