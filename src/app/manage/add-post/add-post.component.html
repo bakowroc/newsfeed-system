@@ -1,7 +1,18 @@
 <div class="form">
-    <form name="addPost" novalidate>
-        <input type="text" name="title" placeholder="Title">
-        <textarea name="editor1" placeholder="The content of the article"></textarea>
+    <form name="addPost" (ngSubmit)="addNews()" novalidate>
+        <input type="text" name="title" placeholder="Title" [(ngModel)]="news.title" required>
+
+        <label class="label">Select a category:</label>
+        <select name="tag" [(ngModel)]="news.tag" required>
+        <option *ngFor="let tag of tags" value="tag.name">{{tag.name}}</option>
+        </select>
+
+        <textarea name="desc" placeholder="The content of the article" [(ngModel)]="news.desc" required></textarea>
+        <!--Przyjemny edytor do artykulow, ale niestety nie wiem jeszcze jak go podpiac zeby przeszlo przy submicie.
+        name='editor1' to wywolanie edytora, a zeby zawartosc przeszla musi byc 'desc'
+
+        <textarea name="editor1" placeholder="The content of the article" [(ngModel)]="news.desc" required></textarea>-->
+
         <button type="submit" class="button"><i class="material-icons">done</i></button>
     </form>
 </div>
