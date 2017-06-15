@@ -16,9 +16,11 @@
             <td>{{user.email}}</td>
             <td>{{user.date_joined | date : 'shortDate'}}</td>
             <td>{{user.group}}</td>
-
-            <!--Do podpiecia-->
-            <td><i class="material-icons">delete</i> | set as redactor | obtain the redactor's permission</td>
+            <td>
+                <i class="material-icons">delete</i>
+                <button class="button">| set as redactor</button>
+                <button class="button">| obtain the redactor's permission</button>
+            </td>
         </tr>
         <tbody>
         </tbody>
