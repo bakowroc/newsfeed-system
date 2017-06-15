@@ -1,3 +1,9 @@
 categories {
     @include table;
+    @include form;
+    @include icons;
+    .button {
+        position: initial;
+        float: right;
+    }
 }

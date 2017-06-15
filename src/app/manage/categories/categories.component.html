@@ -4,11 +4,15 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Action</th>
+                <th><button class="button"><i class="material-icons">add</i>Add tag</button></th>
             </tr>
         </thead>
         <tr *ngFor="let tag of tags">
             <td>{{tag.id}}</td>
             <td>{{tag.name}}</td>
+            <td><i class="material-icons">delete</i></td>
+            <td></td>
         </tr>
         <tbody>
         </tbody>
