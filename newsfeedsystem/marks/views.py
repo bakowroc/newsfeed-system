@@ -26,9 +26,7 @@ from marks.api.serializers import (
 class MarkCreate(CreateAPIView):
     queryset = Mark.objects.all()
     serializer_class = MarkCreateSerializer
-
-    def perform_create(self, serializer):
-        serializer.save(author = self.request.user)
+    permission_classes = [AllowAny]
 
 
 class MarkDetail(RetrieveAPIView):

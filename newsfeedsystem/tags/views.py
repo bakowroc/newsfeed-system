@@ -25,9 +25,7 @@ from tags.api.serializers import (
 class TagCreate(CreateAPIView):
     queryset = Tag.objects.all()
     serializer_class = TagCreateSerializer
-
-    def perform_create(self, serializer):
-        serializer.save(author = self.request.user)
+    permission_classes = [IsAdminUser]
 
 
 class TagDetail(RetrieveAPIView):
