@@ -3,3 +3,4 @@ node_modules/*
 __pycache__/
 polyfills.js
 app.js
+newsfeedsystem/db.sqlite3

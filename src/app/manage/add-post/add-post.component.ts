@@ -1,13 +1,31 @@
 import {Component, Input} from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from '../../services/api.service'
  
 
 @Component ({
     selector: 'add-post',
     templateUrl: './add-post.component.html',
-    styleUrls: ['./add-post.component.scss']
+    styleUrls: ['./add-post.component.scss'],
+    providers: [ApiService]
 })
 
 export default class AddPostComponent{
     @Input() show;
-    constructor() {}
+    tags: any;
+    news: Object = {};
+     
+    constructor(private API: ApiService){}
+    ngOnInit(){
+
+        this.API.get('tags')
+                .subscribe((response)=> this.tags = response);
+
+    }
+    addNews(){
+        this.API.post('news', this.news)
+                .subscribe((response)=>{
+                     console.log(response);
+                })
+    }
 } 
