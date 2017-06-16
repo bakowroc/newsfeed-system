@@ -18,7 +18,7 @@ export default class CategoriesComponent{
                 .subscribe((response)=> this.tags = response);
     }
 
- tagDelete(id: number){
+    tagDelete(id: number){
 
         const confirmation = confirm('This category will be removed');
 
@@ -28,3 +28,4 @@ export default class CategoriesComponent{
                         console.log(response);
                     });
     }
+}

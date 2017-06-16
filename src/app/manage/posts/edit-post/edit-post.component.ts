@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import { ApiService } from '../../../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { routes } from '../../../app.router';
  
 
 @Component ({
@@ -13,7 +14,7 @@ export default class EditPostComponent{
 news: any = {};
 tags: any;
     
-constructor(private route: ActivatedRoute, private API: ApiService){}
+constructor(private route: ActivatedRoute, private API: ApiService, private router: Router){}
     ngOnInit(){
         this.route.params
             .subscribe(params => {
@@ -32,7 +33,11 @@ constructor(private route: ActivatedRoute, private API: ApiService){}
         this.API.update('news', id, this.news)
             .subscribe((response)=>{
                 console.log(response);
+                this.go();
         });
+    }
+    go(){
+        this.router.navigate(['../../../posts'], { relativeTo: this.route });
     }
 }
 
