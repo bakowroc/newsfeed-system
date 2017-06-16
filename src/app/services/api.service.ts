@@ -12,7 +12,7 @@ export class ApiService {
 
     constructor (private http: Http) {
 
-        this.url = 'http://127.0.0.1:8000/api/';
+        this.url = 'http://news-feed-system.herokuapp.com/api/';
 
         this.headers = new Headers({
             "Authorization": "JWT " + localStorage.getItem("jwttoken"),
