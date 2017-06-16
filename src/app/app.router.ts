@@ -13,6 +13,7 @@ import SettingsComponent from './settings/settings.component';
 import ManageComponent from './manage/manage.component';
 import PostsComponent from './manage/posts/posts.component';
 import AddPostComponent from './manage/add-post/add-post.component';
+import EditPostComponent from './manage/posts/edit-post/edit-post.component';
 import CategoriesComponent from './manage/categories/categories.component';
 import AddTagComponent from './manage/add-tag/add-tag.component';
 import CommentsViewComponent from './manage/comments-view/comments-view.component';
@@ -30,7 +31,11 @@ export const router: Routes = [
     { path: 'manage', component: ManageComponent,
         children: [
             { path: '', redirectTo: 'posts', pathMatch: 'full'},
-            { path: 'posts', component: PostsComponent},
+            { path: 'posts', component: PostsComponent,
+                children: [
+                    { path: 'edit-post/:id', component: EditPostComponent}
+                ]
+            },
             { path: 'add-post', component: AddPostComponent},
             { path: 'tags', component: CategoriesComponent},
             { path: 'add-tag', component: AddTagComponent},

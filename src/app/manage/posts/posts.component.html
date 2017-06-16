@@ -18,11 +18,11 @@
             <td>{{news.author.username}}</td>
             <td>{{news.tag.name}}</td>
             <td>
-                <i class="material-icons">mode_edit</i>
+                <i class="material-icons" routerLink="edit-post/{{news.id}}">mode_edit</i>
                 <i class="material-icons" (click)='postDelete(news.id)'>delete</i>
             </td>
         </tr>
         <tbody>
         </tbody>
     </table>
-</div>
+    <router-outlet></router-outlet>

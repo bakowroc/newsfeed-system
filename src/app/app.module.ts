@@ -20,6 +20,7 @@ import RegisterComponent from './register/register.component'
 import ManageComponent from './manage/manage.component'
 import PostsComponent from './manage/posts/posts.component'
 import AddPostComponent from './manage/add-post/add-post.component'
+import EditPostComponent from './manage/posts/edit-post/edit-post.component'
 import CategoriesComponent from './manage/categories/categories.component'
 import AddTagComponent from './manage/add-tag/add-tag.component'
 import CommentsViewComponent from './manage/comments-view/comments-view.component'
@@ -59,6 +60,7 @@ import { AuthService } from './services/auth.service'
                 RegisterComponent,
                 ManageComponent,
                 AddPostComponent,
+                EditPostComponent,
                 PostsComponent,
                 CategoriesComponent,
                 AddTagComponent,

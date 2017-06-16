@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { ApiService } from '../../services/api.service';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component ({
     selector: 'posts',
@@ -10,14 +10,15 @@ import { ApiService } from '../../services/api.service';
 
 export default class PostsComponent{
     @Input() show;
-
+    
     news: any;
-    constructor(private API: ApiService){}
+
+    constructor(private route: ActivatedRoute, private API: ApiService){}
 
     ngOnInit(){
 
         this.loadPosts();
-
+        
     }
 
     postDelete(id: number){
