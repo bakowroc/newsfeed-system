@@ -32,7 +32,7 @@ constructor(private route: ActivatedRoute, private API: ApiService, private rout
       
         this.API.update('news', id, this.news)
             .subscribe((response)=>{
-                console.log(response);
+                console.log(response);     
                 this.go();
         });
     }

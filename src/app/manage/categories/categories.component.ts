@@ -14,8 +14,7 @@ export default class CategoriesComponent{
    
     constructor(private API: ApiService){}
     ngOnInit(){
-        this.API.get('tags')
-                .subscribe((response)=> this.tags = response);
+       this.tagLoad();
     }
 
     tagDelete(id: number){
@@ -26,6 +25,12 @@ export default class CategoriesComponent{
             this.API.delete('tags', id)
                     .subscribe((response)=>{
                         console.log(response);
+                        this.tagLoad();
                     });
     }
+    
+     tagLoad(){
+        this.API.get('tags')
+              .subscribe((response)=> this.tags = response);
+     }
 }

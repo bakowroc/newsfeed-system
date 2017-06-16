@@ -12,9 +12,23 @@ export default class CommentsViewComponent{
     com: any;
     constructor(private API: ApiService){}
     ngOnInit(){
+        this.comLoad();
+        
+    }
+    comDelete(id: number){
 
+        const confirmation = confirm('This comment will be removed');
+
+        if(confirmation)
+            this.API.delete('comments', id)
+                    .subscribe((response)=>{
+                        console.log(response);
+                        this.comLoad();
+                    });
+    }
+    comLoad(){
         this.API.get('comments')
-                .subscribe((response)=> this.com = response);
+            .subscribe((response)=> this.com = response);
 
     }
 } 

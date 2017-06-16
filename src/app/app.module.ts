@@ -12,7 +12,6 @@ import NewsRowComponent from './main-page/news-row/news-row.component'
 import MiniNewsComponent from './main-page/news-row/mini-news/mini-news.component'
 
 import NavbarComponent from './navbar/navbar.component'
-import AboutComponent from './about/about.component'
 import TrendingComponent from './trending/trending.component'
 import SignInComponent from './sign-in/sign-in.component'
 import RegisterComponent from './register/register.component'
@@ -24,7 +23,6 @@ import EditPostComponent from './manage/posts/edit-post/edit-post.component'
 import CategoriesComponent from './manage/categories/categories.component'
 import AddTagComponent from './manage/add-tag/add-tag.component'
 import CommentsViewComponent from './manage/comments-view/comments-view.component'
-import GroupsComponent from './manage/groups/groups.component'
 import UsersComponent from './manage/users/users.component'
 
 import SettingsComponent from './settings/settings.component'
@@ -54,7 +52,6 @@ import { AuthService } from './services/auth.service'
                 MainNewsComponent,
                 WeatherComponent,
                 NavbarComponent,
-                AboutComponent,
                 TrendingComponent,
                 SignInComponent,
                 RegisterComponent,
@@ -65,7 +62,6 @@ import { AuthService } from './services/auth.service'
                 CategoriesComponent,
                 AddTagComponent,
                 CommentsViewComponent,
-                GroupsComponent,
                 UsersComponent,
                 SettingsComponent,
                 NewsRowComponent,

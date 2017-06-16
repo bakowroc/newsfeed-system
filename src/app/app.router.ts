@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import AppComponent from './app.component';
 import MainPageComponent from './main-page/main-page.component';
-import AboutComponent from './about/about.component';
 import TrendingComponent from './trending/trending.component';
 import SignInComponent from './sign-in/sign-in.component';
 import RegisterComponent from './register/register.component';
@@ -17,13 +16,11 @@ import EditPostComponent from './manage/posts/edit-post/edit-post.component';
 import CategoriesComponent from './manage/categories/categories.component';
 import AddTagComponent from './manage/add-tag/add-tag.component';
 import CommentsViewComponent from './manage/comments-view/comments-view.component';
-import GroupsComponent from './manage/groups/groups.component';
 import UsersComponent from './manage/users/users.component';
 
 export const router: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full'},
     { path: '', component: MainPageComponent},
-    { path: 'about', component: AboutComponent},
     { path: 'trending', component: TrendingComponent},
     { path: 'sign-in', component: SignInComponent},
     { path: 'register', component: RegisterComponent},
@@ -40,7 +37,6 @@ export const router: Routes = [
             { path: 'tags', component: CategoriesComponent},
             { path: 'add-tag', component: AddTagComponent},
             { path: 'comments', component: CommentsViewComponent},
-            { path: 'groups', component: GroupsComponent},
             { path: 'users', component: UsersComponent},
         ]},
     { path: 'settings', component: SettingsComponent}
