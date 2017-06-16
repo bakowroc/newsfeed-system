@@ -28,7 +28,8 @@ constructor(private route: ActivatedRoute, private API: ApiService){}
                 .subscribe((response)=> this.tags = response);
     }
     newsUpdate(id: number){
-        this.API.put('news', id, this.news)
+      
+        this.API.update('news', id, this.news)
             .subscribe((response)=>{
                 console.log(response);
         });
