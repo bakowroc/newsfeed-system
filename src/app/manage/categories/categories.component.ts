@@ -27,6 +27,4 @@ export default class CategoriesComponent{
                     .subscribe((response)=>{
                         console.log(response);
                     });
-
-    }
     }

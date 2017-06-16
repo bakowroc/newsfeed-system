@@ -27,6 +27,12 @@ constructor(private route: ActivatedRoute, private API: ApiService){}
         this.API.get('tags')
                 .subscribe((response)=> this.tags = response);
     }
+    newsUpdate(id: number){
+        this.API.put('news', id, this.news)
+            .subscribe((response)=>{
+                console.log(response);
+        });
+    }
 }
 
 

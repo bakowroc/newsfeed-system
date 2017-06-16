@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { routes } from '../../app.router';
 
 @Component ({
     selector: 'add-tag',
@@ -12,13 +13,11 @@ export default class AddTagComponent{
 tag: Object = {};
 
 constructor(private API: ApiService){}
-  addTag(){
+    addTag(){
         this.API.post('tags', this.tag)
                 .subscribe((response)=>{
                 console.log(response);
         })
     }
+    }
 } 
-
-
-
