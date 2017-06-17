@@ -1,6 +1,14 @@
-<div class="main-news">
+<!--<div class="main-news">
     <h1 class="title">Space Ship Is Coming Over</h1>
     <div class="button-overflow">
         <a class="button" routerLink = '/'>Read more</a>
+    </div>
+</div>-->
+<div *ngIf="news">
+    <div class="main-news" *ngFor="let news of news | sortBy : 'date' | slice:0:1">
+        <h1 class="title">{{news.title}}</h1>
+        <div class="button-overflow">
+            <a class="button" routerLink='/'>Read more</a>
+        </div>
     </div>
 </div>

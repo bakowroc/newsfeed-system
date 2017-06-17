@@ -7,6 +7,7 @@ import { routes } from './app.router';
 import AppComponent from './app.component'
 import MainPageComponent from './main-page/main-page.component'
 import MainNewsComponent from './main-page/main-news/main-news.component'
+import { SortPipe } from './sort-by.pipe'
 import WeatherComponent from './main-page/weather/weather.component'
 import NewsRowComponent from './main-page/news-row/news-row.component'
 import MiniNewsComponent from './main-page/news-row/mini-news/mini-news.component'
@@ -71,12 +72,13 @@ import { AuthService } from './services/auth.service'
                 CommentsComponent,
                 AddCommentComponent,
                 SingleCommentComponent,
-
+                SortPipe
                   ],
     providers: [
                 ApiService,
                 AuthService
                 ],
+    //exports: [SortPipe],
     bootstrap: [AppComponent]
 
 })

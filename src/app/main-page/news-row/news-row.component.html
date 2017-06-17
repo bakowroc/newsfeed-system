@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-4" *ngFor="let miniNews of news">
+    <div class="col-lg-4" *ngFor="let miniNews of news | slice:0:3">
         <mini-news [miniNews]="miniNews"></mini-news>
     </div>
 </div>

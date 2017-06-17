@@ -36,7 +36,7 @@ mini-news {
                 text-transform: uppercase;
                 margin-top: 10px;
             }
-            .news-desc{
+            .news-desc {
                 text-align: justify;
                 font-size: 16px;
                 color: darkgray;
@@ -57,7 +57,7 @@ mini-news {
         .button-overflow {
             float: right;
             width: 90px;
-            .button{
+            .button {
                 @include button(#E75141, $padding: 2px 4px, $radius: 3px);
                 float: left;
             }
