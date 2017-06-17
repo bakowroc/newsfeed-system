@@ -38,6 +38,12 @@ export class ApiService {
         return this.http
                     .post(this.url + path + '/create/', post_object, this.options)
                     .map((res: Response) => res.json());
+    }    
+    
+    register(path: string, post_object: Object): Observable<Response>{
+        return this.http
+                    .post(this.url + path + '/create/', post_object)
+                    .map((res: Response) => res.json());
     }
 
     update(path: string, id: number, put_object: Object): Observable<Response>{

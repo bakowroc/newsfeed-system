@@ -46,7 +46,7 @@ export default class ManageComponent implements OnInit, OnChanges, OnDestroy{
             {
                 name: 'Users',
                 link: 'users',
-                icon: 'groups'
+                icon: 'person'
             }
         ]
         this.auth.checkLoggedStatus();

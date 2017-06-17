@@ -10,10 +10,8 @@
             <div class="reminder"><a routerLink="../register">I'd like to register a new account</a></div>
             <button type="submit" class="button">Sign in</button>
         </form>
-        <div *ngIf='current_user'>You are logged in {{current_user.username}}</div>
+        <div *ngIf='current_user'>You are already logged in {{current_user.username}}</div>
     </div>
     <!-- <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>-->
     <a class="popup-bg" routerLink="/"></a>
-
-
 </div>

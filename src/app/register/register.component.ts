@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { AuthService } from '../services/auth.service'
+import { ApiService } from '../services/api.service'
 
 @Component ({
     selector: 'register',
@@ -7,24 +8,25 @@ import { AuthService } from '../services/auth.service'
     styleUrls: ['./register.component.scss']
 })
 
-export default class RegisterComponent implements OnInit{
-
-    data = {};
-    signUp: any = true;
+export default class RegisterComponent{
     current_user: Object; 
+    user: Object = {};
+    
+    constructor(private API: ApiService, private auth: AuthService){}
 
-    constructor(private auth: AuthService){}
-
-    formSubmit() {
-        console.log(this.data);
-    }
-
-    ngOnInit(){
+   ngOnInit(){
         this.auth.getLoggedStatus()
                     .subscribe((response)=>this.current_user = response);
     }
 
-    close(){
-        this.signUp = false;
+    addUser(){
+        this.user['first_name'] = '';
+        this.user['last_name'] = '';
+        
+        this.API.register('users', this.user)
+                .subscribe((response)=>{
+                     console.log(response)
+                })
     }
+
 }
