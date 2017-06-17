@@ -11,7 +11,7 @@
 
                 <li *ngIf="!current_user"><a routerLink="sign-in" class="log-in">Sign in</a></li>
             </ul>
-            <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><span class="person"><i class="material-icons">person</i></span></span>
+            <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><span class="person"><i class="material-icons person">person</i></span></span>
         </nav>
         <nav class="user" *ngIf="showMenu==true" (mouseleave)="!showMenu=false">
             <ul>
