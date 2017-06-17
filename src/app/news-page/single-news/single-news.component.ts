@@ -9,17 +9,24 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./single-news.component.scss']
 })
 
-export default class SingleNewsComponent implements OnInit, OnChanges {
-
+export default class SingleNewsComponent implements OnChanges {
+    mark: Object = {};
     @Input()
         SingleNews: any = {};
+    @Input()
+        newsIdInput: number;
 
-    constructor(){}
+    constructor(private API: ApiService){}
 
-    ngOnInit() {
+    addMark(){
+        this.mark['news'] = this.newsIdInput;
 
+        console.log(this.mark);
+
+        this.API.post('marks', this.mark)
+                .subscribe((response)=>{
+                })
     }
-
     ngOnChanges(){
         console.log(this.SingleNews);
     }

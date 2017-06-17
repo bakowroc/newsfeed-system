@@ -1,9 +1,8 @@
 settings {
+    [class*="col-"] {
+        margin: 0 auto;
+    }
     .content {
-        [class*="col-"] {
-            padding: 0px;
-        }
-        display: flex;
         float: left;
         @include standard-div;
         background: white;
@@ -11,7 +10,7 @@ settings {
             margin: 0;
             float: left;
             padding: 20px;
-            height: 600px;
+            height: 440px;
             width: 100%;
             border-left: solid 1px #f0f0f0;
             h1 {
@@ -23,9 +22,9 @@ settings {
             input[type=password] {
                 border-bottom: solid 1px #fabcbf;
             }
-            /*input[type=file] {
-    background: #5eaff2;
-}*/
+             ::-webkit-input-placeholder {
+                font-size: 14px;
+            }
             .button {
                 background-color: #5eaff2;
                 position: initial;

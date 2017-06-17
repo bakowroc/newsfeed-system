@@ -3,9 +3,9 @@
         <input type="text" name="title" placeholder="Title" [(ngModel)]="news.title" required>
 
         <label class="label">Change a category:</label>
-        <select name="tag" [(ngModel)]="news.tag" required>
-            <option selected="selected" *ngIf="news.tag">{{news.tag.name}}</option>
-            <option *ngFor="let tag of tags" value="{{tag.id}}">{{tag.name}}</option>
+        <select name="tag" *ngIf="news.tag" [(ngModel)]="news.tag" required>
+          <!-- <option *ngIf="news.tag" [selected]="news.tag.name" [value]="news.tag.id">{{news.tag.name}}</option>-->
+            <option [selected]="news.tag.name" *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</option>
         </select>
         <textarea name="desc" placeholder="The content of the article" [(ngModel)]="news.desc" required></textarea>
 

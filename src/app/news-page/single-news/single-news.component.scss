@@ -78,7 +78,8 @@ single-news {
                 color: #009688;
             }
         }
-        label {
+        label,
+        {
             float: right;
             padding: 10px;
             font-size: 20px;
@@ -92,6 +93,14 @@ single-news {
                 content: '\f006';
                 font-family: FontAwesome;
             }
+        }
+        .button {
+            display: block;
+            float: right;
+            padding: 10px;
+            border: none;
+            color: #ccc;
+            background: transparent;
         }
     }
 }
