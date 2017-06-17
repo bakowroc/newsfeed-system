@@ -18,5 +18,10 @@ import { ApiService } from '../../services/api.service';
                 .subscribe((response)=> this.news = response);
         
     }
+     createSlugFromTitle(title: string): string{
+
+        return title.toLowerCase().split(' ').join('-');
+
+    }
 }
  

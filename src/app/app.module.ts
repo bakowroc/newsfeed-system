@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routes } from './app.router';
 
+import { SortPipe } from './sort-by.pipe'
+import { TruncatePipe } from './limit-to.pipe'
+
 import AppComponent from './app.component'
 import MainPageComponent from './main-page/main-page.component'
 import MainNewsComponent from './main-page/main-news/main-news.component'
-import { SortPipe } from './sort-by.pipe'
 import WeatherComponent from './main-page/weather/weather.component'
 import NewsRowComponent from './main-page/news-row/news-row.component'
 import MiniNewsComponent from './main-page/news-row/mini-news/mini-news.component'
@@ -72,7 +74,8 @@ import { AuthService } from './services/auth.service'
                 CommentsComponent,
                 AddCommentComponent,
                 SingleCommentComponent,
-                SortPipe
+                SortPipe,
+                TruncatePipe
                   ],
     providers: [
                 ApiService,
