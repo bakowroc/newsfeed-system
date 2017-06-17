@@ -18,8 +18,8 @@
             <td *ngIf="user.groups.length">{{user.groups[0].name}}</td>
             <td *ngIf="!user.groups.length"></td>
             <td>
-                <button class="button" *ngIf="user.groups.length && user.groups[0].name != 'News manager'" (click)="addRedactor(user.id, user.username)">set as redactor</button>
-                <button class="button delete" *ngIf="user.groups.length && user.groups[0].name == 'News manager'">obtain the redactor's permission</button>
+                <button class="button" *ngIf="user.groups.length && user.groups[0].name != 'News manager'" (click)="addRedactor(user.id, user.username, user.email, user.groups[0].id)">set as redactor</button>
+                <button class="button delete" *ngIf="user.groups.length && user.groups[0].name == 'News manager'" (click)="addRedactor(user.id, user.username, user.email, user.groups[0].id)">delete redactor</button>
                 <i class="material-icons">delete</i>
             </td>
         </tr>

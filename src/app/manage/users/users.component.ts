@@ -15,10 +15,12 @@ export default class UsersComponent{
     ngOnInit(){
         this.usersLoad();
     }
-    addRedactor(id: number, username, group){
+    addRedactor(id: number, username: string, email: any, group: any){
+        let groups = group == 1 ? 3 : 1;
         this.user = {
         username: username,
-        groups: [id:1]
+        email: email || '',
+        groups: [groups]
         }
         console.log(this.user);
         
