@@ -11,12 +11,12 @@
 
                 <li *ngIf="!current_user"><a routerLink="sign-in" class="log-in">Sign in</a></li>
             </ul>
-            <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><img src="/static/assets/user/1.png"></span>
+            <span *ngIf="current_user" (mouseover)="showMenu=true"><p>{{current_user.username}}</p><span class="person"><i class="material-icons">person</i></span></span>
         </nav>
         <nav class="user" *ngIf="showMenu==true" (mouseleave)="!showMenu=false">
             <ul>
                 <li *ngFor="let part of logMenu"><a routerLink="{{part.link}}"><i class="material-icons">{{part.icon}}</i><p>{{part.name}}</p></a></li>
-                <li><a (click) = 'logout()'><i class="material-icons">power_settings_new</i><p>Logout</p></a></li>
+                <li><a (click)='logout()'><i class="material-icons">power_settings_new</i><p>Logout</p></a></li>
             </ul>
         </nav>
     </div>

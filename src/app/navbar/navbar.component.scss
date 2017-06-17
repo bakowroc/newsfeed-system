@@ -76,14 +76,19 @@ navbar {
                 margin-left: 30px;
                 p {
                     float: left;
-                    margin-top: 15px;
+                    margin-top: 16px;
                     font-size: 14px;
                 }
-                img {
-                    width: 50px;
-                    height: 50px;
+                .person {
+                    width: 40px;
+                    height: 40px;
                     border-radius: 100%;
-                    margin-left: 13px;
+                    top: 7px;
+                    right: 15px;
+                    background: rgba(255, 255, 255, 0.13);
+                    .material-icons {
+                        padding: 8px;
+                    }
                 }
             }
         }
@@ -119,11 +124,6 @@ navbar {
                     }
                 }
             }
-        }
-        .material-icons {
-            font-size: 15px;
-            margin-right: 10px;
-            float: left;
         }
     }
 }
