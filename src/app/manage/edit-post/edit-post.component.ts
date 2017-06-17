@@ -1,7 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
-import { ApiService } from '../../../services/api.service';
+import { ApiService } from '../../services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { routes } from '../../../app.router';
+import { routes } from '../../app.router';
  
 
 @Component ({
@@ -37,7 +37,7 @@ constructor(private route: ActivatedRoute, private API: ApiService, private rout
         });
     }
     go(){
-        this.router.navigate(['../../../posts'], { relativeTo: this.route });
+        this.router.navigate(['../../posts'], { relativeTo: this.route });
     }
 }
 
