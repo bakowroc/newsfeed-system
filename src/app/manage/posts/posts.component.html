@@ -16,7 +16,8 @@
             <td>{{news.title}}</td>
             <td>{{news.date | date : 'shortDate'}}</td>
             <td>{{news.author.username}}</td>
-            <td>{{news.tag.name}}</td>
+            <td *ngIf="!news.tag"></td>
+            <td *ngIf="news.tag">{{news.tag.name}}</td>
             <td>
                 <i class="material-icons" routerLink="../edit-post/{{news.id}}">mode_edit</i>
                 <i class="material-icons" (click)='postDelete(news.id)'>delete</i>
