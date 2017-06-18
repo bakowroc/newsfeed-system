@@ -96,18 +96,18 @@ navbar {
         }
     }
     .user {
-        @include standard-div;
+        margin-top: 13px;
+        box-shadow: 0 1px 2px #dedede;
         width: 180px;
-        height: 135px;
         float: right;
         color: black;
         background: white;
         font-size: 13px;
-        position: fixed;
-        right: 45px;
+        position: relative;
+        float: right;
+        left: 400px;
         top: 57px;
         ul {
-            height: 100%;
             list-style: none;
             padding: 0;
             margin: 0;
