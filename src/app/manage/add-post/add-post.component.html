@@ -1,6 +1,14 @@
 <div class="form">
-    <form name="addPost" (ngSubmit)="addNews()" novalidate>
-        <input type="text" name="title" placeholder="Title" [(ngModel)]="news.title" required>
+    <form name="form" (ngSubmit)="addNews()" novalidate>
+        <input type="text" name="title" placeholder="Title" [(ngModel)]="news.title" minlength="3" maxlength="20" required>
+        <!--
+
+        <div *ngIf="form && form.title.errors">dfdf
+            <div *ngIf="form.title.errors.required">Required0</div>
+            <div *ngIf="form.title.errors.minlength">Short</div>
+            <div *ngIf="form.title.errors.maxlength">Long</div>
+        </div>
+-->
 
         <label class="label">Select a category:</label>
         <select name="tag" [(ngModel)]="news.tag" required>
