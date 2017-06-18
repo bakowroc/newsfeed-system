@@ -16,6 +16,7 @@ import MiniNewsComponent from './main-page/news-row/mini-news/mini-news.componen
 
 import NavbarComponent from './navbar/navbar.component'
 import TrendingComponent from './trending/trending.component'
+import SingleTrendComponent from './trending/single-trend/single-trend.component'
 import SignInComponent from './sign-in/sign-in.component'
 import RegisterComponent from './register/register.component'
 
@@ -56,6 +57,7 @@ import { AuthService } from './services/auth.service'
                 WeatherComponent,
                 NavbarComponent,
                 TrendingComponent,
+                SingleTrendComponent,
                 SignInComponent,
                 RegisterComponent,
                 ManageComponent,

@@ -61,10 +61,13 @@ single-news {
         }
     }
     div.stars {
-        display: inline-block;
+        /*display: inline-block;
         position: relative;
         left: 50px;
-        bottom: 20px;
+        bottom: 20px;*/
+        display: inline-block;
+        float: right;
+        padding: 20px 60px 20px 60px;
         span {
             margin-left: 8px;
             color: rgba(75, 75, 75, 0.55);

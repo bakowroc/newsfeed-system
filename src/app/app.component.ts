@@ -13,7 +13,7 @@ export default class AppComponent implements OnInit{
 
     current_user: Object;
 
-    constructor(private auth: AuthService, private api: ApiService){}
+    constructor(private auth: AuthService, private API: ApiService){}
 
     ngOnInit(){
 

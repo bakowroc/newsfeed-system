@@ -15,7 +15,11 @@
         </nav>
         <nav class="user" *ngIf="showMenu==true" (mouseleave)="!showMenu=false">
             <ul>
-                <li *ngFor="let part of logMenu"><a routerLink="{{part.link}}"><i class="material-icons">{{part.icon}}</i><p>{{part.name}}</p></a></li>
+                <!-- <li *ngFor="let part of logMenu"><a routerLink="{{part.link}}"><i class="material-icons">{{part.icon}}</i><p>{{part.name}}</p></a></li>-->
+
+                <li><a routerLink="settings"><i class="material-icons">settings</i><p>Account Settings</p></a></li>
+                <li *ngIf="current_user.groups.length && current_user.groups[0].id !=3"><a routerLink="manage"><i class="material-icons">dashboard</i><p>Management Panel</p></a></li>
+
                 <li><a (click)='logout()'><i class="material-icons">power_settings_new</i><p>Logout</p></a></li>
             </ul>
         </nav>

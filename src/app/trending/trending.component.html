@@ -1,3 +1,5 @@
-<div *ngIf = 'current_user'>
-    Logged
-</div>    
+<div class="row" *ngIf="mark">
+    <div class="col-lg-4" *ngFor="let singleTrend of mark">
+        <single-trend [singleTrend]="singleTrend"></single-trend>
+    </div>
+</div>

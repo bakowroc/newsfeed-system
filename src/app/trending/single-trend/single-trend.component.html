@@ -1,0 +1,20 @@
+<article class="news-content">
+    <div class="news-logo">
+        <img src="/static/assets/news/{{singleTrend.news.id}}.png">
+    </div>
+    <div class="text">
+        <div class="tag">{{singleTrend.news.tag.name}}</div>
+        <div class="title">
+            {{singleTrend.news.title}}
+        </div>
+        <p class="news-desc">
+            {{cutText(230, singleTrend.news.desc)}}
+        </p>
+        <div class="button-overflow">
+            <a class="button" routerLink="../news/{{singleTrend.news.id}}/{{createSlugFromTitle(singleTrend.news.title)}}">
+                    Read more
+                </a>
+        </div>
+    </div>
+
+</article>

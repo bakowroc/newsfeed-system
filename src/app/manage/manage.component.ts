@@ -56,7 +56,6 @@ export default class ManageComponent implements OnInit, OnChanges, OnDestroy{
                         let groupOfLoggedUser = this.current_user['groups'][0]['id']
                             if(groupOfLoggedUser == 3)
                                 this.router.navigate(['../'], { relativeTo: this.route });
-            
         });
     }
 

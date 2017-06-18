@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, OnChanges} from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -10,13 +11,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export default class SingleNewsComponent implements OnChanges {
+    current_user: Object;
     mark: Object = {};
     @Input()
         SingleNews: any = {};
     @Input()
         newsIdInput: number;
 
-    constructor(private API: ApiService){}
+    constructor(private auth: AuthService, private API: ApiService){}
+    
+    ngOnInit(){
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>this.current_user = response);
+    }
 
     addMark(){
         this.mark['news'] = this.newsIdInput;

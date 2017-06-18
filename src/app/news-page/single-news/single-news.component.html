@@ -28,7 +28,7 @@
         {{SingleNews.desc}}
     </article>
 
-    <div class="stars">
+    <div class="stars" *ngIf="current_user">
         <span>Rate this article:</span>
         <form (ngSubmit)="addMark()">
             <button type="submit" class="button"><i class="material-icons">done</i></button>
