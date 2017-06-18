@@ -1,23 +1,24 @@
 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
     <div class="content">
-        <div class="userForm">
-            <form name="user" (ngSubmit)="formSubmit()" novalidate>
+        <div class="userForm" *ngIf="current_user">
+            <form name="user" (ngSubmit)="userUpdate(current_user.id, current_user.username, current_user.email)" novalidate>
                 <h1>Account settings</h1>
 
                 <span class="label">Username: </span>
-                <input type="text" name="username" required>
+                <input type="text" name="username" [(ngModel)]="current_user.username" required>
 
                 <span class="label">Email Address: </span>
-                <input type="email" name="email" required>
+                <input type="email" name="email" [(ngModel)]="current_user.email" required>
 
-                <span class="label">Group: </span>
-                <input type="text" required>
-
-                <span class="label">Confirm changes: </span>
-                <input type="password" name="password" placeholder="Enter your password" required>
+                <!--<span class="label">Confirm changes: </span>
+<input type="password" name="password" placeholder="Enter your password" required>-->
 
                 <button type="submit" class="button"><i class="material-icons">done</i></button>
             </form>
+            <!--<div class="userForm" *ngIf="current_user.groups.length">
+    <span class="label">Group: </span>
+    <input type="text" [disabled]="true" placeholder="{{current_user.groups[0].name}}" required>
+</div>-->
         </div>
     </div>
 </div>

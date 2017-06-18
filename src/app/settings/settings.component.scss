@@ -10,7 +10,7 @@ settings {
             margin: 0;
             float: left;
             padding: 20px;
-            height: 440px;
+            height: 300px;
             width: 100%;
             border-left: solid 1px #f0f0f0;
             h1 {
@@ -21,6 +21,7 @@ settings {
             input[type=text],
             input[type=password] {
                 border-bottom: solid 1px #fabcbf;
+                background: none;
             }
              ::-webkit-input-placeholder {
                 font-size: 14px;
