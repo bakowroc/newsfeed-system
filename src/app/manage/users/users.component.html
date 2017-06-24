@@ -1,0 +1,29 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Joined</th>
+                <th>Groups</th>
+                <th *ngIf=" current_user && current_user.groups.length && current_user.groups[0].id == 2">Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let user of users ">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.date_joined | date : 'shortDate'}}</td>
+            <td *ngIf="user.groups.length">{{user.groups[0].name}}</td>
+            <td *ngIf="!user.groups.length"></td>
+            <td *ngIf="current_user && current_user.groups.length && current_user.groups[0].id == 2">
+                <button class="button" *ngIf="user.groups.length && user.groups[0].name != 'News manager'" (click)="addRedactor(user.id, user.username, user.email, user.groups[0].id)">set as redactor</button>
+                <button class="button delete" *ngIf="user.groups.length && user.groups[0].name == 'News manager'" (click)="addRedactor(user.id, user.username, user.email, user.groups[0].id)">delete redactor</button>
+                <i class="material-icons">delete</i>
+            </td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>

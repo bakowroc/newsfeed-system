@@ -1,0 +1,12 @@
+<article class="comment-content">
+    <p class="comment-content-text">
+        {{comment.content}}
+    </p>
+    <span class="comment-content-author">
+        {{comment.author.username}}
+    </span>
+    <a class="comment-content-news" routerLink = 'news/{{comment.related_news.id}}/{{createSlugFromTitle(comment.related_news.title)}}'>
+        {{comment.related_news.title}}
+    </a>
+
+</article>

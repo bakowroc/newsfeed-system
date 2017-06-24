@@ -1,0 +1,240 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+;
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+}
+
+;
+@mixin focus ($action) {
+    @if $action=='reset' {
+        outline: none;
+    }
+}
+
+@mixin input($font) {
+    width: 100%;
+    padding: 11px 10px 9px 10px;
+    text-align: left;
+    font-size: $font;
+    color: #000;
+    border: none;
+}
+
+@mixin button($background, $padding: 7px, $type: 'normal', $radius: 2px) {
+    text-decoration: none;
+    width: 100%;
+    padding: $padding;
+    @if $type=='square' {
+        padding: $padding 2* $padding;
+    }
+    text-align: center;
+    background: $background;
+    border-bottom: 2px solid darken($background, 10%);
+    color: #fff;
+    @include border-radius($radius);
+    &:hover {
+        background: lighten($background, 5%);
+        cursor: pointer;
+    }
+}
+
+@mixin vertical-menu($link-color, $margin) {
+    ul {
+        display: inline-block;
+        float: left;
+        width: auto;
+        >li {
+            display: inline;
+            float: left;
+            margin-right: $margin;
+            padding: 5px;
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            >a {
+                text-decoration: none;
+                width: 100%;
+                float: left;
+                color: $link-color;
+                &:hover {
+                    color: rgba($link-color, 0.8);
+                }
+            }
+        }
+    }
+}
+
+@mixin li-header {
+    width: 100%;
+    border-radius: 3px;
+    padding-bottom: 13px;
+    text-align: left;
+    float: left;
+    img {
+        float: left;
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        margin-right: 15px;
+    }
+    p {
+        display: block;
+        margin-left: 5px;
+        font-size: 27px;
+        font-weight: 500;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+        text-transform: capitalize;
+    }
+    span {
+        font-size: 18px;
+        color: #bfbfbf;
+        text-transform: capitalize;
+    }
+}
+
+@mixin content {
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 17px;
+    padding: 5px;
+}
+
+@mixin ul {
+    ul {
+        float: left;
+        width: 100%;
+        list-style: none;
+        margin-top: 13px;
+        padding: 0;
+    }
+}
+
+@mixin popup {
+    position: fixed;
+    z-index: 120;
+    margin: 0 auto;
+    margin-top: 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    height: 320px;
+    width: 400px;
+    padding: 20px;
+}
+
+@mixin popup-bg {
+    z-index: 119;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: #000;
+    opacity: 0.5;
+}
+
+@mixin form {
+    input[type=email],
+    input[type=text],
+    input[type=password] {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: solid 1px #bcdefa;
+        line-height: 2px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .label {
+        color: #ccc;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+    .reminder a {
+        text-decoration: none;
+        float: right;
+        color: #f25e65;
+        font-size: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .button {
+        position: absolute;
+        letter-spacing: 0.5px;
+        border: none;
+        text-align: center;
+        color: #fff;
+        background-color: #5EAFF2;
+        font-size: 15px;
+        right: 25px;
+        bottom: 25px;
+        border-radius: 3px;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
+
+@mixin standard-div {
+    width: 100%;
+    margin-top: 13px;
+    box-shadow: 0 1px 2px lighten(black, 87%);
+}
+
+@mixin table {
+    table {
+        width: 100%;
+        thead {
+            border-bottom: solid 1px;
+            border-color: rgb(228, 228, 228);
+            th {
+                height: 50px;
+                padding: 10px;
+            }
+        }
+        tbody {
+            background: #f9f7f7;
+            color: #888;
+            font-weight: 300;
+            td {
+                height: 45px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@mixin icons {
+    .material-icons {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+}

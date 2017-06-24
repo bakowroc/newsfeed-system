@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Comment</th>
+                <th>Date</th>
+                <th>In response to</th>
+                <th *ngIf="current_user && current_user.groups.length && current_user.groups[0].id == 2">Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let com of com">
+            <td>{{com.author.username}}</td>
+            <td>{{com.content}}</td>
+            <td>{{com.date | date : 'shortDate'}}</td>
+            <td>{{com.related_news.title}}</td>
+            <td *ngIf="current_user && current_user.groups.length && current_user.groups[0].id == 2"><i class="material-icons" (click)="comDelete(com.id)">delete</i></td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>

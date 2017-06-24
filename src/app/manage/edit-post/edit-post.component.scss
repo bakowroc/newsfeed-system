@@ -1,0 +1,42 @@
+edit-post {
+    .popup {
+        @include popup;
+        width: 650px;
+        height: 560px;
+        margin-top: 75px;
+    }
+    .form {
+        @include form;
+        input[type=text],
+        textarea,
+        select {
+            border: solid 1px #d1d1d1;
+            padding: 10px;
+            width: 100%;
+        }
+        textarea {
+            height: 300px;
+        }
+        select {
+            margin-bottom: 13px;
+            color: rgba(33, 150, 243, 0.57);
+            text-transform: lowercase;
+        }
+        .label {
+            margin-left: 3px;
+            &.blue {
+                width: 100%;
+                color: #2196f3;
+            }
+        }
+        .button {
+            position: initial;
+            margin-top: 13px;
+            float: right;
+            @include icons;
+        }
+    }
+    .popup-bg {
+        @include popup-bg;
+    }
+}

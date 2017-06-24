@@ -1,0 +1,8 @@
+<div class="comments" *ngIf="Comments">
+    <ul>
+        <h1>{{Comments.length}} Comments</h1>
+        <li *ngFor="let comment of Comments">
+            <single-comment [comment]="comment"></single-comment>
+        </li>
+    </ul>
+</div>

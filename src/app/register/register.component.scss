@@ -1,0 +1,13 @@
+register {
+    .register-form {
+        @include popup;
+        height: 350px;
+        h1 {
+            font-size: 25px;
+        }
+        @include form;
+    }
+    .popup-bg {
+        @include popup-bg;
+    }
+}

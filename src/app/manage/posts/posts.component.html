@@ -1,0 +1,29 @@
+<!--<div *ngIf="show==true">-->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Author</th>
+                <th>Tags</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let news of news">
+            <td>{{news.id}}</td>
+            <td>{{news.title}}</td>
+            <td>{{news.date | date : 'shortDate'}}</td>
+            <td>{{news.author.username}}</td>
+            <td *ngIf="!news.tag"></td>
+            <td *ngIf="news.tag">{{news.tag.name}}</td>
+            <td>
+                <i class="material-icons" routerLink="../edit-post/{{news.id}}">mode_edit</i>
+                <i class="material-icons" (click)='postDelete(news.id)'>delete</i>
+            </td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+    <router-outlet></router-outlet>

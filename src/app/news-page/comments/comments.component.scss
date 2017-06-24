@@ -1,0 +1,11 @@
+comments {
+    .comments {
+        h1 {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 35px;
+        }
+        @include ul;
+    }
+}

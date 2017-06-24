@@ -1,0 +1,12 @@
+sign-in {
+    .log-in-form {
+        @include popup;
+        h1 {
+            font-size: 25px;
+        }
+        @include form;
+    }
+    .popup-bg {
+        @include popup-bg;
+    }
+}

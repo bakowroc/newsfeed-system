@@ -1,0 +1,66 @@
+mini-news {
+    .news-content {
+        position: relative;
+        background: #f9f9f9;
+        .news-logo {
+            width: 100%;
+            padding: 0;
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+        @include standard-div;
+        margin: 20px 0;
+        float: left;
+        padding-bottom: 13px;
+        text-align: left;
+        .text {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            .title {
+                text-decoration: none;
+                color: rgba(black, 0.8);
+                font-size: 20px;
+                font-weight: 600;
+                float: left;
+                margin: 10px 0;
+                width: 100%;
+                clear: both;
+            }
+            .tag {
+                color: #ccc;
+                font-size: 13px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+            .news-desc {
+                text-align: justify;
+                font-size: 16px;
+                color: darkgray;
+                display: block;
+                margin-bottom: 15px;
+                float: left;
+            }
+        }
+        /* .full-width-button-area {
+           position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background: transparent;
+            text-align: right;
+            text-decoration: none;
+        }*/
+        .button-overflow {
+            float: right;
+            width: 90px;
+            .button {
+                @include button(#E75141, $padding: 2px 4px, $radius: 3px);
+                float: left;
+            }
+        }
+    }
+}

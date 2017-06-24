@@ -1,0 +1,48 @@
+<div class="single-news" *ngIf="SingleNews">
+    <div class="single-news-img">
+        <img src="/static/assets/news/{{SingleNews.id}}.png">
+
+        <header class="single-news-header">
+
+            <div class="single-news-tag">
+                {{SingleNews.tag.name}}
+            </div>
+
+            <div class="single-news-date">
+                {{SingleNews.date | date : 'shortDate'}}
+            </div>
+
+            <h1 class="single-news-title">
+                {{SingleNews.title}}
+            </h1>
+
+            <div class="single-news-author">
+                {{SingleNews.author.username}}
+            </div>
+
+        </header>
+
+    </div>
+
+    <article class="single-news-content">
+        {{SingleNews.desc}}
+    </article>
+
+    <div class="stars" *ngIf="current_user">
+        <span>Rate this article:</span>
+        <form (ngSubmit)="addMark()">
+            <button type="submit" class="button"><i class="material-icons">done</i></button>
+            <input id="star-5" type="radio" name="value" [value]="5" [(ngModel)]="mark.value" />
+            <label for="star-5"></label>
+            <input id="star-4" type="radio" name="value" [value]="4" [(ngModel)]="mark.value" />
+            <label for="star-4"></label>
+            <input id="star-3" type="radio" name="value" [value]="3" [(ngModel)]="mark.value" />
+            <label for="star-3"></label>
+            <input id="star-2" type="radio" name="value" [value]="2" [(ngModel)]="mark.value" />
+            <label for="star-2"></label>
+            <input id="star-1" type="radio" name="value" [value]="1" [(ngModel)]="mark.value" />
+            <label for="star-1"></label>
+
+        </form>
+    </div>
+</div>

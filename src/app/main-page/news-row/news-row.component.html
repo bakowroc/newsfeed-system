@@ -1,0 +1,5 @@
+<div class="row" *ngIf="news">
+    <div class="col-lg-4" *ngFor="let miniNews of news | sortBy: 'date' | slice:1:news.length">
+        <mini-news [miniNews]="miniNews"></mini-news>
+    </div>
+</div>

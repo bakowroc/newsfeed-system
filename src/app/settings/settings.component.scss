@@ -1,0 +1,51 @@
+settings {
+    [class*="col-"] {
+        margin: 0 auto;
+    }
+    .content {
+        float: left;
+        @include standard-div;
+        background: white;
+        .userForm {
+            margin: 0;
+            float: left;
+            padding: 20px;
+            height: 300px;
+            width: 100%;
+            border-left: solid 1px #f0f0f0;
+            h1 {
+                font-size: 25px;
+            }
+            @include form;
+            input[type=email],
+            input[type=text],
+            input[type=password] {
+                border-bottom: solid 1px #fabcbf;
+                background: none;
+            }
+             ::-webkit-input-placeholder {
+                font-size: 14px;
+            }
+            .button {
+                background-color: #5eaff2;
+                position: initial;
+                margin-top: 15px;
+                width: 50px;
+                height: 50px;
+                float: right;
+            }
+            .avatar {
+                width: 100%;
+                img {
+                    border-radius: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    height: 150px;
+                    width: 150px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        @include icons;
+    }
+}

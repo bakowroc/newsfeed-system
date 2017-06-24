@@ -1,0 +1,8 @@
+<div class="standard-div">
+    <form class="form" name="addTag" (ngSubmit)="addTag()">
+        <label class="label">Enter a new category...</label>
+        <input type="text" name="name" placeholder="...here" [(ngModel)]="tag.name" required>
+
+        <button type="submit" class="button"><i class="material-icons">done</i></button>
+    </form>
+</div>

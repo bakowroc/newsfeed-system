@@ -1,0 +1,17 @@
+<div class="col-lg-12">
+    <div class="log-in-form">
+        <h1>Sign in</h1>
+        <span class="error-login" *ngIf='errorLogin'>Wrong credentials!</span>
+        <form (ngSubmit)="login()">
+            <span class="label">Username</span>
+            <input type="text" name="username" placeholder="Your username" [(ngModel)]="data.username" required>
+            <span class="label">Password</span>
+            <input type="password" name="password" placeholder="Your password" [(ngModel)]="data.password" required>
+            <div class="reminder"><a routerLink="../register">I'd like to register a new account</a></div>
+            <button type="submit" class="button">Sign in</button>
+        </form>
+        <div *ngIf='current_user'>You are already logged in {{current_user.username}}</div>
+    </div>
+    <!-- <div class="popup-bg" *ngIf="logIn==true" (click)="close()"></div>-->
+    <a class="popup-bg" routerLink="/"></a>
+</div>
