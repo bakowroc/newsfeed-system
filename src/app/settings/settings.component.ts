@@ -13,6 +13,8 @@ export default class SettingsComponent implements OnInit{
     constructor(private API: ApiService, private auth: AuthService){}
 
     ngOnInit(){
+
+        this.auth.checkLoggedStatus();
         this.auth.getLoggedStatus()
                     .subscribe((response)=>this.current_user = response);
     }
@@ -22,7 +24,7 @@ export default class SettingsComponent implements OnInit{
            email: email,
        }
         console.log(this.current_user);
-        
+
         this.API.update('users', id, this.current_user)
             .subscribe((response)=>{
                 console.log(this.current_user)
@@ -30,6 +32,3 @@ export default class SettingsComponent implements OnInit{
 
 }
 }
-
-
-

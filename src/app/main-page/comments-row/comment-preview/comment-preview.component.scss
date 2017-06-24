@@ -1,0 +1,46 @@
+comment-preview{
+
+    .comment-content{
+
+        float: left;
+        width: 100%;
+        background: #2f313e;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        .comment-content-text{
+
+            border-radius: 2px;
+            float: left;
+            width: 100%;
+            //background: rgba(#5EAFF2, 0.8);
+            box-sizing: border-box;
+            //padding: 10px;
+            color: #fff;
+            font-size: 18px;
+
+
+        }
+
+        .comment-content-author,
+        .comment-content-news{
+
+            float: left;
+            color: #ddd;
+            font-size: 12px;
+
+        }
+
+        .comment-content-news{
+
+            float: right;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #5EAFF2;
+
+        }
+
+    }
+
+}

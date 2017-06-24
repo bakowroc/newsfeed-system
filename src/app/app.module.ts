@@ -12,6 +12,8 @@ import MainPageComponent from './main-page/main-page.component'
 import MainNewsComponent from './main-page/main-news/main-news.component'
 import WeatherComponent from './main-page/weather/weather.component'
 import NewsRowComponent from './main-page/news-row/news-row.component'
+import CommentsRowComponent from './main-page/comments-row/comments-row.component'
+import CommentPreviewComponent from './main-page/comments-row/comment-preview/comment-preview.component'
 import MiniNewsComponent from './main-page/news-row/mini-news/mini-news.component'
 
 import NavbarComponent from './navbar/navbar.component'
@@ -70,7 +72,9 @@ import { AuthService } from './services/auth.service'
                 UsersComponent,
                 SettingsComponent,
                 NewsRowComponent,
+                CommentsRowComponent,
                 MiniNewsComponent,
+                CommentPreviewComponent,
                 NewsPageComponent,
                 SingleNewsComponent,
                 CommentsComponent,

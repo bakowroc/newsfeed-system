@@ -6,11 +6,11 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Joined</th>
-                <th>Group</th>
-                <th *ngIf="current_user && current_user.groups.length && current_user.groups[0].id == 2">Action</th>
+                <th>Groups</th>
+                <th *ngIf=" current_user && current_user.groups.length && current_user.groups[0].id == 2">Action</th>
             </tr>
         </thead>
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let user of users ">
             <td>{{user.id}}</td>
             <td>{{user.username}}</td>
             <td>{{user.email}}</td>

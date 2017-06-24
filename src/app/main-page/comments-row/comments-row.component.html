@@ -1,0 +1,5 @@
+<div class="row" *ngIf="comments">
+    <div class="col-lg-4" *ngFor="let comment of comments | slice: 0:3">
+        <comment-preview [comment] = 'comment'></comment-preview>
+    </div>
+</div>

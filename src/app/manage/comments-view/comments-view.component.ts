@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component ({
     selector: 'comments-view',
@@ -9,11 +10,18 @@ import { ApiService } from '../../services/api.service';
 
 export default class CommentsViewComponent{
     @Input() show;
+
+    current_user: any;
     com: any;
-    constructor(private API: ApiService){}
+    constructor(private API: ApiService, private auth: AuthService){}
     ngOnInit(){
         this.comLoad();
-        
+        this.auth.checkLoggedStatus();
+        this.auth.getLoggedStatus()
+                    .subscribe((response)=>{
+                        this.current_user = response;
+
+        });
     }
     comDelete(id: number){
 
@@ -31,4 +39,4 @@ export default class CommentsViewComponent{
             .subscribe((response)=> this.com = response);
 
     }
-} 
+}

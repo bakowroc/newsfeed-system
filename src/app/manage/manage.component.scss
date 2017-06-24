@@ -4,12 +4,12 @@ manage {
             padding: 2px;
         }
         float: left;
-        height: 650px;
+        min-height: 650px;
         display: flex;
         width: 100%;
         .menu {
             @include standard-div;
-            height: 650px;
+            min-height: 650px;
             width: 100%;
             float: left;
             background-color: #5EAFF2;
@@ -41,7 +41,7 @@ manage {
         }
         .content {
             @include standard-div;
-            height: 650px;
+            min-height: 650px;
             width: 100%;
             background: #fff;
             float: right;
